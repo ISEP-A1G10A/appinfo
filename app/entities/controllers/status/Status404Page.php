@@ -1,0 +1,19 @@
+<?php
+
+class Status404Page extends Page {
+    private static $quotes = [
+        ["Tu sais quand les types de 130 kilos disent certaines choses, ceux de 60 les écoutent", "Cent mille dollars au soleil", "Michel Audiard"],
+        ["La chance peut pas toujours taper au même endroit, moi je lui demande que la dernière heure", "Cent mille dollars au soleil", "Michel Audiard"],
+        ["Seulement on a dû arrêter la fabrication, y a des clients qui devenaient aveugles. Alors ça faisait des histoires ...", "Les tontons flingueurs", "Michel Audiard"],
+        ["Le mexicain l'avait achetée en viager à un procureur à la retraite. Après trois mois, l'accident bête. Une affaire ...", "Les tontons flingueurs", "Michel Audiard"]
+    ];
+
+    public function render() {
+        Logger::log404();
+        require "../app/views/status/404/status404.php";
+    }
+
+    private function getQuote() {
+        return self::$quotes[array_rand(self::$quotes)];
+    }
+}
