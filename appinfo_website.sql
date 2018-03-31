@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 31, 2018 at 02:23 PM
+-- Generation Time: Mar 31, 2018 at 02:58 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.2
 
@@ -227,7 +227,7 @@ CREATE TABLE `user_tempory_password` (
   `id` int(11) NOT NULL,
   `user` int(11) NOT NULL,
   `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `date_expiration` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `expiration_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
