@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 30, 2018 at 10:50 PM
+-- Generation Time: Mar 31, 2018 at 02:23 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.2
 
@@ -106,7 +106,7 @@ CREATE TABLE `gear_type` (
 
 CREATE TABLE `home` (
   `id` int(11) NOT NULL,
-  `id_user_main` int(11) NOT NULL,
+  `main_user` int(11) NOT NULL,
   `type` int(11) NOT NULL,
   `surface` varchar(11) NOT NULL,
   `address_line_1` varchar(1023) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
@@ -445,7 +445,7 @@ ALTER TABLE `user_tempory_password`
 -- AUTO_INCREMENT for table `user_type`
 --
 ALTER TABLE `user_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
