@@ -31,4 +31,10 @@ abstract class Page {
             echo '<script type="application/javascript" src="' . new URL("js/" . $file) . '"></script>\n';
         }
     }
+
+    protected $s = [];
+
+    protected function initializationStrings($lang) {
+        $this->s = Lang::getStrings($lang);
+    }
 }

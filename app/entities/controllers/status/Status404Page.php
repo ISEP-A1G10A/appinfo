@@ -1,6 +1,10 @@
 <?php
 
 class Status404Page extends Page {
+    public function __construct($lang) {
+        $this->initializationStrings($lang);
+    }
+
     private static $quotes = [
         ["Tu sais quand les types de 130 kilos disent certaines choses, ceux de 60 les écoutent", "Cent mille dollars au soleil", "Michel Audiard"],
         ["La chance peut pas toujours taper au même endroit, moi je lui demande que la dernière heure", "Cent mille dollars au soleil", "Michel Audiard"],

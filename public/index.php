@@ -29,7 +29,7 @@ if (isset($_GET['p'])) {
 }
 URL::setUrlBase(substr($_SERVER['SCRIPT_NAME'], 0, strlen($_SERVER['SCRIPT_NAME']) - 9));
 // appUrls
-$appUrls = Routes::getAppRoutes();
+$appUrls = Routes::getRoutes();
 foreach ($appUrls as $path => &$arrayExecution) {
     if (Regex::urlMatch($p, $path)) {
         $argvClass = [$_SESSION['settings']['language']];
@@ -41,19 +41,9 @@ foreach ($appUrls as $path => &$arrayExecution) {
         break;
     }
 }
-// statusUrls
-$statusUrls = Routes::getStatusRoutes();
-if (!isset($page)) {
-    foreach ($statusUrls as $path => &$class) {
-        if (Regex::urlMatch($p, $path)) {
-            $page = new $class();
-            break;
-        }
-    }
-}
 // default 404
 if (!isset($page)) {
-    $page = new Status404Page();
+    $page = new Status404Page($_SESSION['settings']['language']);
 }
 // display
 $page->render();

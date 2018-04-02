@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>404 - Page introuvable</title>
-    <link rel="icon" href="<?php echo new URL("img/logos/domisep_mini.png");?>">
+    <title><?php echo $this->s["404"]["title"] ?></title>
+    <link rel="icon" href="<?php echo new URL("img/logos/domisep_mini.png"); ?>">
     <style type="text/css">
         html, body {
             height: 100%;
@@ -61,7 +61,7 @@
     <div class="center">
         <div class="error">
             <span class="error404">404</span>
-            <span class="error-msg">Page non trouvée</span>
+            <span class="error-msg"><?php echo $this->s["404"]["not_found"] ?></span>
         </div>
         <?php
         require 'quote.php';

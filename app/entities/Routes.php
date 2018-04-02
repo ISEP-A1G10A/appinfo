@@ -2,7 +2,9 @@
 
 abstract class Routes {
     private static $appRoutes = [
-        "home"               => [HomePage::class],
+        "home" => [HomePage::class],
+        "404"  => [Status404Page::class],
+        "418"  => [Status418Page::class]
 //        "users/{}"           => [UserPage::class],
 //        "users/{}/infos"     => [UserPage::class, ["infos"]], // modify informations form : display = none; et bouton "modify" JS change valeurs, au clic je submit la form
 //        "users/{}/houses"    => [UserPage::class, ["houses"]],
@@ -10,21 +12,9 @@ abstract class Routes {
     ];
 
     /**
-     * @return array
+     * @return array routes
      */
-    public static function getAppRoutes() {
+    public static function getRoutes() {
         return self::$appRoutes;
-    }
-
-    private static $statusRoutes = [
-        "418" => Status418Page::class,
-        "404" => Status404Page::class
-    ];
-
-    /**
-     * @return array
-     */
-    public static function getStatusRoutes() {
-        return self::$statusRoutes;
     }
 }
