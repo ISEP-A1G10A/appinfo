@@ -3,6 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>404 - Page introuvable</title>
+    <link rel="icon" href="<?php echo new URL("img/logos/domisep_mini.png");?>">
     <style type="text/css">
         html, body {
             height: 100%;

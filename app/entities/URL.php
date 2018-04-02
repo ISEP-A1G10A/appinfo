@@ -20,7 +20,7 @@ class URL {
      */
     public static function setUrlBase($urlBase) {
         if (!isset(self::$urlBase)) {
-            self::$urlBase = substr($urlBase, 0, strlen($urlBase)-7); // remove "public/"
+            self::$urlBase = substr($urlBase, 0, strlen($urlBase)); // remove "public/"
         }
     }
 }
