@@ -1,18 +1,21 @@
 <?php
 
 abstract class AppPage extends Page {
+    protected abstract function renderContent();
 
     private $cssFiles = [
     ];
     private $jsFiles = [
     ];
     private $admin;
+    protected $page;
 
     /** Call during children's contruction
      * @param $lang string ex: "fr"
      * @param $admin boolean
      */
-    protected function initilization($lang, $admin = false) {
+    protected function initilization($page, $lang, $admin = false) {
+        $this->page = $page;
         $this->initializationStrings($lang);
         $this->addToCssFiles($this->cssFiles);
         $this->addToJsFiles($this->jsFiles);
@@ -34,6 +37,6 @@ abstract class AppPage extends Page {
      * Render method
      */
     public function render() {
-        // require content
+        require "../app/views/app/default.php";
     }
 }

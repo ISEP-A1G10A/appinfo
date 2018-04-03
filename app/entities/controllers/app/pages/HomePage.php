@@ -2,7 +2,10 @@
 
 class HomePage extends AppPage {
     public function __construct($lang) {
-        $this->initilization($lang);
-        echo ucfirst($this->s['home']['title']) . '<br>';
+        $this->initilization("home", $lang);
+    }
+
+    protected function renderContent() {
+        echo "ok";
     }
 }

@@ -14,7 +14,7 @@ abstract class Page {
 
     protected function displayCssFiles() {
         foreach ($this->cssFiles as $file) {
-            echo '<link rel=\"stylesheet\" href=\"' . new URL("css/" . $file) . '\">\n';
+            echo '<link rel=\"stylesheet\" href=\"' . new URL("css/" . $file) . '\">';
         }
     }
 
@@ -27,8 +27,8 @@ abstract class Page {
     }
 
     protected function displayJsFiles() {
-        foreach ($this->cssFiles as $file) {
-            echo '<script type="application/javascript" src="' . new URL("js/" . $file) . '"></script>\n';
+        foreach ($this->jsFiles as $file) {
+            echo '<script type="application/javascript" src="' . new URL("js/" . $file) . '"></script>';
         }
     }
 
