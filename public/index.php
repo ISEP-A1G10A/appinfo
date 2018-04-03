@@ -15,6 +15,17 @@ function getPage($routes, $p) {
     return new Status404Page($_SESSION['settings']['language']);
 }
 
+function getPageAfterForm($p) {
+    $routes = Routes::getFormRoutes();
+    foreach ($routes as $path => &$arrayExecution) {
+        if (Regex::urlMatch($p, "form/" . $path)) {
+            $form = new $arrayExecution[0]($_SESSION['settings']['language']);
+            return $form->getPage();
+        }
+    }
+    return "404";
+}
+
 function handleAutoload() {
     require '../app/entities/Autoloader.php';
     autoloader::register();
@@ -42,6 +53,8 @@ function handleLanguage() {
 handleAutoload();
 handleSession();
 handleLanguage();
+// init URL entity
+URL::setUrlBase(substr($_SERVER['SCRIPT_NAME'], 0, strlen($_SERVER['SCRIPT_NAME']) - 9));
 // default page
 if (isset($_GET['p'])) { // ex: localhost/appinfo/public/index.php?p=home
     $p = $_GET['p'];
@@ -54,11 +67,12 @@ if (isset($_GET['p'])) { // ex: localhost/appinfo/public/index.php?p=home
 } else { // ex: localhost/appinfo/public/
     $p = "home";
 }
-// init URL entity
-URL::setUrlBase(substr($_SERVER['SCRIPT_NAME'], 0, strlen($_SERVER['SCRIPT_NAME']) - 9));
 $connected = false; // to handle
+if (startswith($p, "form/")) { // handle form action and redirection
+    $p = getPageAfterForm($p);
+}
 if (!$connected) {
     $page = getPage(Routes::getShowcaseRoutes(), $p);
 }
-// display
+// render
 $page->render();

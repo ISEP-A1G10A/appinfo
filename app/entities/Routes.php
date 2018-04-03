@@ -16,6 +16,9 @@ abstract class Routes {
         "status"      => [
             "404" => [Status404Page::class],
             "418" => [Status418Page::class]
+        ],
+        "form"        => [
+            "connection" => [ConnectionForm::class]
         ]
     ];
 
@@ -24,5 +27,9 @@ abstract class Routes {
      */
     public static function getShowcaseRoutes() {
         return array_merge(self::$appRoutes["showcase"], self::$appRoutes["status"]);
+    }
+
+    public static function getFormRoutes() {
+        return self::$appRoutes["form"];
     }
 }

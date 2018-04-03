@@ -1,4 +1,5 @@
 <?php
+require 'functions.php';
 
 class Autoloader {
     static function register() {
@@ -12,8 +13,15 @@ class Autoloader {
         try {
             if ($class === "Page") {
                 require 'controllers/Page.php';
-            } elseif (self::endswith($class, "Page")) {
-                if (self::startswith($class, "Status")) {
+            } elseif (endswith($class, "Form")) {
+                $file = 'controllers/form/' . $class . '.php';
+                if (file_exists("../app/entities/" . $file)) {
+                    require $file;
+                } else {
+                    throw new FileNotFindException($file);
+                }
+            } elseif (endswith($class, "Page")) {
+                if (startswith($class, "Status")) {
                     $file = 'controllers/status/' . $class . '.php';
                     if (file_exists("../app/entities/" . $file)) {
                         require $file;
@@ -28,7 +36,7 @@ class Autoloader {
                         throw new FileNotFindException($file);
                     }
                 }
-            } elseif (self::endswith($class, "Exception")) {
+            } elseif (endswith($class, "Exception")) {
                 require 'exceptions/' . $class . '.php';
             } else {
                 $file = $class . ".php";
@@ -43,23 +51,5 @@ class Autoloader {
         } catch (FileNotFindException $e) {
             echo "file not found: " . $class;
         }
-    }
-
-    /**
-     * @param $string string to test
-     * @param $end string to compare
-     * @return bool
-     */
-    static function endswith($string, $end) {
-        return substr($string, -strlen($end)) === $end;
-    }
-
-    /**
-     * @param $string string to test
-     * @param $start string to compare
-     * @return bool
-     */
-    static function startswith($string, $start) {
-        return substr($string, 0, strlen($start)) === $start;
     }
 }
