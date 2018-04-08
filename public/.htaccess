@@ -1,10 +1,8 @@
 Options FollowSymLinks ExecCGI
 
 RewriteEngine On
-RewriteBase /
+RewriteBase /appinfo/public/
 
-# If the requested file doesnt exist
-# and if the requested file is not an existing directory
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^[^4]* /appinfo/public/index.php [L,S=4000]
+RewriteRule ^[^4]* index.php [L,S=4000]

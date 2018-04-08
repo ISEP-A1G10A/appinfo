@@ -56,9 +56,7 @@ handleLanguage();
 // init URL entity
 URL::setUrlBase(substr($_SERVER['SCRIPT_NAME'], 0, strlen($_SERVER['SCRIPT_NAME']) - 9));
 // default page
-if (isset($_GET['p'])) { // ex: localhost/appinfo/public/index.php?p=home
-    $p = $_GET['p'];
-} elseif (isset($_SERVER['REDIRECT_URL'])) { // ex: localhost/appinfo/public/home/
+if (isset($_SERVER['REDIRECT_URL'])) { // ex: localhost/appinfo/public/home/
     $tmp = $_SERVER['REDIRECT_URL'];
     if (substr($tmp, -1) != "/") {
         $tmp .= "/";
