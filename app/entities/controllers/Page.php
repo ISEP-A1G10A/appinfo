@@ -5,7 +5,7 @@ abstract class Page {
 
     private $cssFiles = [
         "font.css",
-        "main.css"
+        "default.css"
     ];
 
     protected function addToCssFiles($files) {
