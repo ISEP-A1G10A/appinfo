@@ -14,7 +14,7 @@ abstract class Page {
 
     protected function displayCssFiles() {
         foreach ($this->cssFiles as $file) {
-            echo '<link rel=\"stylesheet\" href=\"' . new URL("css/" . $file) . '\">';
+            echo '<link rel="stylesheet" href="' . new URL("css/" . $file) . '">';
         }
     }
 
