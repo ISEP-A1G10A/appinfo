@@ -29,7 +29,7 @@ abstract class AppPage extends Page {
         if ($this->admin) {
             // require nav admin
         } else {
-            // require nav default
+            require "../app/views/app/nav/navShowcase.php";
         }
     }
 
