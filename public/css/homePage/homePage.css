@@ -1,5 +1,5 @@
 .home-section1 {
-    color: black;
+    color: white;
     background-image:url("etoile.jpg") ;
 }
 .home-section2 {
@@ -11,6 +11,7 @@
     flex-direction: row;
     position: sticky;
     background-color: #1D383E;
+    text-align: center;
 }
 
 .home-logo, .home-item-menu {
@@ -23,13 +24,12 @@
     -moz-border-radius: 10px;
     border-radius: 10px;
     background: #1D383E;
-    padding: 10px 20px 10px 20px;
-    border: solid white 4px;
+    padding: 5px 5px 5px 5px;
+    border: solid white 2px;
     text-decoration: none;
 }
 
 .btn:hover {
     background: #1f5661;
     text-decoration: none;
-    border: solid #ffb300 4px;
 }
