@@ -8,3 +8,5 @@
     <img class="flag" src="<?php echo new URL("img/flags/us.png")?>" alt="us_flag"/>
     <a class="link" href="">Se connecter</a>
 </nav>
+
+<!--nav-->
