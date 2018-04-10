@@ -1,0 +1,35 @@
+.home-section1 {
+    color: black;
+    background-image:url("etoile.jpg") ;
+}
+.home-section2 {
+    padding-top: 10px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    background-color: #1D383E;
+}
+
+.home-logo, .home-item-menu {
+    padding: 10px;
+}
+
+.btn {
+    color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background: #1D383E;
+    padding: 10px 20px 10px 20px;
+    border: solid white 4px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #1f5661;
+    text-decoration: none;
+    border: solid #ffb300 4px;
+}

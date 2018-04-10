@@ -11,7 +11,9 @@ body {
     font-family: Roboto, sans-serif;
 }
 
-* { box-sizing: border-box; }
+* { box-sizing: border-box;
+    color: #d32f2f;
+}
 
 /* RESPONSIVE */
 /*.col-1 { width: 8.33%; }*/
