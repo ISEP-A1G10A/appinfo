@@ -12,6 +12,6 @@ class HomePage extends AppPage {
     }
 
     protected function renderContent() {
-        require "../app/views/app/homePage.php";
+        require "../app/views/app/home/homePage.php";
     }
 }

@@ -26,6 +26,10 @@ function getPageAfterForm($p) {
     return "404";
 }
 
+function handleForm() {
+
+}
+
 function handleAutoload() {
     require '../app/entities/Autoloader.php';
     autoloader::register();
@@ -68,6 +72,11 @@ if (isset($_SERVER['REDIRECT_URL'])) { // ex: localhost/appinfo/public/home/
 $connected = false; // to handle
 if (startswith($p, "form/")) { // handle form action and redirection
     $p = getPageAfterForm($p);
+    if (substr($p, -1) != "/") {
+        $p .= "/";
+    }
+    header("Location: http://localhost/appinfo/public/" . $p);
+    die();
 }
 if (!$connected) {
     $page = getPage(Routes::getShowcaseRoutes(), $p);
