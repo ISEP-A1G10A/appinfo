@@ -1,10 +1,9 @@
-.design-btn-flat-clasic{
+.design-btn-flat-classic{
     position: relative;
     top: 14px;
     height: 5.2%;
     width: 140px;
     border-radius: 5px;
-    /*border: 2px solid #1d383e;*/
     padding: 5px 10px;
     font-family: Roboto;
     font-size: 1.125em;
@@ -13,7 +12,6 @@
     transition: background-color .2s linear;
 }
 
-.design-btn-flat-clasic:hover{
+.design-btn-flat-classic:hover{
     background-color: #1f5661;
-
 }

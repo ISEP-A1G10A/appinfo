@@ -1,34 +1,35 @@
 nav{
-    height: 50px;
+    height: 2%;
     background-color: #1D383E;
 }
-/*nav:hover{
-    transition: opacity .2s linear;
-    opacity: 1;
-}*/
+
+.left{
+    display: inline-block;
+    padding: 1% 1% 1% 1.5%;
+}
 
 .right{
     float: right;
-    margin-right: 1%;
+    display: inline-block;
+    align-content: right;
+    width: 23%;
+    padding: 1%;
 }
 
 .logo{
-    margin-left: 1%;
+    position: relative;
+    top: 4px;
     width: 45px;
     height: auto;
 }
 
 .txt{
     position: relative;
-    top: -5px;
     font-family: Roboto;
     font-size: 3em;
     color: white;
 }
 
-.flag{
-    height: 45px;
-    padding-right: 10px;
-    /*opacity: 0;*/
+[id=button]{
+    margin-left: 20%;
 }
-
