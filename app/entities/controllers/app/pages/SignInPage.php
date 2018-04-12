@@ -9,6 +9,6 @@ class SignInPage extends AppPage {
     }
 
     protected  function renderContent() {
-
+        require "../app/views/app/signIn/signInPage.php";
     }
 }

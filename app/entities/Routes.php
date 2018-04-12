@@ -4,7 +4,8 @@ abstract class Routes {
     private static $appRoutes = [
         "showcase"    => [
             "home" => [HomePage::class],
-            "test" => [TestPage::class]
+            "test" => [TestPage::class],
+            "sign-in" => [SignInPage::class],
 //        "users/{}"           => [UserPage::class],
 //        "users/{}/infos"     => [UserPage::class, ["infos"]], // modify informations form : display = none; et bouton "modify" JS change valeurs, au clic je submit la form
 //        "users/{}/houses"    => [UserPage::class, ["houses"]],
@@ -19,7 +20,7 @@ abstract class Routes {
             "418" => [Status418Page::class]
         ],
         "form"        => [
-            "connection" => [ConnectionForm::class]
+            "connection" => [ConnectionForm::class],
         ]
     ];
 

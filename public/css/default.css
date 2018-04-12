@@ -11,7 +11,11 @@ body {
     font-family: Roboto, sans-serif;
 }
 
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 /* RESPONSIVE */
 /*.col-1 { width: 8.33%; }*/
