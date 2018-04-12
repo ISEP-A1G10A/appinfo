@@ -9,6 +9,7 @@ abstract class AppPage extends Page {
         "design/designTextInput.css",
     ];
     private $jsFiles = [
+        "design/designButtons.js",
     ];
     private $admin;
     protected $page;

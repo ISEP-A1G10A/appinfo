@@ -1,13 +1,81 @@
-.design-btn-raised {
+.design-btn-raised, .design-btn-flat {
     font-size: 15px;
     font-weight: 400;
     border: none;
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 3px;
     letter-spacing: 0.05px;
+    text-decoration: none;
 }
 
-.design-btn-raised:hover {
+.design-btn-raised:hover, .design-btn-flat:hover {
     cursor: pointer;
-    opacity: 0.8;
+}
+
+.design-btn-flat {
+    background: none;
+}
+
+/* FLAT ANIMATION */
+
+.design-btn-flat.in {
+    animation: flat-in;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.design-btn-flat.out {
+    animation: flat-out;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flat-in {
+    from {
+        background: none;
+    }
+    to {
+        background-color: #eee;
+        opacity: 0.8;
+    }
+}
+
+@keyframes flat-out {
+    from {
+        background-color: #eee;
+        opacity: 0.8;
+    }
+    to {
+        background: none;
+    }
+}
+
+/* RAISED ANIMATION */
+
+.design-btn-raised.in {
+    animation: raised-in;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.design-btn-raised.out {
+    animation: raised-out;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes raised-in {
+    from { }
+    to {
+        opacity: 0.8;
+    }
+}
+
+@keyframes raised-out {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+    }
 }
