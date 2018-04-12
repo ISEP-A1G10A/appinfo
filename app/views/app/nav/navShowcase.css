@@ -1,34 +1,39 @@
 nav{
     height: 60px;
-    display: flex;
-    align-items: center;
     border-bottom: solid #ffb300;
     background-color: white;
 }
 
-nav img.logo{
-    height: 40px;
+.right{
+    float: right;
 }
 
-nav span.txt{
+.logo{
+    width: 45px;
+    height: auto;
+}
+
+.txt{
+    position: relative;
+    top: -5px;
     font-family: Roboto;
-    font-size: 48px;
-    padding-right: 720px;
+    font-size: 3em;
 }
 
-nav img.flag{
+.flag{
     height: 45px;
     padding-right: 10px;
 }
 
-nav a.link{
-    height: 40px;
+.link{
+    position: relative;
+    top: -16px;
+    height: 5.2%;
     width: 140px;
     border-radius: 15px;
     border: 2px solid #1d383e;
-    padding-left: 17px;
-    padding-top: 7px;
+    padding: 5px 10px;
     font-family: Roboto;
-    font-size: 18px;
-    color: black;
+    font-size: 1.125em;
+    color: #1d383e;
 }
