@@ -19,18 +19,18 @@
 /* FLAT ANIMATION */
 
 .design-btn-flat.in {
-    animation: flat-in;
+    animation: design-button-flat-in;
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
 }
 
 .design-btn-flat.out {
-    animation: flat-out;
+    animation: design-button-flat-out;
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
 }
 
-@keyframes flat-in {
+@keyframes design-button-flat-in {
     from {
         background: none;
     }
@@ -40,7 +40,7 @@
     }
 }
 
-@keyframes flat-out {
+@keyframes design-button-flat-out {
     from {
         background-color: #eee;
         opacity: 0.8;
@@ -53,25 +53,25 @@
 /* RAISED ANIMATION */
 
 .design-btn-raised.in {
-    animation: raised-in;
+    animation: design-button-raised-in;
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
 }
 
 .design-btn-raised.out {
-    animation: raised-out;
+    animation: design-button-raised-out;
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
 }
 
-@keyframes raised-in {
+@keyframes design-button-raised-in {
     from { }
     to {
         opacity: 0.8;
     }
 }
 
-@keyframes raised-out {
+@keyframes design-button-raised-out {
     from {
         opacity: 0.8;
     }

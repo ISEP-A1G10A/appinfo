@@ -1,4 +1,4 @@
-.design-input-classic {
+.design-textInput-classic {
     border: none;
     border-bottom: 1px solid lightgrey;
     font-size: 18px;
@@ -6,4 +6,36 @@
     margin-bottom: 20px;
     background: none;
     width: 100%;
+}
+
+/* CLASSIC ANIMATION */
+
+.design-textInput-classic.focus {
+    animation: design-inputText-focus;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+.design-textInput-classic.not-focus {
+    animation: design-inputText-not-focus;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes design-inputText-focus {
+    from {
+        border-bottom: 1px solid lightgrey;
+    }
+    to {
+        border-bottom: 1px solid gray;
+    }
+}
+
+@keyframes design-inputText-not-focus {
+    from {
+        border-bottom: 1px solid gray;
+    }
+    to {
+        border-bottom: 1px solid lightgrey;
+    }
 }
