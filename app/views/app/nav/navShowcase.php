@@ -1,5 +1,6 @@
 <style>
     <?php include 'navShowcase.css'; ?>
+    <?php include 'designButton.css'; ?>
 </style>
 <nav>
     <span>
@@ -7,8 +8,12 @@
         <span class="txt">LUXO</span>
     </span>
     <span class="right">
-        <img class="flag" src="<?php echo new URL("img/flags/fr.png")?>" alt="fr_flag"/>
-        <img class="flag" src="<?php echo new URL("img/flags/us.png")?>" alt="us_flag"/>
-        <a class="link" href="">Se connecter</a>
+        <!--<img class="flag" src="<?php /*echo new URL("img/flags/France.png")*/?>" alt="fr_flag"/>
+        <img class="flag" src="<?php /*echo new URL("img/flags/United-States.png")*/?>" alt="us_flag"/>-->
+        <span class="design-btn-flat-clasic">FR</span>
+        <span class="design-btn-flat-clasic">EN</span>
+        <span class="design-btn-flat-clasic">CONNEXION</span>
+
+
     </span>
 </nav>
