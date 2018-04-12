@@ -6,7 +6,10 @@ $homePage = [
     "title" => "accueil"
 ];
 $signIn = [
-    "title" => "connexion"
+    "title" => "connexion",
+    "forget_password" => "Mot de passe oublié",
+    "placeholder_email" => "Email",
+    "placeholder_password" => "Mot de passe"
 ];
 $status404Page = [
     "title"     => "404 - Page introuvable",
