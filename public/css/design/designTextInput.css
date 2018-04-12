@@ -1,0 +1,9 @@
+.design-input-classic {
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    font-size: 18px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    background: none;
+    width: 100%;
+}

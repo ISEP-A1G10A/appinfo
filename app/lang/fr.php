@@ -15,8 +15,9 @@ $status404Page = [
 $formErrorsCommon = [
 ];
 $formErrorsConnection = [
-    "email_empty" => "Veuillez entrer un email",
-    "email_not_valid" => "Veuillez entrer un email valide"
+    "email_empty" => "Veuillez entrer votre email",
+    "email_not_valid" => "Veuillez entrer un email valide",
+    "password_empty" => "Veuillez entrer votre mot de passe"
 ];
 $formErrors = [
     "common" => $formErrorsCommon,

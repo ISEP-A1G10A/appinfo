@@ -1,0 +1,23 @@
+.signIn {
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.signIn-form {
+    width: 500px;
+}
+
+.signIn-form-title {
+    background-color: #1f5661;
+}
+
+.signIn-form-btn {
+    background-color: #1f5661;
+    color: white;
+}
+
+body {
+    background-color: whitesmoke;
+}

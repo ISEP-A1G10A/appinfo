@@ -1,0 +1,13 @@
+.design-btn-raised {
+    font-size: 15px;
+    font-weight: 400;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    letter-spacing: 0.05px;
+}
+
+.design-btn-raised:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}

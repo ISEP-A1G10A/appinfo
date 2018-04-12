@@ -4,6 +4,9 @@ abstract class AppPage extends Page {
     protected abstract function renderContent();
 
     private $cssFiles = [
+        "design/designButtons.css",
+        "design/designForm.css",
+        "design/designTextInput.css",
     ];
     private $jsFiles = [
     ];

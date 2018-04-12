@@ -10,6 +10,9 @@ class ConnectionForm extends Form {
                 [function ($toTest) {return isEmpty($toTest);}, "connection", "email_empty"],
                 [function ($toTest) {return !isEmail($toTest);}, "connection", "email_not_valid"],
             ]),
+            new Verification($lang, "POST", "password", [
+                [function ($toTest) {return isEmpty($toTest);}, "connection", "password_empty"],
+            ])
         ]);
         $this->error = $this->runVerifications();
     }
