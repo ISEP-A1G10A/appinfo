@@ -6,8 +6,11 @@
         </a>
     </span>
     <span class="navShowcase-right">
-        <span class="design-btn-flat navShowcase-lang-btn">FR</span>
-        <span class="design-btn-flat navShowcase-lang-btn">EN</span>
+        <form action="<?php echo new URL(true) ?>" method="post">
+            <input name="form" value="nav-showcase" type="hidden">
+            <input name="fr" class="design-btn-flat navShowcase-lang-btn" type="submit" value="FR">
+            <input name="en" class="design-btn-flat navShowcase-lang-btn" type="submit" value="EN">
+        </form>
         <a class="design-btn-raised navShowcase-connect-btn" href="<?php echo new URL("sign-in/") ?>">CONNEXION</a>
     </span>
 </nav>

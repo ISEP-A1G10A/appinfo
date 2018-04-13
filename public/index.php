@@ -27,7 +27,6 @@ function getPageAfterForm($p) {
 }
 
 function handleForm() {
-
 }
 
 function handleAutoload() {
@@ -44,8 +43,12 @@ function handleSession() {
 
 function handleLanguage() {
     // get changement language
-    if (isset($_GET['l'])) {
-        $_SESSION['settings']['language'] = $_GET['l'];
+    if (isset($_POST['form']) && $_POST['form'] === "nav-showcase") {
+        if (isset($_POST['en'])) {
+            $_SESSION['settings']['language'] = "en";
+        } else {
+            $_SESSION['settings']['language'] = "fr";
+        }
     }
     // default language
     if (!isset($_SESSION['settings']['language'])) {

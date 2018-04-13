@@ -5,7 +5,11 @@ class URL {
     private static $urlBase;
 
     public function __construct($url) {
-        $this->url = $url;
+        if ($url === true) {
+            $this->url = substr($_SERVER['REQUEST_URI'], strlen(dirname($_SERVER['SCRIPT_NAME'])) + 1);
+        } else {
+            $this->url = $url;
+        }
     }
 
     /**
