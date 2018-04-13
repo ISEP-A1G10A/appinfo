@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 31, 2018 at 02:58 PM
+-- Generation Time: Apr 13, 2018 at 08:36 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.2
 
@@ -31,10 +31,10 @@ SET time_zone = "+00:00";
 CREATE TABLE `gear` (
   `id` int(11) NOT NULL,
   `type` int(11) NOT NULL,
-  `reference` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `label` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `reference` varchar(255) COLLATE utf8_bin NOT NULL,
+  `label` varchar(255) COLLATE utf8_bin NOT NULL,
   `room` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -44,9 +44,10 @@ CREATE TABLE `gear` (
 
 CREATE TABLE `gear_action` (
   `id` int(11) NOT NULL,
-  `label` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `instruction` varchar(1023) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `label` varchar(255) COLLATE utf8_bin NOT NULL,
+  `instruction` varchar(1023) COLLATE utf8_bin NOT NULL,
+  `gear` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -56,8 +57,9 @@ CREATE TABLE `gear_action` (
 
 CREATE TABLE `gear_category` (
   `id` int(11) NOT NULL,
-  `label` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `label` varchar(255) COLLATE utf8_bin NOT NULL,
+  `isCaptor` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -67,8 +69,8 @@ CREATE TABLE `gear_category` (
 
 CREATE TABLE `gear_company` (
   `id` int(11) NOT NULL,
-  `label` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `label` varchar(255) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -80,9 +82,11 @@ CREATE TABLE `gear_event` (
   `id` int(11) NOT NULL,
   `gear` int(11) NOT NULL,
   `action` int(11) NOT NULL,
-  `data` varchar(1023) NOT NULL,
-  `user` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `data` varchar(1023) CHARACTER SET latin1 NOT NULL,
+  `user` int(11) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `unit` varchar(7) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -93,10 +97,10 @@ CREATE TABLE `gear_event` (
 CREATE TABLE `gear_type` (
   `id` int(11) NOT NULL,
   `company` int(11) NOT NULL,
-  `label` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `serial_number` varchar(515) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `label` varchar(255) COLLATE utf8_bin NOT NULL,
+  `serial_number` varchar(515) COLLATE utf8_bin NOT NULL,
   `category` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -108,14 +112,14 @@ CREATE TABLE `home` (
   `id` int(11) NOT NULL,
   `main_user` int(11) NOT NULL,
   `type` int(11) NOT NULL,
-  `surface` varchar(11) NOT NULL,
-  `address_line_1` varchar(1023) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `address_line_2` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `address_zip_code` varchar(10) NOT NULL,
-  `address_city` varchar(127) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `address_country` varchar(127) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `label` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `surface` varchar(11) CHARACTER SET latin1 NOT NULL,
+  `address_line_1` varchar(1023) COLLATE utf8_bin NOT NULL,
+  `address_line_2` varchar(255) COLLATE utf8_bin NOT NULL,
+  `address_zip_code` varchar(10) CHARACTER SET latin1 NOT NULL,
+  `address_city` varchar(127) COLLATE utf8_bin NOT NULL,
+  `address_country` varchar(127) COLLATE utf8_bin NOT NULL,
+  `label` varchar(255) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -125,8 +129,8 @@ CREATE TABLE `home` (
 
 CREATE TABLE `home_type` (
   `id` int(11) NOT NULL,
-  `label` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `label` varchar(255) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -138,7 +142,7 @@ CREATE TABLE `link_gear_action_gear_category` (
   `id` int(11) NOT NULL,
   `action` int(11) NOT NULL,
   `category` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -150,7 +154,7 @@ CREATE TABLE `link_user_home` (
   `id` int(11) NOT NULL,
   `user` int(11) NOT NULL,
   `home` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -163,8 +167,8 @@ CREATE TABLE `message` (
   `user` int(11) NOT NULL,
   `object` int(11) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `content` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `content` text COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -174,9 +178,9 @@ CREATE TABLE `message` (
 
 CREATE TABLE `message_object` (
   `id` int(11) NOT NULL,
-  `label` varchar(255) NOT NULL,
-  `email_prefix` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `label` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `email_prefix` varchar(255) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -187,8 +191,8 @@ CREATE TABLE `message_object` (
 CREATE TABLE `room` (
   `id` int(11) NOT NULL,
   `type` int(11) NOT NULL,
-  `label` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `label` varchar(255) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -198,8 +202,8 @@ CREATE TABLE `room` (
 
 CREATE TABLE `room_type` (
   `id` int(11) NOT NULL,
-  `label` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `label` varchar(255) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -209,13 +213,20 @@ CREATE TABLE `room_type` (
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `first_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `last_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `first_name` varchar(255) COLLATE utf8_bin NOT NULL,
+  `last_name` varchar(255) COLLATE utf8_bin NOT NULL,
   `type` int(11) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `phone` varchar(20) NOT NULL,
-  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `email` varchar(255) COLLATE utf8_bin NOT NULL,
+  `phone` varchar(20) CHARACTER SET latin1 NOT NULL,
+  `password` varchar(255) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `first_name`, `last_name`, `type`, `email`, `phone`, `password`) VALUES
+(1, 'test', 'test', 1, 'test@test.com', '0000000000', '$6$rounds=3232$yRyJDM8YPUMMRAJF$80d8yrKfQdx.BEleBxPuCxJh2IJp3IRJM32poxmYJcZ/MBoyvYPSVN2MeP.9Yrl.P1DBSkJ9mbBz0DhDeckRc0');
 
 -- --------------------------------------------------------
 
@@ -226,9 +237,9 @@ CREATE TABLE `user` (
 CREATE TABLE `user_tempory_password` (
   `id` int(11) NOT NULL,
   `user` int(11) NOT NULL,
-  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `password` varchar(255) COLLATE utf8_bin NOT NULL,
   `expiration_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -238,8 +249,8 @@ CREATE TABLE `user_tempory_password` (
 
 CREATE TABLE `user_type` (
   `id` int(11) NOT NULL,
-  `label` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `label` varchar(255) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Dumping data for table `user_type`
@@ -435,7 +446,7 @@ ALTER TABLE `room_type`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `user_tempory_password`
 --
