@@ -1,14 +1,17 @@
 <style>
     <?php include 'navShowcase.css'; ?>
+    <?php include 'designButton.css'; ?>
 </style>
 <nav>
-    <span>
+    <span class="left">
         <img class="logo" src="<?php echo new URL("img/logos/domisep_mini.png")?>" alt="logo"/>
         <span class="txt">LUXO</span>
     </span>
     <span class="right">
-        <img class="flag" src="<?php echo new URL("img/flags/fr.png")?>" alt="fr_flag"/>
-        <img class="flag" src="<?php echo new URL("img/flags/us.png")?>" alt="us_flag"/>
-        <a class="link" href="">Se connecter</a>
+        <span class="design-btn-flat-classic">FR</span>
+        <span class="design-btn-flat-classic">EN</span>
+        <span id="button">
+            <span class="design-btn-flat-classic">CONNEXION</span>
+        </span>
     </span>
 </nav>
