@@ -50,6 +50,10 @@
     margin: 0 5px;
 }
 
+.navShowcase-lang-btn.in {
+    color: #1f5661;
+}
+
 .navShowcase-connect-btn {
     margin: 0 20px;
     background-color: #ffb300;
