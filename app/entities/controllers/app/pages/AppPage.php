@@ -41,7 +41,7 @@ abstract class AppPage extends Page {
     protected function initializationForm($name, $formClass) {
         $form = new $formClass();
         $this->forms[$name] = $form;
-        $this->initilizationErrors("connection");
+        $this->initilizationErrors($name);
         if ($form->isValid()) {
             $form->redirect();
         }
@@ -49,7 +49,10 @@ abstract class AppPage extends Page {
     }
 
     protected function getFormValue($form, $name) {
-        return $this->forms[$form]->getValue($name);
+        if (isset($this->forms[$form])) {
+            return $this->forms[$form]->getValue($name);
+        }
+        return "";
     }
 
     protected $errors = [];

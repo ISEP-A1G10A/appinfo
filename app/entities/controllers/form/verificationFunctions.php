@@ -5,5 +5,5 @@ function isEmpty($toTest) {
 }
 
 function isEmail($toTest) {
-    return false; // TODO
+    return filter_var($toTest, FILTER_VALIDATE_EMAIL);
 }

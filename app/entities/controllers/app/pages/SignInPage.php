@@ -19,10 +19,20 @@ class SignInPage extends AppPage {
         ERRORS
     */
     private function displayErrors() {
+        $errorTexts = [];
+        $display = false;
         foreach ($this->errors as $name => $text) {
             if (!endswith($name, "_empty")) {
-                echo "<span class='design-form-error'>" . $text . "</span>";
+                $display = true;
+                array_push($errorTexts, "<span class='design-form-error'><img class='design-form-error-logo' src='" . new URL("img/icons/cancel.png") . "'>" . $text . "</span>");
             }
+        }
+        if ($display) {
+            echo "<div class='design-form-errors'>";
+            foreach ($errorTexts as $errorText) {
+                echo $errorText;
+            }
+            echo "<div/>";
         }
     }
 

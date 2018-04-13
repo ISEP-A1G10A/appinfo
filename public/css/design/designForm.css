@@ -10,7 +10,7 @@
 }
 
 .design-form-inputs {
-    margin: 40px 40px 20px 40px;
+    margin: 20px 20px 40px;
     padding: 10px 0 0;
 }
 
@@ -35,4 +35,30 @@
 
 .design-form-link {
     color: gray;
+}
+
+.design-form-error {
+    background-color: indianred;
+    border: 1px solid red;
+    color: white;
+    padding: 5px;
+    font-size: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.design-form-errors {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.design-form-errors.hidden {
+    display: none;
+}
+
+.design-form-error-logo {
+    width: 20px;
+    margin-right: 7px;
 }
