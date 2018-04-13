@@ -5,26 +5,23 @@ if (!isset($_SESSION)) {
 require "verificationFunctions.php";
 
 class ConnectionForm extends Form {
-    private $error;
-
-    public function __construct($lang) {
+    public function __construct() {
+        $this->method = "POST";
         $this->addToVerifications([
-            new Verification($lang, "POST", "email", [
-                [function ($toTest) {return isEmpty($toTest);}, "connection", "email_empty"],
-                [function ($toTest) {return !isEmail($toTest);}, "connection", "email_not_valid"],
+            new Verification("POST", "email", [
+                [function ($toTest) { return isEmpty($toTest); }, "connection", "email_empty"],
+                [function ($toTest) { return !isEmail($toTest); }, "connection", "email_not_valid"],
             ]),
-            new Verification($lang, "POST", "password", [
-                [function ($toTest) {return isEmpty($toTest);}, "connection", "password_empty"],
+            new Verification("POST", "password", [
+                [function ($toTest) { return isEmpty($toTest); }, "connection", "password_empty"],
             ])
         ]);
-        $_SESSION["errors"]["connection"] = $this->runVerifications();
+        $this->runVerifications();
+        $_SESSION["errors"]["connection"] = $this->getErrors();
+        // if valid action
     }
 
-    public function getPage() {
-        if ($this->error !== []) {
-            return "sign-in";
-        } else {
-            return "home";
-        }
+    public function getRedirectionPage() {
+        return "home";
     }
 }

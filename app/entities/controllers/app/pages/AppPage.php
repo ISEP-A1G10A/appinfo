@@ -31,9 +31,33 @@ abstract class AppPage extends Page {
         $this->admin = $admin;
     }
 
+    protected $forms = [];
+
+    /** Create Form
+     * @param $name
+     * @param $formClass
+     * @return mixed
+     */
+    protected function initializationForm($name, $formClass) {
+        $form = new $formClass();
+        $this->forms[$name] = $form;
+        $this->initilizationErrors("connection");
+        if ($form->isValid()) {
+            $form->redirect();
+        }
+        return $form;
+    }
+
+    protected function getFormValue($form, $name) {
+        return $this->forms[$form]->getValue($name);
+    }
+
     protected $errors = [];
 
-    protected function initilizationErrors($category) {
+    /**
+     * @param $category string lang traduction error category ex: "connection"
+     */
+    private function initilizationErrors($category) {
         if (isset($_SESSION["errors"][$category])) {
             foreach ($_SESSION["errors"][$category] as $error) {
                 $this->errors = array_merge($this->errors, [$error[1] => $this->getErrorText($error)]);

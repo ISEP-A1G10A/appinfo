@@ -1,8 +1,9 @@
 <?php
 
 abstract class Form {
+    protected $method;
 
-    public abstract function getPage();
+    public abstract function getRedirectionPage();
 
     private $verifications = [];
 
@@ -10,11 +11,42 @@ abstract class Form {
         $this->verifications = array_merge($this->verifications, $toAdd);
     }
 
+    private $errors = [];
+
     protected function runVerifications() {
-        $errors = [];
         foreach ($this->verifications as $verification) {
-            $errors = array_merge($errors, $verification->run());
+            $this->errors = array_merge($this->errors, $verification->run());
         }
-        return $errors;
+    }
+
+    protected function getErrors() {
+        return $this->errors;
+    }
+
+    public function isValid() {
+        return $this->errors === [];
+    }
+
+    public function redirect() {
+        header("Location: http://localhost/appinfo/public/" . $this->getRedirectionPage() . "/");
+        die();
+    }
+
+    public function getValue($name) {
+        try {
+            if ($this->method === "POST") {
+                if (isset($_POST[$name])) {
+                    return $_POST[$name];
+                }
+            } elseif ($this->method === "GET") {
+                if (isset($_GET[$name])) {
+                    return $_GET[$name];
+                }
+            } else {
+                throw new MethodNotSupportedException($this->method);
+            }
+        } catch (MethodNotSupportedException $exception) {
+        }
+        return "";
     }
 }

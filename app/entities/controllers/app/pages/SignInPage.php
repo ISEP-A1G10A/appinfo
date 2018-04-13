@@ -3,7 +3,9 @@
 class SignInPage extends AppPage {
     public function __construct($lang) {
         $this->initilization("signIn", $lang);
-        $this->initilizationErrors("connection");
+        if (isset($_POST["form"]) && $_POST["form"] === "connection") {
+            $this->initializationForm("connection", ConnectionForm::class);
+        }
         $this->addToCssFiles([
             "signIn/signIn.css"
         ]);
@@ -19,14 +21,14 @@ class SignInPage extends AppPage {
     private function displayErrors() {
         foreach ($this->errors as $name => $text) {
             if (!endswith($name, "_empty")) {
-                echo "<span>" . $text . "</span>";
+                echo "<span class='design-form-error'>" . $text . "</span>";
             }
         }
     }
 
     // EMAIL
     private function isErrorEmail() {
-        return isset($this->errors["email_empty"]) or isset($this->errors["email_not_valid"]);
+        return isset($this->errors["email_empty"]) || isset($this->errors["email_not_valid"]);
     }
 
     private function gotErrorEmail() {

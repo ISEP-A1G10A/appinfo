@@ -1,17 +1,15 @@
 <?php
 
 class Verification {
-    private $lang, $method, $name, $functions;
+    private $method, $name, $functions;
 
     /**
      * Verification constructor.
-     * @param $lang
      * @param $method
      * @param $name
      * @param $functions
      */
-    public function __construct($lang, $method, $name, $functions) {
-        $this->lang = $lang;
+    public function __construct($method, $name, $functions) {
         $this->method = $method;
         $this->name = $name;
         $this->functions = $functions;
@@ -41,6 +39,7 @@ class Verification {
             foreach ($this->functions as $function) {
                 if ($function[0]($value)) {
                     array_push($errors, [$function[1], $function[2]]);
+                    return $errors;
                 }
             }
         }
