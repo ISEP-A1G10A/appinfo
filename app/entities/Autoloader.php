@@ -38,7 +38,10 @@ class Autoloader {
                 }
             } elseif (endswith($class, "Exception")) {
                 require 'exceptions/' . $class . '.php';
-            } else {
+            } elseif (endswith($class, "Table")) {
+                require '../app/db/' . $class . '.php';
+            }
+            else {
                 $file = $class . ".php";
                 if (file_exists("../app/entities/" . $file)) {
                     require $file;
