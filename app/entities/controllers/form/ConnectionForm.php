@@ -18,9 +18,10 @@ class ConnectionForm extends Form {
         ]);
         $this->runVerifications();
         if ($this->isValid()) {
-            $response = userTable::getUserOrError($this->getValue("email"), $this->getValue("password"));
+            $response = UserTable::getUserOrError($this->getValue("email"), $this->getValue("password"));
             if ($response[0] === "success") {
                 $_SESSION["user"]["id"] = $response[1]["id"];
+                $_SESSION["user"]["role"] = UserTypeTable::getRoleByTypeId($response[1]["type"]);
             } else {
             $this->addError($response[1]);
             }

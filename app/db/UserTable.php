@@ -1,6 +1,6 @@
 <?php
 
-abstract class userTable extends Table {
+abstract class UserTable extends Table {
     private static function getAllById($id) {
         $request = self::prepare("SELECT * FROM user WHERE id=:id");
         return $request->execute([
