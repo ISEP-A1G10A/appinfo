@@ -19,6 +19,10 @@ abstract class Form {
         }
     }
 
+    protected function addError($error) {
+        array_push($this->errors, $error);
+    }
+
     protected function getErrors() {
         return $this->errors;
     }
