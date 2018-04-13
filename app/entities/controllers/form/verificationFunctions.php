@@ -5,5 +5,5 @@ function isEmpty($toTest) {
 }
 
 function isEmail($toTest) {
-    return true; // TODO
+    return false; // TODO
 }

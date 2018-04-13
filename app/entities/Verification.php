@@ -18,22 +18,19 @@ class Verification {
     }
 
     public function run() {
-        $error = false;
+        $errors = [];
         try {
             if ($this->method === "GET") {
                 if (isset($_GET[$this->name])) {
                     $value = $_GET[$this->name];
                 } else {
-                    // TODO : call notifications->new($this->getError($this->functions["isEmpty"]))
-                    $error = true;
+                    array_push($errors, [$this->functions[0][1], $this->functions[0][2]]);
                 }
             } elseif ($this->method === "POST") {
                 if (isset($_POST[$this->name])) {
                     $value = $_POST[$this->name];
                 } else {
-                    // TODO : call notifications->new($this->getError($this->functions["isEmpty"]))
-//                    Logger::logDebug("verification_error " . $this->getError($this->functions["isEmpty"]));
-                    $error = true;
+                    array_push($errors, [$this->functions[0][1], $this->functions[0][2]]);
                 }
             } else {
                 throw new MethodNotSupportedException($this->method);
@@ -43,15 +40,10 @@ class Verification {
         if (isset($value)) {
             foreach ($this->functions as $function) {
                 if ($function[0]($value)) {
-                    // TODO : call notifications->new($this->getError($errorArray)) <--- need modifications
-                    $error = true;
+                    array_push($errors, [$function[1], $function[2]]);
                 }
             }
         }
-        return $error;
-    }
-
-    private function getError($errorArray) {
-        return Lang::getStrings($this->lang)["formErrors"][$errorArray[0]][$errorArray[1]];
+        return $errors;
     }
 }

@@ -1,4 +1,7 @@
 <?php
+if (!isset($_SESSION)) {
+    session_start();
+}
 require "verificationFunctions.php";
 
 class ConnectionForm extends Form {
@@ -14,11 +17,11 @@ class ConnectionForm extends Form {
                 [function ($toTest) {return isEmpty($toTest);}, "connection", "password_empty"],
             ])
         ]);
-        $this->error = $this->runVerifications();
+        $_SESSION["errors"]["connection"] = $this->runVerifications();
     }
 
     public function getPage() {
-        if ($this->error) {
+        if ($this->error !== []) {
             return "sign-in";
         } else {
             return "home";

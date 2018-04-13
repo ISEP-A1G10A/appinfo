@@ -6,4 +6,7 @@ $(".design-textInput-classic").focusin(
     function () {
         $(this).removeClass('focus').addClass('not-focus');
     }
+).bind('input', function () {
+        $(this).removeClass('error');
+    }
 );

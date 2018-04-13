@@ -11,12 +11,10 @@ abstract class Form {
     }
 
     protected function runVerifications() {
-        $error = false;
+        $errors = [];
         foreach ($this->verifications as $verification) {
-            if ($verification->run()) {
-                $error = true;
-            }
+            $errors = array_merge($errors, $verification->run());
         }
-        return $error;
+        return $errors;
     }
 }
