@@ -10,7 +10,7 @@
 }
 
 .design-form-inputs {
-    margin: 20px 20px 40px;
+    margin: 15px 20px 40px;
     padding: 10px 0 0;
 }
 
@@ -51,7 +51,7 @@
 .design-form-errors {
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 10px 10px -5px;
 }
 
 .design-form-errors.hidden {

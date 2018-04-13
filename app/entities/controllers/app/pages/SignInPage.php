@@ -32,7 +32,7 @@ class SignInPage extends AppPage {
             foreach ($errorTexts as $errorText) {
                 echo $errorText;
             }
-            echo "<div/>";
+            echo "</div>";
         }
     }
 
