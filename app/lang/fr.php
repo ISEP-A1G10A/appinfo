@@ -6,11 +6,11 @@ $homePage = [
     "title" => "accueil"
 ];
 $signIn = [
-    "title" => "connexion",
-    "forget_password" => "Mot de passe oublié",
-    "placeholder_email" => "Email",
-    "placeholder_email_wrong" => "Veuillez entrer un email",
-    "placeholder_password" => "Mot de passe",
+    "title"                      => "connexion",
+    "forget_password"            => "Mot de passe oublié",
+    "placeholder_email"          => "Email",
+    "placeholder_email_wrong"    => "Veuillez entrer un email",
+    "placeholder_password"       => "Mot de passe",
     "placeholder_password_wrong" => "Veuillez entrer un mot de passe"
 ];
 $status404Page = [
@@ -20,13 +20,14 @@ $status404Page = [
 $formErrorsCommon = [
 ];
 $formErrorsConnection = [
-    "email_empty" => "Veuillez entrer votre email",
-    "email_not_valid" => "Veuillez entrer un email valide",
-    "password_empty" => "Veuillez entrer votre mot de passe",
-    "wrong_credentials" => "Identifiants invalides"
+    "email_empty"              => "Veuillez entrer votre email",
+    "email_not_valid"          => "Veuillez entrer un email valide",
+    "no_user_with_given_email" => "Email invalide",
+    "password_empty"           => "Veuillez entrer votre mot de passe",
+    "wrong_password"           => "Mot de passe invalide"
 ];
 $formErrors = [
-    "common" => $formErrorsCommon,
+    "common"     => $formErrorsCommon,
     "connection" => $formErrorsConnection
 ];
 return [

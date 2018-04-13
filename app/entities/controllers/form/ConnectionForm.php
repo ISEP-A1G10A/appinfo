@@ -18,8 +18,12 @@ class ConnectionForm extends Form {
         ]);
         $this->runVerifications();
         if ($this->isValid()) {
-            // TODO : VERIFY CREDENTIALS
-            $this->addError(["connection", "wrong_credentials"]);
+            $response = userTable::getUserOrError($this->getValue("email"), $this->getValue("password"));
+            if ($response[0] === "success") {
+                $_SESSION["user"]["id"] = $response[1]["id"];
+            } else {
+            $this->addError($response[1]);
+            }
         }
         $_SESSION["errors"]["connection"] = $this->getErrors();
     }

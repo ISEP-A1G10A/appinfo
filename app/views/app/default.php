@@ -10,6 +10,9 @@
 </head>
 <body>
     <?php
+    if (isset($_SESSION["user"]["id"])) {
+        echo "USER CONNECTED WITH ID : " . $_SESSION["user"]["id"] . "<br>";
+    }
     $this->renderNav();
     $this->renderContent();
     $this->displayJsFiles();
