@@ -16,19 +16,20 @@ abstract class AppPage extends Page {
         "design/designButtons.js",
         "design/designTextInput.js",
     ];
-    private $admin;
+    private $section;
     protected $page;
 
     /** Call during children's contruction
+     * @param $page
      * @param $lang string ex: "fr"
-     * @param $admin boolean
+     * @param string $section
      */
-    protected function initilization($page, $lang, $admin = false) {
+    protected function initilization($page, $lang, $section = "showcase") {
         $this->page = $page;
         $this->initializationStrings($lang);
         $this->addToCssFiles($this->cssFiles);
         $this->addToJsFiles($this->jsFiles);
-        $this->admin = $admin;
+        $this->section = $section;
     }
 
     protected $forms = [];
@@ -80,9 +81,11 @@ abstract class AppPage extends Page {
      * Render nav between admin and default
      */
     protected function renderNav() {
-        if ($this->admin) {
+        if ($this->section === "admin") {
             // require nav admin
-        } else {
+        } elseif ($this->section === "connected") {
+            // require nav connected
+        } elseif ($this->section === "showcase") {
             require "../app/views/app/nav/navShowcase.php";
         }
     }
