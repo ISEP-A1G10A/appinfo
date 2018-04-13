@@ -1,4 +1,5 @@
 <?php
+// pages
 $main = [
     "language" => "fr"
 ];
@@ -17,6 +18,7 @@ $status404Page = [
     "title"     => "404 - Page introuvable",
     "not_found" => "Page non trouvée"
 ];
+// forms
 $formErrorsCommon = [
 ];
 $formErrorsConnection = [
@@ -30,10 +32,19 @@ $formErrors = [
     "common"     => $formErrorsCommon,
     "connection" => $formErrorsConnection
 ];
+// nav
+$navShowcase = [
+    "connection" => "connexion"
+];
+$navs = [
+    "showcase" => $navShowcase
+];
+// array
 return [
     "main"       => $main,
     "home"       => $homePage,
     "signIn"     => $signIn,
     "404"        => $status404Page,
-    "formErrors" => $formErrors
+    "formErrors" => $formErrors,
+    "navs"       => $navs
 ];
