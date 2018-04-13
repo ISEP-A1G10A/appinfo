@@ -14,7 +14,7 @@
 
 .design-textInput-classic.error::placeholder {
     color: red;
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 /* CLASSIC ANIMATION */
