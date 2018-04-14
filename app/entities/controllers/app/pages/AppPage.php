@@ -84,7 +84,7 @@ abstract class AppPage extends Page {
         if ($this->section === "admin") {
             // require nav admin
         } elseif ($this->section === "connected") {
-            // require nav connected
+            require "../app/views/app/nav/navConnected.php";
         } elseif ($this->section === "showcase") {
             require "../app/views/app/nav/navShowcase.php";
         }
