@@ -32,6 +32,6 @@ class LogsPage extends AppPage {
                 ]);
             }
         }
-        return $logs;
+        return array_reverse($logs);
     }
 }
