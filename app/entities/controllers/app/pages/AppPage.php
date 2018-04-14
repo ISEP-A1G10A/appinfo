@@ -81,8 +81,8 @@ abstract class AppPage extends Page {
      * Render nav between admin and default
      */
     protected function renderNav() {
-        if ($this->section === "admin") {
-            // require nav admin
+        if ($this->section === "adminsys") {
+            require "../app/views/app/nav/navShowcase.php"; // TODO
         } elseif ($this->section === "connected") {
             require "../app/views/app/nav/navConnected.php";
         } elseif ($this->section === "showcase") {

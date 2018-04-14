@@ -35,8 +35,8 @@ function handleAutoload() {
 }
 
 function handleSession() {
-    session_start();
-    if (empty($_SESSION)) {
+    if (!isset($_SESSION)) {
+        session_start();
         Logger::logConnection();
     }
 }
@@ -56,6 +56,13 @@ function handleLanguage() {
     }
 }
 
+function handleUserRole() {
+    if (isset($_SESSION['user']['role'])) {
+        return $_SESSION['user']['role'];
+    }
+    return "showcase";
+}
+
 // SCRIPT
 handleAutoload();
 handleSession();
@@ -72,8 +79,10 @@ if (isset($_SERVER['REDIRECT_URL'])) { // ex: localhost/appinfo/public/home/
 } else { // ex: localhost/appinfo/public/
     $p = "home";
 }
-$connected = false; // to handle
-if (!$connected) {
+$user_role = handleUserRole(); // to handle
+if ($user_role === "admin_sys") {
+    $page = getPage(Routes::getAdminSysRoutes(), $p);
+} else {
     $page = getPage(Routes::getShowcaseRoutes(), $p);
 }
 // render

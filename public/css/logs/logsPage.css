@@ -1,0 +1,79 @@
+.logs-table {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.logs-tbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.logs-tr, .logs-td {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logs-tr:first-child {
+    border-bottom: 1px solid gray;
+}
+
+.logs-tr > .logs-td {
+    padding: 5px;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+}
+
+.logs-th {
+    flex: 1;
+}
+
+.logs-td:last-child, .logs-th:last-child {
+    border-right: 1px solid gray;
+}
+
+.logs-title {
+    background-color: #1d383e;
+    color: white;
+    font-weight: 800;
+    padding: 10px;
+}
+
+.logs-search {
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+}
+
+.logs-search-input {
+    width: 100%;
+    border: none;
+    padding: 5px;
+}
+
+.logs-colum-date, .logs-colum-hour, .logs-colum-ip-address {
+    max-width: 110px;
+    min-width: 110px;
+}
+
+.logs-colum-type {
+    max-width: 160px;
+    min-width: 160px;
+}
+
+.logs-colum-session-id {
+    max-width: 290px;
+    min-width: 290px;
+}
+
+.logs-colum-value {
+    min-width: 200px;
+    justify-content: flex-start;
+}
+
+.logs-colum-value.logs-td {
+    padding-left: 10px;
+}

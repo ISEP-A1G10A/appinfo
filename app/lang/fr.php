@@ -6,13 +6,23 @@ $main = [
 $homePage = [
     "title" => "accueil"
 ];
-$signIn = [
+$signInPage = [
     "title"                      => "connexion",
     "forget_password"            => "Mot de passe oublié",
     "placeholder_email"          => "Email",
     "placeholder_email_wrong"    => "Veuillez entrer un email",
     "placeholder_password"       => "Mot de passe",
     "placeholder_password_wrong" => "Veuillez entrer un mot de passe"
+];
+$logsPage = [
+    "title"      => "logs",
+    "date"       => "date",
+    "hour"       => "heure",
+    "type"       => "type",
+    "session-id" => "session ID",
+    "ip-address" => "adresse IP",
+    "value"      => "valeur",
+    "search"     => "rechercher"
 ];
 $status404Page = [
     "title"     => "404 - Page introuvable",
@@ -43,7 +53,8 @@ $navs = [
 return [
     "main"       => $main,
     "home"       => $homePage,
-    "signIn"     => $signIn,
+    "signIn"     => $signInPage,
+    "logs"       => $logsPage,
     "404"        => $status404Page,
     "formErrors" => $formErrors,
     "navs"       => $navs

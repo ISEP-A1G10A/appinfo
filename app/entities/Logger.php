@@ -16,7 +16,7 @@ abstract class Logger {
      * LOG TYPES
      */
     public static function logException($exceptionName) {
-        self::log("log.txt", "exception", $exceptionName);
+        self::log("log_debug.txt", "exception", $exceptionName);
     }
 
     public static function logConnection() {
