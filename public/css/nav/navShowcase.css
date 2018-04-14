@@ -1,4 +1,4 @@
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 430px) {
     .navShowcase-title {
         display: none;
     }
@@ -24,7 +24,7 @@
 
 .navShowcase-right {
     justify-content: flex-end;
-    min-width: 300px;
+    min-width: 260px;
 }
 
 .navShowcase-logo {
@@ -55,7 +55,9 @@
 }
 
 .navShowcase-lang-btn {
-    margin: 0 5px;
+    margin: 0 2px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .navShowcase-lang-btn.in {

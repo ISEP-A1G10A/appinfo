@@ -10,7 +10,6 @@ abstract class AppPage extends Page {
         "design/designButtons.css",
         "design/designForm.css",
         "design/designTextInput.css",
-        "nav/navWebShowcase.css",
         "nav/navShowcase.css"
     ];
     private $jsFiles = [

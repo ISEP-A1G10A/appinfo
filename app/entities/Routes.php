@@ -2,7 +2,7 @@
 
 abstract class Routes {
     private static $appRoutes = [
-        "showcase"   => [
+        "showcase"  => [
             "home"    => [HomePage::class],
             "sign-in" => [SignInPage::class],
 //        "users/{}"           => [UserPage::class],
@@ -10,14 +10,15 @@ abstract class Routes {
 //        "users/{}/houses"    => [UserPage::class, ["houses"]],
 //        "users/{}/houses/{}" => [HomePage::class] // HousePage
         ],
-        "client_app" => [
+        "connected" => [
+            "home" => [HomeConnectedPage::class]
         ],
-        "admin_sys"  => [
-            "logs"    => [LogsPage::class],
+        "admin_sys" => [
+            "logs"       => [LogsPage::class],
             "logs-debug" => [LogsDebugPage::class],
-            "sign-in" => [SignInPage::class], // TODO : remove
+            "sign-in"    => [SignInPage::class], // TODO : remove
         ],
-        "status"     => [
+        "status"    => [
             "404" => [Status404Page::class],
             "418" => [Status418Page::class]
         ]
@@ -28,6 +29,10 @@ abstract class Routes {
      */
     public static function getShowcaseRoutes() {
         return array_merge(self::$appRoutes["showcase"], self::$appRoutes["status"]);
+    }
+
+    public static function getConnectedRoutes() {
+        return array_merge(self::$appRoutes["connected"], self::$appRoutes["status"]);
     }
 
     public static function getAdminSysRoutes() {
