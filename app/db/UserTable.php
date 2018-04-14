@@ -8,8 +8,8 @@ abstract class UserTable extends Table {
         ]);
     }
 
-    private static function getAllByEmail($email) {
-        $request = self::prepare("SELECT * FROM user WHERE email=:email");
+    private static function getAllIdsAndTypesAndPasswordsByEmail($email) {
+        $request = self::prepare("SELECT id, type, password FROM user WHERE email=:email");
         $request->execute([
             ':email' => $email
         ]);
@@ -17,7 +17,7 @@ abstract class UserTable extends Table {
     }
 
     public static function getUserOrError($email, $password) {
-        $users = self::getAllByEmail($email);
+        $users = self::getAllIdsAndTypesAndPasswordsByEmail($email);
         if (count($users) > 0) {
             foreach ($users as $user) {
                 if (Encryption::compare($password, $user["password"])) {
