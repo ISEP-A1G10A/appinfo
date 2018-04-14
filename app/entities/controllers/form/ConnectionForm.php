@@ -17,8 +17,11 @@ class ConnectionForm extends Form {
             ])
         ]);
         $this->runVerifications();
+        if ($this->isValid()) {
+            // TODO : VERIFY CREDENTIALS
+            $this->addError(["connection", "wrong_credentials"]);
+        }
         $_SESSION["errors"]["connection"] = $this->getErrors();
-        // if valid action
     }
 
     public function getRedirectionPage() {

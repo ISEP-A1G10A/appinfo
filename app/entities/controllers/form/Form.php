@@ -19,6 +19,10 @@ abstract class Form {
         }
     }
 
+    protected function addError($error) {
+        array_push($this->errors, $error);
+    }
+
     protected function getErrors() {
         return $this->errors;
     }
@@ -36,11 +40,11 @@ abstract class Form {
         try {
             if ($this->method === "POST") {
                 if (isset($_POST[$name])) {
-                    return $_POST[$name];
+                    return strip_tags($_POST[$name]);
                 }
             } elseif ($this->method === "GET") {
                 if (isset($_GET[$name])) {
-                    return $_GET[$name];
+                    return strip_tags($_GET[$name]);
                 }
             } else {
                 throw new MethodNotSupportedException($this->method);

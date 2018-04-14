@@ -11,7 +11,7 @@ abstract class Lang {
      * @return string
      */
     private static function verifyLang($lang) {
-        if (array_key_exists($lang, self::$availableLanguages)) {
+        if (in_array($lang, self::$availableLanguages)) {
             return $lang;
         } else {
             return self::$defaultLanguage;

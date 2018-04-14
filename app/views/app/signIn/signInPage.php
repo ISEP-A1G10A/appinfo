@@ -16,7 +16,7 @@
         <hr class="design-form-hr">
         <div class="design-form-links">
             <a class="design-btn-flat design-form-link signIn-form-forget-password"
-               href="<?php echo new URL("forgot-password") ?>"><?php echo $this->s[$this->page]["forget_password"] ?>
+               href="<?php echo new URL("forgot-password/") ?>"><?php echo $this->s[$this->page]["forget_password"] ?>
                 ?</a>
         </div>
     </div>
