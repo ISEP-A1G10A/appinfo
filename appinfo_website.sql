@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 13, 2018 at 08:36 PM
+-- Generation Time: Apr 14, 2018 at 03:51 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.2
 
@@ -61,6 +61,13 @@ CREATE TABLE `gear_category` (
   `isCaptor` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- Dumping data for table `gear_category`
+--
+
+INSERT INTO `gear_category` (`id`, `label`, `isCaptor`) VALUES
+(1, 'temperature', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -71,6 +78,13 @@ CREATE TABLE `gear_company` (
   `id` int(11) NOT NULL,
   `label` varchar(255) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `gear_company`
+--
+
+INSERT INTO `gear_company` (`id`, `label`) VALUES
+(1, 'domisep');
 
 -- --------------------------------------------------------
 
@@ -84,9 +98,16 @@ CREATE TABLE `gear_event` (
   `action` int(11) NOT NULL,
   `data` varchar(1023) CHARACTER SET latin1 NOT NULL,
   `user` int(11) NOT NULL,
-  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
   `unit` varchar(7) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `gear_event`
+--
+
+INSERT INTO `gear_event` (`id`, `gear`, `action`, `data`, `user`, `date`, `unit`) VALUES
+(1, 1, 0, '25.0', 2, '2018-04-13 00:00:00', 'celsius');
 
 -- --------------------------------------------------------
 
@@ -101,6 +122,13 @@ CREATE TABLE `gear_type` (
   `serial_number` varchar(515) COLLATE utf8_bin NOT NULL,
   `category` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `gear_type`
+--
+
+INSERT INTO `gear_type` (`id`, `company`, `label`, `serial_number`, `category`) VALUES
+(1, 1, 'sensor-temperature', '00000032', 1);
 
 -- --------------------------------------------------------
 
@@ -121,6 +149,13 @@ CREATE TABLE `home` (
   `label` varchar(255) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- Dumping data for table `home`
+--
+
+INSERT INTO `home` (`id`, `main_user`, `type`, `surface`, `address_line_1`, `address_line_2`, `address_zip_code`, `address_city`, `address_country`, `label`) VALUES
+(1, 2, 1, '32', '32 rue de l\'ISEP', 'Appartement 32', '75000', 'Paris', 'France', 'Ma maison');
+
 -- --------------------------------------------------------
 
 --
@@ -131,6 +166,13 @@ CREATE TABLE `home_type` (
   `id` int(11) NOT NULL,
   `label` varchar(255) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `home_type`
+--
+
+INSERT INTO `home_type` (`id`, `label`) VALUES
+(1, 'house');
 
 -- --------------------------------------------------------
 
@@ -226,7 +268,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `first_name`, `last_name`, `type`, `email`, `phone`, `password`) VALUES
-(1, 'test', 'test', 1, 'test@test.com', '0000000000', '$6$rounds=3232$yRyJDM8YPUMMRAJF$80d8yrKfQdx.BEleBxPuCxJh2IJp3IRJM32poxmYJcZ/MBoyvYPSVN2MeP.9Yrl.P1DBSkJ9mbBz0DhDeckRc0');
+(1, 'test_admin_sys', 'test_admin_sys', 1, 'admin_sys@test.com', '0000000000', '$6$rounds=3232$yRyJDM8YPUMMRAJF$80d8yrKfQdx.BEleBxPuCxJh2IJp3IRJM32poxmYJcZ/MBoyvYPSVN2MeP.9Yrl.P1DBSkJ9mbBz0DhDeckRc0'),
+(2, 'test_client', 'test_client', 3, 'client@test.com', '0000000000', '$6$rounds=3232$yRyJDM8YPUMMRAJF$80d8yrKfQdx.BEleBxPuCxJh2IJp3IRJM32poxmYJcZ/MBoyvYPSVN2MeP.9Yrl.P1DBSkJ9mbBz0DhDeckRc0');
 
 -- --------------------------------------------------------
 
@@ -386,32 +429,32 @@ ALTER TABLE `gear_action`
 -- AUTO_INCREMENT for table `gear_category`
 --
 ALTER TABLE `gear_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `gear_company`
 --
 ALTER TABLE `gear_company`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `gear_event`
 --
 ALTER TABLE `gear_event`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `gear_type`
 --
 ALTER TABLE `gear_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `home`
 --
 ALTER TABLE `home`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `home_type`
 --
 ALTER TABLE `home_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `link_gear_action_gear_category`
 --
@@ -446,7 +489,7 @@ ALTER TABLE `room_type`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `user_tempory_password`
 --
