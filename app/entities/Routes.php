@@ -14,7 +14,7 @@ abstract class Routes {
         ],
         "admin_sys"  => [
             "logs"    => [LogsPage::class],
-            "logs-debug",
+            "logs-debug" => [LogsDebugPage::class],
             "sign-in" => [SignInPage::class], // TODO : remove
         ],
         "status"     => [
