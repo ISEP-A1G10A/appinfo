@@ -1,3 +1,9 @@
+@media screen and (max-width: 450px) {
+    .navShowcase-title {
+        display: none;
+    }
+}
+
 .navShowcase-nav {
     height: 60px;
     background-color: #1f5661;
@@ -18,6 +24,7 @@
 
 .navShowcase-right {
     justify-content: flex-end;
+    min-width: 300px;
 }
 
 .navShowcase-logo {
