@@ -14,3 +14,17 @@
         <a class="design-btn-raised navShowcase-connect-btn" href="<?php echo new URL("sign-in/") ?>"><?php echo strtoupper($this->s["navs"]["showcase"]["connection"])?></a>
     </span>
 </nav>
+<!--<nav class="navShowcase-mobile-nav">-->
+<!--    <div class="navShowcase-mobile-toggle">-->
+<!--        <input type="checkbox" />-->
+<!--        <span></span>-->
+<!--        <span></span>-->
+<!--        <span></span>-->
+<!--        <ul class="navShowcase-mobile-menu">-->
+<!--            <a class="navShowcase-mobile-menu-item" href="#"><li>Home</li></a>-->
+<!--            <a class="navShowcase-mobile-menu-item" href="#"><li>About</li></a>-->
+<!--            <a class="navShowcase-mobile-menu-item" href="#"><li>Info</li></a>-->
+<!--            <a class="navShowcase-mobile-menu-item" href="#"><li>Contact</li></a>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--</nav>-->
