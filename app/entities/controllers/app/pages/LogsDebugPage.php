@@ -1,6 +1,6 @@
 <?php
 
-class LogsPage extends AppPage {
+class LogsDebugPage extends AppPage {
     public function __construct($lang) {
         $this->initilization("logs", $lang, "adminsys");
         $this->addToCssFiles([
@@ -17,7 +17,7 @@ class LogsPage extends AppPage {
 
     private function getLogs() {
         $logs = [];
-        $fp = fopen("../app/logs/log.txt", "r") or die("Couldn't open File");
+        $fp = fopen("../app/logs/log_debug.txt", "r") or die("Couldn't open File");
         while (!feof($fp)) { //Continue loading strings till the end of file
             $line = fgets($fp, 1024); // Load one complete line
             $line = explode(" ", $line);
@@ -28,7 +28,7 @@ class LogsPage extends AppPage {
                     "type"       => trim($line[2], "[]"),
                     "session-id" => $line[3],
                     "ip-address" => $line[4],
-                    "value"      => $this->getValueFromLog($line)
+                    "value" => $this->getValueFromLog($line)
                 ]);
             }
         }
