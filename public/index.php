@@ -82,6 +82,8 @@ if (isset($_SERVER['REDIRECT_URL'])) { // ex: localhost/appinfo/public/home/
 $user_role = handleUserRole(); // to handle
 if ($user_role === "admin_sys") {
     $page = getPage(Routes::getAdminSysRoutes(), $p);
+} elseif ($user_role === "user_main") {
+    $page = getPage(Routes::getConnectedRoutes(), $p);
 } else {
     $page = getPage(Routes::getShowcaseRoutes(), $p);
 }
