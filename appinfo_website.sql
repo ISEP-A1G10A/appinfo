@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 14, 2018 at 04:22 PM
+-- Generation Time: Apr 15, 2018 at 01:05 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.2
 
@@ -35,6 +35,13 @@ CREATE TABLE `gear` (
   `label` varchar(255) COLLATE utf8_bin NOT NULL,
   `room` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `gear`
+--
+
+INSERT INTO `gear` (`id`, `type`, `reference`, `label`, `room`) VALUES
+(1, 1, 'Q-0000003232', 'salon_température', 1);
 
 -- --------------------------------------------------------
 
@@ -95,9 +102,9 @@ INSERT INTO `gear_company` (`id`, `label`) VALUES
 CREATE TABLE `gear_event` (
   `id` int(11) NOT NULL,
   `gear` int(11) NOT NULL,
-  `action` int(11) NOT NULL,
+  `action` int(11) DEFAULT NULL,
   `data` varchar(1023) CHARACTER SET latin1 NOT NULL,
-  `user` int(11) NOT NULL,
+  `user` int(11) DEFAULT NULL,
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
   `unit` varchar(7) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -107,7 +114,7 @@ CREATE TABLE `gear_event` (
 --
 
 INSERT INTO `gear_event` (`id`, `gear`, `action`, `data`, `user`, `date`, `unit`) VALUES
-(1, 1, 0, '25.0', 2, '2018-04-13 00:00:00', 'celsius');
+(1, 1, NULL, '25.0', NULL, '2018-04-15 12:58:09', 'celsius');
 
 -- --------------------------------------------------------
 
@@ -233,8 +240,16 @@ CREATE TABLE `message_object` (
 CREATE TABLE `room` (
   `id` int(11) NOT NULL,
   `type` int(11) NOT NULL,
-  `label` varchar(255) COLLATE utf8_bin NOT NULL
+  `label` varchar(255) COLLATE utf8_bin NOT NULL,
+  `home` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `room`
+--
+
+INSERT INTO `room` (`id`, `type`, `label`, `home`) VALUES
+(1, 1, 'Salon', 1);
 
 -- --------------------------------------------------------
 
@@ -246,6 +261,13 @@ CREATE TABLE `room_type` (
   `id` int(11) NOT NULL,
   `label` varchar(255) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `room_type`
+--
+
+INSERT INTO `room_type` (`id`, `label`) VALUES
+(1, 'living_room');
 
 -- --------------------------------------------------------
 
@@ -269,7 +291,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `first_name`, `last_name`, `type`, `email`, `phone`, `password`) VALUES
 (1, 'test_admin_sys', 'test_admin_sys', 1, 'admin_sys@test.com', '0000000000', '$6$rounds=3232$yRyJDM8YPUMMRAJF$80d8yrKfQdx.BEleBxPuCxJh2IJp3IRJM32poxmYJcZ/MBoyvYPSVN2MeP.9Yrl.P1DBSkJ9mbBz0DhDeckRc0'),
-(2, 'test_client', 'test_client', 3, 'client@test.com', '0000000000', '$6$rounds=3232$yRyJDM8YPUMMRAJF$80d8yrKfQdx.BEleBxPuCxJh2IJp3IRJM32poxmYJcZ/MBoyvYPSVN2MeP.9Yrl.P1DBSkJ9mbBz0DhDeckRc0');
+(2, 'test_client', 'test_client', 3, 'client@test.com', '0000000000', '$6$rounds=3232$yRyJDM8YPUMMRAJF$80d8yrKfQdx.BEleBxPuCxJh2IJp3IRJM32poxmYJcZ/MBoyvYPSVN2MeP.9Yrl.P1DBSkJ9mbBz0DhDeckRc0'),
+(3, 'test_client2', 'test_client2', 4, 'client2@test.com', '0000000000', '$6$rounds=3232$yRyJDM8YPUMMRAJF$80d8yrKfQdx.BEleBxPuCxJh2IJp3IRJM32poxmYJcZ/MBoyvYPSVN2MeP.9Yrl.P1DBSkJ9mbBz0DhDeckRc0');
 
 -- --------------------------------------------------------
 
@@ -419,7 +442,7 @@ ALTER TABLE `user_type`
 -- AUTO_INCREMENT for table `gear`
 --
 ALTER TABLE `gear`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `gear_action`
 --
@@ -479,17 +502,17 @@ ALTER TABLE `message_object`
 -- AUTO_INCREMENT for table `room`
 --
 ALTER TABLE `room`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `room_type`
 --
 ALTER TABLE `room_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `user_tempory_password`
 --
