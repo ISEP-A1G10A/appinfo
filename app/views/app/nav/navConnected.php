@@ -13,7 +13,7 @@
         </span>
     </div>
     <div class="navConnected-side">
-        <a class="navConnected-link">
+        <a class="navConnected-link design-btn-flat">
             <img class="navConnected-icon" src="<?php echo new URL("img/icons/home-circle.png") ?>"/>
             <span class="navConnected-text">Acceuil</span>
         </a>
@@ -21,16 +21,16 @@
             <div class="navConnected-text">
                 MAISONS
             </div>
-            <a class="navConnected-link">
+            <a class="navConnected-link design-btn-flat">
                 <img class="navConnected-icon" src="<?php echo new URL("img/icons/home.png") ?>"/>
                 <span class="navConnected-text"><?php echo $_SESSION["user"]["houses"][0][1] ?></span>
             </a>
         </div>
-        <a class="navConnected-link">
+        <a class="navConnected-link design-btn-flat">
             <img class="navConnected-icon" src="<?php echo new URL("img/icons/account-circle.png") ?>"/>
             <span class="navConnected-text">Profil</span>
         </a>
-        <a class="navConnected-link">
+        <a class="navConnected-link design-btn-flat">
             <img class="navConnected-icon" src="<?php echo new URL("img/icons/help-circle.png") ?>"/>
             <span class="navConnected-text">Aide</span>
         </a>
