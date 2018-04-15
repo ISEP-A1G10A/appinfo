@@ -25,17 +25,18 @@
     align-items: center;
 }
 
-.navConnected-houses {
+/*.navConnected-houses {
     padding-top: 50px;
     padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+}*/
 
 .navConnected-icon {
     width: 25px;
     height: 25px;
+    margin-right: 20px;
 }
 
 /*TOP NAV*/

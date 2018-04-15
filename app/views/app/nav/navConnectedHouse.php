@@ -4,9 +4,9 @@
         <?php echo $house[1] ?>
     </span>
 </a>
-<a class="navConnected-link-info design-btn-flat">
+<a class="navConnected-link design-btn-flat">
     <?php echo ucfirst($this->s["navs"]["connected"]["info"])?>
 </a>
-<a class="navConnected-link-sensor design-btn-flat">
+<a class="navConnected-link design-btn-flat">
     <?php echo ucfirst($this->s["navs"]["connected"]["sensors"])?>
 </a>

@@ -13,20 +13,15 @@
         </span>
     </div>
     <div class="navConnected-side">
-        <a class="navConnected-link design-btn-flat">
-            <img class="navConnected-icon" src="<?php echo new URL("img/icons/home-circle.png") ?>"/>
-            <span class="navConnected-text"><?php echo ucfirst($this->s["navs"]["connected"]["home"])?></span>
-        </a>
-        <div class="navConnected-houses">
-            <div class="navConnected-text"><?php echo strtoupper($this->s["navs"]["connected"]["houses"])?></div>
+        <!--<div>--> <!--class="navConnected-houses"-->
             <?php
             foreach ($_SESSION["user"]["houses"] as $house){
                 require "navConnectedHouse.php";
             }
             ?>
-        </div>
+        <!--</div>-->
         <a class="navConnected-link design-btn-flat">
-            <img class="navConnected-icon" src="<?php echo new URL("img/icons/account-circle.png") ?>"/>
+            <img class="navConnected-icon" src="<?php echo new URL("img/icons/profile.png") ?>"/>
             <span class="navConnected-text"><?php echo ucfirst($this->s["navs"]["connected"]["profile"])?></span>
         </a>
         <a class="navConnected-link design-btn-flat">
