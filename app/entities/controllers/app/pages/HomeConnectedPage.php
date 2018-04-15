@@ -6,6 +6,6 @@ class HomeConnectedPage extends AppPage {
     }
 
     protected function renderContent() {
-        echo "home connected";
+        /*echo "home connected";*/
     }
 }
