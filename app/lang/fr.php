@@ -46,8 +46,18 @@ $formErrors = [
 $navShowcase = [
     "connection" => "connexion"
 ];
+$navConnected = [
+    "connection" => "deconnexion",
+    "home" => "accueil",
+    "houses" => "maisons",
+    "info" => "informations",
+    "sensors" => "capteurs",
+    "profile" => "profil",
+    "help" => "aide"
+];
 $navs = [
-    "showcase" => $navShowcase
+    "showcase" => $navShowcase,
+    "connected" => $navConnected
 ];
 // array
 return [

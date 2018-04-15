@@ -34,8 +34,8 @@
 }
 
 .navConnected-icon {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
 }
 
 /*TOP NAV*/
@@ -87,7 +87,7 @@
     margin-left: 5px;
 }
 
-.navConnected-lang-btn, .navConnected-connect-btn {
+.navConnected-lang-btn, .navConnected-disconnect-btn {
     color: white;
 }
 
@@ -101,7 +101,7 @@
     color: #1f5661;
 }
 
-.navConnected-connect-btn {
+.navConnected-disconnect-btn {
     margin: 0 20px;
     background-color: #ffb300;
     color: #1f5661;
