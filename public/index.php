@@ -29,7 +29,7 @@ function handleSession() {
 
 function handleLanguage() {
     // get changement language
-    if (isset($_POST['form']) && $_POST['form'] === "nav-showcase") {
+    if (isset($_POST['form']) && $_POST['form'] === "nav-lang") {
         if (isset($_POST['en'])) {
             $_SESSION['settings']['language'] = "en";
         } else {
@@ -39,6 +39,12 @@ function handleLanguage() {
     // default language
     if (!isset($_SESSION['settings']['language'])) {
         $_SESSION['settings']['language'] = 'fr';
+    }
+}
+
+function handleDeconnection() {
+    if (isset($_POST['form']) && $_POST['form'] === "nav-deconnection") {
+        $_SESSION['user'] = [];
     }
 }
 
@@ -53,6 +59,7 @@ function handleUserRole() {
 handleAutoload();
 handleSession();
 handleLanguage();
+handleDeconnection();
 // init URL entity
 URL::setUrlBase(substr($_SERVER['SCRIPT_NAME'], 0, strlen($_SERVER['SCRIPT_NAME']) - 9));
 // default page
