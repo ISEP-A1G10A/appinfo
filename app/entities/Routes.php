@@ -16,12 +16,10 @@ abstract class Routes {
             "houses/{}/sensors"  => [HomeConnectedPage::class],
             "houses/{}/settings" => [HomeConnectedPage::class],
             "help"               => [HomeConnectedPage::class],
-            "sign-in"            => [SignInPage::class] // TODO : remove
         ],
         "admin_sys" => [
             "logs"       => [LogsPage::class],
             "logs-debug" => [LogsDebugPage::class],
-            "sign-in"    => [SignInPage::class] // TODO : remove
         ],
         "status"    => [
             "404" => [Status404Page::class],
