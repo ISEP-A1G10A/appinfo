@@ -21,13 +21,11 @@
             <span><?php echo ucfirst($this->s["navs"]["connected"]["profile"]) ?></span>
         </a>
         <hr class="design-sideNav-hr">
-        <!--<div>--> <!--class="navConnected-web-houses"-->
         <?php
         foreach ($_SESSION["user"]["houses"] as $house) {
             require "navConnectedHouse.php";
         }
         ?>
-        <!--</div>-->
         <a class="design-sideNav-link<?php echo Regex::urlMatchPattern("help") ? " current" : "" ?>"
            href="<?php echo new URL("help/") ?>">
             <img class="design-sideNav-icon" src="<?php echo new URL("img/icons/help-circle.png") ?>"/>
