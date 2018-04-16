@@ -4,9 +4,10 @@
         <?php echo $house[1] ?>
     </span>
 </a>
-<a class="navConnected-link design-btn-flat">
-    <?php echo ucfirst($this->s["navs"]["connected"]["info"])?>
+
+<a class="design-nav-btn navConnected-sublink">
+    <span class="navConnected-sublink-text"><?php echo ucfirst($this->s["navs"]["connected"]["info"])?></span>
 </a>
-<a class="navConnected-link design-btn-flat">
-    <?php echo ucfirst($this->s["navs"]["connected"]["sensors"])?>
+<a class="design-nav-btn navConnected-sublink">
+    <span class="navConnected-sublink-text"><?php echo ucfirst($this->s["navs"]["connected"]["sensors"])?></span>
 </a>

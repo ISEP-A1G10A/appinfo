@@ -1,0 +1,46 @@
+
+.design-nav-btn {
+    font-size: 15px;
+    font-weight: 400;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    letter-spacing: 0.05px;
+    text-decoration: none;
+}
+
+.design-nav-btn:hover {
+    cursor: pointer;
+}
+
+.design-nav-btn.in {
+    animation: design-nav-btn-in;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.design-nav-btn.out {
+    animation: design-nav-btn-out;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes design-nav-btn-in {
+    from {
+        background-color: #cdcdcd;
+    }
+    to {
+        background-color: #d2d2d2;
+        opacity: 0.8;
+    }
+}
+
+@keyframes design-nav-btn-out {
+    from {
+        background-color: #d2d2d2;
+        opacity: 0.8;
+    }
+    to {
+        background-color: #cdcdcd;;
+    }
+}
