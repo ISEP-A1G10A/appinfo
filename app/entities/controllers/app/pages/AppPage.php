@@ -13,7 +13,8 @@ abstract class AppPage extends Page {
         "design/designSideNav.css",
         "design/designTextInput.css",
         "nav/navShowcase.css",
-        "nav/navConnected.css"
+        "nav/navConnected.css",
+        "nav/navMobileConnected.css"
     ];
     private $jsFiles = [
         "design/designButtons.js",

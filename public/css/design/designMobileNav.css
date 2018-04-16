@@ -84,9 +84,43 @@
     font-weight: 700;
 }
 
-.design-mobileNav-link.bottom {
-    border: none;
-    background: none;
+.design-mobileNav-bottom {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.design-mobileNav-bottom:hover {
+    cursor: pointer;
+}
+
+.design-mobileNav-bottom > form {
+    width: 100%;
+}
+
+.design-mobileNav-bottom-lang {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.design-mobileNav-lang-btn {
+    flex: 1;
+    text-align: center;
+    background-color: #1f5661;
+    color: white;
+    margin: 10px 0;
+}
+
+.design-mobileNav-lang-btn:nth-child(2) {
+    margin-right: 5px;
+}
+
+.design-mobileNav-lang-btn:last-child {
+    margin-left: 5px;
 }
 
 .design-mobileNav-icon {

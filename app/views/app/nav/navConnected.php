@@ -67,13 +67,20 @@
             <img class="design-mobileNav-icon" src="<?php echo new URL("img/icons/help-circle.png") ?>"/>
             <span><?php echo ucfirst($this->s["navs"]["connected"]["help"]) ?></span>
         </a>
+        <div class="design-mobileNav-bottom">
+        <form action="<?php echo new URL(true) ?>" method="post" class="design-mobileNav-bottom-lang">
+            <input name="form" value="nav-lang" type="hidden">
+            <span class="design-btn-raised design-mobileNav-lang-btn">FR</span>
+            <span class="design-btn-raised design-mobileNav-lang-btn">EN</span>
+        </form>
         <form action="<?php echo new URL("sign-in/") ?>" method="post">
             <input name="form" value="nav-deconnection" type="hidden">
-            <button class="design-mobileNav-link bottom">
+            <button class="design-btn-raised navConnected-mobile-deconnection">
                 <img class="design-mobileNav-icon" src="<?php echo new URL("img/icons/power.png") ?>"/>
                 <span><?php echo ucfirst($this->s["navs"]["connected"]["deconnection"]) ?></span>
             </button>
         </form>
+        </div>
     </div>
     <div class="design-mobileNav-cache">
     </div>
