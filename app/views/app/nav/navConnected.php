@@ -10,8 +10,8 @@
         <span class="navConnected-web-right">
             <form action="<?php echo new URL(true) ?>" method="post">
                 <input name="form" value="nav-lang" type="hidden">
-                <span class="design-btn-flat navConnected-web-lang-btn">FR</span>
-                <span class="design-btn-flat navConnected-web-lang-btn">EN</span>
+                <input name="fr" type="submit" class="design-btn-flat navConnected-web-lang-btn" value="FR">
+                <input name="fr" type="submit" class="design-btn-flat navConnected-web-lang-btn" value="EN">
             </form>
             <form action="<?php echo new URL("sign-in/") ?>" method="post">
                 <input name="form" value="nav-deconnection" type="hidden">
