@@ -11,9 +11,9 @@
 </head>
 <body>
     <?php
-//    if (isset($_SESSION["user"]["id"]) && isset($_SESSION["user"]["role"])) {
-//        echo "USER CONNECTED WITH ID <b>" . $_SESSION["user"]["id"] . "</b> AND ROLE <b>" . $_SESSION["user"]["role"] . "</b><br>";
-//    }
+    /*if (isset($_SESSION["user"]["id"]) && isset($_SESSION["user"]["role"])) {
+        echo "USER CONNECTED WITH ID <b>" . $_SESSION["user"]["id"] . "</b> AND ROLE <b>" . $_SESSION["user"]["role"] . "</b><br>";
+    }*/
     $this->renderNav();
     $this->renderContent();
     $this->displayJsFiles();

@@ -1,0 +1,109 @@
+@media screen and (max-width: 430px) {
+    .navConnected-title {
+        display: none;
+    }
+}
+
+/*SIDE NAV*/
+
+.navConnected-side {
+    width: 180px;
+    height: 100%;
+    position: fixed;
+    background-color: lightgray;
+    border-right: solid 4px #1f5661;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navConnected-link {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*.navConnected-houses {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}*/
+
+.navConnected-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+}
+
+/*TOP NAV*/
+
+.navConnected-top {
+    height: 60px;
+    background-color: #1f5661;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.navConnected-left, .navConnected-right {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+}
+
+.navConnected-left {
+    justify-content: flex-start;
+}
+
+.navConnected-right {
+    justify-content: flex-end;
+    min-width: 260px;
+}
+
+.navConnected-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.navConnected-logo-link {
+    display: flex;
+    margin-left: 20px;
+    text-decoration: none;
+    outline: none;
+}
+
+.navConnected-logo-link:active {
+    border: none;
+}
+
+.navConnected-title {
+    position: relative;
+    font-size: 35px;
+    color: white;
+    margin-left: 5px;
+}
+
+.navConnected-lang-btn, .navConnected-disconnect-btn {
+    color: white;
+}
+
+.navConnected-lang-btn {
+    margin: 0 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navConnected-lang-btn.in {
+    color: #1f5661;
+}
+
+.navConnected-disconnect-btn {
+    margin: 0 20px;
+    background-color: #ffb300;
+    color: #1f5661;
+}

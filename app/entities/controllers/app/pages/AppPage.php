@@ -10,7 +10,8 @@ abstract class AppPage extends Page {
         "design/designButtons.css",
         "design/designForm.css",
         "design/designTextInput.css",
-        "nav/navShowcase.css"
+        "nav/navShowcase.css",
+        "nav/navConnected.css"
     ];
     private $jsFiles = [
         "design/designButtons.js",
@@ -84,7 +85,7 @@ abstract class AppPage extends Page {
         if ($this->section === "adminsys") {
             require "../app/views/app/nav/navShowcase.php"; // TODO
         } elseif ($this->section === "connected") {
-            // require nav connected
+            require "../app/views/app/nav/navConnected.php";
         } elseif ($this->section === "showcase") {
             require "../app/views/app/nav/navShowcase.php";
         }
