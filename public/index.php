@@ -15,20 +15,6 @@ function getPage($routes, $p) {
     return new Status404Page($_SESSION['settings']['language']);
 }
 
-function getPageAfterForm($p) {
-    $routes = Routes::getFormRoutes();
-    foreach ($routes as $path => &$arrayExecution) {
-        if (Regex::urlMatch($p, "form/" . $path)) {
-            $form = new $arrayExecution[0]($_SESSION['settings']['language']);
-            return $form->getPage();
-        }
-    }
-    return "404";
-}
-
-function handleForm() {
-}
-
 function handleAutoload() {
     require '../app/entities/Autoloader.php';
     autoloader::register();
