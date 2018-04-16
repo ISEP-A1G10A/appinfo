@@ -11,8 +11,12 @@ abstract class Routes {
 //        "users/{}/houses/{}" => [HomePage::class] // HousePage
         ],
         "connected" => [
-            "home"    => [HomeConnectedPage::class],
-            "sign-in" => [SignInPage::class] // TODO : remove
+            "home"               => [HomeConnectedPage::class],
+            "profile"            => [HomeConnectedPage::class],
+            "houses/{}/sensors"  => [HomeConnectedPage::class],
+            "houses/{}/settings" => [HomeConnectedPage::class],
+            "help"               => [HomeConnectedPage::class],
+            "sign-in"            => [SignInPage::class] // TODO : remove
         ],
         "admin_sys" => [
             "logs"       => [LogsPage::class],
