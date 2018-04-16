@@ -47,7 +47,7 @@ $navShowcase = [
     "connection" => "connexion"
 ];
 $navConnected = [
-    "disconnection" => "deconnexion",
+    "deconnection" => "deconnexion",
     "houses" => "maisons",
     "settings" => "paramètres",
     "sensors" => "capteurs",

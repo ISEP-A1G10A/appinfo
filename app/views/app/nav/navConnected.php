@@ -8,10 +8,17 @@
             </a>
         </span>
         <span class="navConnected-web-right">
-            <span class="design-btn-flat navConnected-web-lang-btn">FR</span>
-            <span class="design-btn-flat navConnected-web-lang-btn">EN</span>
-            <a class="design-btn-raised navConnected-web-disconnect-btn"
-               href="<?php echo new URL("sign-in/") ?>"><?php echo strtoupper($this->s["navs"]["connected"]["connection"]) ?></a>
+            <form action="<?php echo new URL(true) ?>" method="post">
+                <input name="form" value="nav-lang" type="hidden">
+                <span class="design-btn-flat navConnected-web-lang-btn">FR</span>
+                <span class="design-btn-flat navConnected-web-lang-btn">EN</span>
+            </form>
+            <form action="<?php echo new URL("sign-in/") ?>" method="post">
+                <input name="form" value="nav-deconnection" type="hidden">
+                <input type="submit"
+                       class="design-btn-raised navConnected-web-disconnect-btn"
+                       value="<?php echo strtoupper($this->s["navs"]["connected"]["deconnection"]) ?>"/>
+            </form>
         </span>
     </div>
     <div class="design-sideNav">
