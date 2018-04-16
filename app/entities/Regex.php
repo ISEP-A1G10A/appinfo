@@ -31,4 +31,17 @@ abstract class Regex {
 //        preg_match("#/(\d)+/#", $url, $matches);
 //        return substr($matches[0], 1, -1);
     }
+
+    public static function urlMatchPattern($pattern) {
+        if (isset($_SERVER['REDIRECT_URL'])) { // ex: localhost/appinfo/public/home/
+            $tmp = $_SERVER['REDIRECT_URL'];
+            if (substr($tmp, -1) != "/") {
+                $tmp .= "/";
+            }
+            $p = substr($tmp, strlen(dirname($_SERVER['SCRIPT_NAME'])) + 1); // if URL = "localhost/appinfo/public/a/", give "a/"
+        } else { // ex: localhost/appinfo/public/
+            $p = "home";
+        }
+        return self::urlMatch($p, $pattern);
+    }
 }
