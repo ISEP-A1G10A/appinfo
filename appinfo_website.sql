@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 15, 2018 at 01:05 PM
+-- Generation Time: Apr 16, 2018 at 10:12 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.2
 
@@ -204,6 +204,13 @@ CREATE TABLE `link_user_home` (
   `user` int(11) NOT NULL,
   `home` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `link_user_home`
+--
+
+INSERT INTO `link_user_home` (`id`, `user`, `home`) VALUES
+(1, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -487,7 +494,7 @@ ALTER TABLE `link_gear_action_gear_category`
 -- AUTO_INCREMENT for table `link_user_home`
 --
 ALTER TABLE `link_user_home`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `message`
 --
