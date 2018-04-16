@@ -9,6 +9,7 @@ abstract class AppPage extends Page {
     private $cssFiles = [
         "design/designButtons.css",
         "design/designForm.css",
+        "design/designMobileNav.css",
         "design/designSideNav.css",
         "design/designTextInput.css",
         "nav/navShowcase.css",
@@ -16,6 +17,7 @@ abstract class AppPage extends Page {
     ];
     private $jsFiles = [
         "design/designButtons.js",
+        "design/designMobileNav.js",
         "design/designSideNav.js",
         "design/designTextInput.js",
     ];

@@ -1,0 +1,116 @@
+.design-mobileNav-cache {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: -1;
+}
+
+.design-mobileNav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* TOP */
+
+.design-mobileNav-top {
+    height: 47px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #1f5661;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.design-mobileNav-top-hamburger {
+    height: 32px;
+    width: 32px;
+}
+
+.design-mobileNav-top-hamburger:hover {
+    cursor: pointer;
+}
+
+.design-mobileNav-top-title {
+    color: white;
+    font-size: 23px;
+    margin-left: 10px;
+}
+
+/* SIDE */
+
+.design-mobileNav-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    background-color: white;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    transition: 0.3s;
+    overflow-x: hidden;
+}
+
+.design-mobileNav-link {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 55px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    opacity: 0.7;
+    padding-left: 16px;
+}
+
+.design-mobileNav-link > span, div {
+    white-space: nowrap;
+}
+
+.design-mobileNav-link.current {
+    background-color: #e3e3e3;
+    color: black;
+    font-weight: 700;
+}
+
+.design-mobileNav-link.bottom {
+    border: none;
+    background: none;
+}
+
+.design-mobileNav-icon {
+    height: 32px;
+    width: 32px;
+    margin-right: 25px;
+}
+
+.design-mobileNav-section-title {
+    margin-left: 10px;
+    padding: 2px;
+    color: gray;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0;
+    width: 100%;
+}
+
+.design-mobileNav-hr {
+    border: none;
+    height: 0.2vh;
+    background-color: gainsboro;
+    opacity: 0.6;
+    width: 100%;
+    margin: 10px 0;
+}
+

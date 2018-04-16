@@ -1,3 +1,15 @@
+@media screen and (max-width: 800px){
+    .navConnected-web {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 801px){
+    .navConnected-mobile {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 430px) {
     .navConnected-web-title {
         display: none;
