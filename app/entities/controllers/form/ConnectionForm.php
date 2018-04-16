@@ -22,9 +22,9 @@ class ConnectionForm extends Form {
             if ($response[0] === "success") {
                 $_SESSION["user"]["id"] = $response[1]["id"];
                 $_SESSION["user"]["role"] = UserTypeTable::getRoleByTypeId($response[1]["type"]);
-                $_SESSION["user"]["houses"] = HomeTable::getAllIdsAndLabelsByMainUser($response[1]["id"]);
+                $_SESSION["user"]["houses"] = array_merge(HomeTable::getAllIdsAndLabelsByMainUser($response[1]["id"]), LinkUserHomeTable::getAllIdsAndLabelsOfHomeByUser($response[1]["id"]));
             } else {
-            $this->addError($response[1]);
+                $this->addError($response[1]);
             }
         }
         $_SESSION["errors"]["connection"] = $this->getErrors();
