@@ -22,6 +22,11 @@
         </span>
     </div>
     <div class="design-sideNav">
+        <a class="design-sideNav-link<?php echo Regex::urlMatchPattern("home") ? " current" : "" ?>"
+           href="<?php echo new URL("home/") ?>">
+            <img class="design-sideNav-icon" src="<?php echo new URL("img/icons/explore.png") ?>"/>
+            <span><?php echo ucfirst($this->s["navs"]["connected"]["home"]) ?></span>
+        </a>
         <a class="design-sideNav-link<?php echo Regex::urlMatchPattern("profile") ? " current" : "" ?>"
            href="<?php echo new URL("profile/") ?>">
             <img class="design-sideNav-icon" src="<?php echo new URL("img/icons/profile.png") ?>"/>
