@@ -89,7 +89,7 @@ abstract class AppPage extends Page {
      */
     protected function renderNav() {
         if ($this->section === "adminsys") {
-            require "../app/views/app/nav/navConnected/navConnected.php"; // TODO
+            require "../app/views/app/nav/navAdminSys/navAdminSys.php";
         } elseif ($this->section === "connected") {
             require "../app/views/app/nav/navConnected/navConnected.php";
         } elseif ($this->section === "showcase") {

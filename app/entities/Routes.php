@@ -18,6 +18,7 @@ abstract class Routes {
             "help"               => [HomeConnectedPage::class],
         ],
         "admin_sys" => [
+            "home"       => [LogsPage::class],
             "logs"       => [LogsPage::class],
             "logs-debug" => [LogsDebugPage::class],
         ],

@@ -47,17 +47,24 @@ $navShowcase = [
     "connection" => "connexion"
 ];
 $navConnected = [
-    "home" => "tableau de bord",
+    "home"         => "tableau de bord",
     "deconnection" => "deconnexion",
-    "houses" => "maisons",
-    "settings" => "paramètres",
-    "sensors" => "capteurs",
-    "profile" => "profil",
-    "help" => "aide"
+    "houses"       => "maisons",
+    "settings"     => "paramètres",
+    "sensors"      => "capteurs",
+    "profile"      => "profil",
+    "help"         => "aide"
+];
+$navAdminSys = [
+    "home"         => "tableau de bord",
+    "deconnection" => "deconnexion",
+    "logs"         => "logs",
+    "logs_debug"   => "logs debug"
 ];
 $navs = [
-    "showcase" => $navShowcase,
-    "connected" => $navConnected
+    "showcase"  => $navShowcase,
+    "connected" => $navConnected,
+    "adminsys"  => $navAdminSys
 ];
 // array
 return [

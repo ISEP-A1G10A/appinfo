@@ -16,7 +16,7 @@
     }*/
     $this->renderNav();
     ?>
-    <div class="content">
+    <div class="content<?php echo $this->section === "showcase" ? " showcase" : "" ?>">
         <?php $this->renderContent(); ?>
     </div>
     <?php
