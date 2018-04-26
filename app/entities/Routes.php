@@ -22,6 +22,9 @@ abstract class Routes {
             "logs"       => [LogsPage::class],
             "logs-debug" => [LogsDebugPage::class],
         ],
+        "admin_sav" => [
+            "home"       => [HomeSysSavPage::class], // TODO
+        ],
         "status"    => [
             "404" => [Status404Page::class],
             "418" => [Status418Page::class]
@@ -41,5 +44,9 @@ abstract class Routes {
 
     public static function getAdminSysRoutes() {
         return array_merge(self::$appRoutes["admin_sys"], self::$appRoutes["status"]);
+    }
+
+    public static function getAdminSavRoutes() {
+        return array_merge(self::$appRoutes["admin_sav"], self::$appRoutes["status"]);
     }
 }
