@@ -11,6 +11,7 @@ abstract class AppPage extends Page {
         "design/designForm.css",
         "design/designMobileNav.css",
         "design/designSideNav.css",
+        "design/designTabs.css",
         "design/designTextInput.css",
         "design/designTopNav.css",
         "nav/navShowcase.css",
@@ -21,6 +22,7 @@ abstract class AppPage extends Page {
         "design/designButtons.js",
         "design/designMobileNav.js",
         "design/designSideNav.js",
+        "design/designTabs.js",
         "design/designTextInput.js",
     ];
     private $section;
