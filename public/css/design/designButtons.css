@@ -7,8 +7,17 @@
     letter-spacing: 0.05px;
     text-decoration: none;
 }
-
-.design-btn-raised:hover, .design-btn-flat:hover {
+.design-home-btn {
+    font-size: 24px;
+    color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background: #1D383E;
+    padding: 4px 4px 4px 4px;
+    text-decoration: none;
+}
+.design-btn-raised:hover, .design-btn-flat:hover,.design-home-btn:hover {
     cursor: pointer;
 }
 

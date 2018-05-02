@@ -15,12 +15,13 @@ $(window).scroll(function () {
             show its border-bottom by setting its width.
             */
             $('.home-sub-nav-item-menu a').eq(index).css({
-                'background-color': '#ffb300'
+                'color': '#ffb300','border': 'solid #ffb300 4px'
+
             });
         } else {
             //hide the border-bottom
             $('.home-sub-nav-item-menu a').eq(index).css({
-                'background-color': 'white'
+                'color': 'white','border': 'solid white 4px'
             });
         }
     });
