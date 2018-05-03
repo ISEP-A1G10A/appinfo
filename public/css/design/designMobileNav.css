@@ -77,9 +77,6 @@
     padding-left: 16px;
 }
 
-.design-mobileNav-link > span, div {
-    white-space: nowrap;
-}
 
 .design-mobileNav-link.current {
     background-color: #e3e3e3;

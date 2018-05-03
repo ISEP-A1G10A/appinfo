@@ -2,7 +2,7 @@
     <div class="home-text">
         <div class="home-title">La Domotique vue par <strong>Domisep</strong><br></div class="home-title">
         Domisep est une entreprise qui permet un contrôle sécurisé et ergonomique de toute habitation<br>
-        <a class="home-link" href="../404/"> En savoir plus</a>
+        <a class="home-link" href="#section1"> En savoir plus</a>
     </div>
 </div>
 
