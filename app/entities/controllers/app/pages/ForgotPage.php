@@ -7,7 +7,7 @@ class ForgotPage extends AppPage {
             $this->initializationForm("Forgot", ForgotForm::class);
         }
          $this->addToCssFiles([
-            "signIn/Forgot.css"
+            "forgotPassword/forgotPassword.css"
         ]);
     }
 
