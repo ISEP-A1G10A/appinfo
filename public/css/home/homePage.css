@@ -7,31 +7,34 @@
     height: 200px;
     word-wrap: break-word;
 }
-.home-text{
-    margin-left:10%;
-    padding-top:30px;
+
+.home-text {
+    margin-left: 10%;
+    padding-top: 30px;
     word-wrap: break-word;
 }
-.home-title{
+
+.home-title {
     color: #ffb300;
     font-size: 30px;
 
+}
 
-}
-.home-link{
+.home-link {
     text-align: right;
-    color:blue;
+    color: blue;
 }
+
 .home-sub-nav {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     position: sticky;
     background-color: #1D383E;
     text-align: center;
-    top: 55px;
+    top: 60px;
 }
 
 .home-sub-nav-item-menu {
