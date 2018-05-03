@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 15, 2018 at 01:05 PM
+-- Generation Time: Apr 26, 2018 at 07:23 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.2
 
@@ -205,6 +205,13 @@ CREATE TABLE `link_user_home` (
   `home` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- Dumping data for table `link_user_home`
+--
+
+INSERT INTO `link_user_home` (`id`, `user`, `home`) VALUES
+(1, 3, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -292,7 +299,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `first_name`, `last_name`, `type`, `email`, `phone`, `password`) VALUES
 (1, 'test_admin_sys', 'test_admin_sys', 1, 'admin_sys@test.com', '0000000000', '$6$rounds=3232$yRyJDM8YPUMMRAJF$80d8yrKfQdx.BEleBxPuCxJh2IJp3IRJM32poxmYJcZ/MBoyvYPSVN2MeP.9Yrl.P1DBSkJ9mbBz0DhDeckRc0'),
 (2, 'test_client', 'test_client', 3, 'client@test.com', '0000000000', '$6$rounds=3232$yRyJDM8YPUMMRAJF$80d8yrKfQdx.BEleBxPuCxJh2IJp3IRJM32poxmYJcZ/MBoyvYPSVN2MeP.9Yrl.P1DBSkJ9mbBz0DhDeckRc0'),
-(3, 'test_client2', 'test_client2', 4, 'client2@test.com', '0000000000', '$6$rounds=3232$yRyJDM8YPUMMRAJF$80d8yrKfQdx.BEleBxPuCxJh2IJp3IRJM32poxmYJcZ/MBoyvYPSVN2MeP.9Yrl.P1DBSkJ9mbBz0DhDeckRc0');
+(3, 'test_client2', 'test_client2', 4, 'client2@test.com', '0000000000', '$6$rounds=3232$yRyJDM8YPUMMRAJF$80d8yrKfQdx.BEleBxPuCxJh2IJp3IRJM32poxmYJcZ/MBoyvYPSVN2MeP.9Yrl.P1DBSkJ9mbBz0DhDeckRc0'),
+(4, 'test_admin_sav', 'test_admin_sav', 2, 'admin_sav@test.com', '0000000000', '$6$rounds=3232$yRyJDM8YPUMMRAJF$80d8yrKfQdx.BEleBxPuCxJh2IJp3IRJM32poxmYJcZ/MBoyvYPSVN2MeP.9Yrl.P1DBSkJ9mbBz0DhDeckRc0');
 
 -- --------------------------------------------------------
 
@@ -487,7 +495,7 @@ ALTER TABLE `link_gear_action_gear_category`
 -- AUTO_INCREMENT for table `link_user_home`
 --
 ALTER TABLE `link_user_home`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `message`
 --
@@ -512,7 +520,7 @@ ALTER TABLE `room_type`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `user_tempory_password`
 --

@@ -13,4 +13,16 @@ abstract class HomeTable extends Table {
         }
         return $houses;
     }
+
+    public static function getOneIdAndLabelById($id) {
+        $request = self::prepare("SELECT id, label FROM home WHERE id=:id");
+        $request->execute([
+            ':id' => $id
+        ]);
+        $results = $request->fetchAll(PDO::FETCH_ASSOC);
+        if (count($results) > 0) {
+            return $results[0];
+        }
+        return $results;
+    }
 }

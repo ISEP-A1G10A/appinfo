@@ -1,0 +1,18 @@
+.navConnected-mobile-deconnection {
+    background-color: #ffb300;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #1f5661;
+    font-size: 20px;
+}
+
+.navConnected-mobile-deconnection > img {
+    margin-left: -7px;
+}
+
+.navConnected-mobile-deconnection > span {
+    margin-left: -15px;
+}

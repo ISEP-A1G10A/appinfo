@@ -9,13 +9,17 @@ abstract class AppPage extends Page {
     private $cssFiles = [
         "design/designButtons.css",
         "design/designForm.css",
+        "design/designMobileNav.css",
         "design/designSideNav.css",
         "design/designTextInput.css",
+        "design/designTopNav.css",
         "nav/navShowcase.css",
-        "nav/navConnected.css"
+        "nav/navConnectedWeb.css",
+        "nav/navConnectedMobile.css"
     ];
     private $jsFiles = [
         "design/designButtons.js",
+        "design/designMobileNav.js",
         "design/designSideNav.js",
         "design/designTextInput.js",
     ];
@@ -85,11 +89,13 @@ abstract class AppPage extends Page {
      */
     protected function renderNav() {
         if ($this->section === "adminsys") {
-            require "../app/views/app/nav/navConnected.php"; // TODO
+            require "../app/views/app/nav/navAdminSys/navAdminSys.php";
+        } elseif ($this->section === "adminsav") {
+            require "../app/views/app/nav/navAdminSav/navAdminSav.php";
         } elseif ($this->section === "connected") {
-            require "../app/views/app/nav/navConnected.php";
+            require "../app/views/app/nav/navConnected/navConnected.php";
         } elseif ($this->section === "showcase") {
-            require "../app/views/app/nav/navShowcase.php";
+            require "../app/views/app/nav/navShowcase/navShowcase.php";
         }
     }
 

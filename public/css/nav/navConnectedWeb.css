@@ -1,0 +1,36 @@
+@media screen and (max-width: 800px){
+    .navConnected-web {
+        display: none;
+    }
+
+    .content {
+        margin-top: 47px;
+    }
+}
+
+@media screen and (min-width: 801px){
+    .navConnected-mobile {
+        display: none;
+    }
+
+    .content {
+        margin-top: 60px;
+    }
+
+    .content:not(.showcase) {
+        margin-left: 220px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .navConnected-web-title {
+        display: none;
+    }
+}
+
+.navConnected-web-disconnect-btn {
+    margin: 0 20px;
+    background-color: #ffb300;
+    color: #1f5661;
+}
+
