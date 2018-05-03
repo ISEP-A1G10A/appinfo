@@ -1,0 +1,58 @@
+.profile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-inputs {
+    padding: 10px 0 0;
+    margin: 15px 20px 40px;
+}
+
+.profile-form-title {
+    padding: 20px;
+    font-size: 30px;
+    color: white;
+    background-color: #1f5661;
+}
+
+.profile-form-btn {
+    background-color: #1f5661;
+    color: white;
+}
+
+.profile-form-text {
+    border: none;
+    font-size: 18px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    background: none;
+    width: 100%;
+}
+
+@media screen and (min-width: 520px) {
+    .profile {
+        padding-top: 30px;
+    }
+
+    .profile-form {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 519px) {
+    .profile-form {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .profile-form-btn {
+        flex: 1;
+    }
+
+    .profile-form-forget-password {
+        flex: 1;
+        text-align: center;
+        margin: 0 10px;
+    }
+}

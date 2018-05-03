@@ -14,6 +14,20 @@ $signInPage = [
     "placeholder_password"       => "Mot de passe",
     "placeholder_password_wrong" => "Veuillez entrer un mot de passe"
 ];
+$profilePage = [
+    "title"                        => "profil",
+    "first_name"                   => "prénom",
+    "last_name"                    => "nom",
+    "password"                     => "mot de passe",
+    "email"                        => "Email",
+    "phone"                        => "numéro de téléphone",
+    "submit"                       => "valider",
+    "placeholder_email_wrong"      => "Veuillez entrer un email",
+    "placeholder_password_wrong"   => "Veuillez entrer un mot de passe",
+    "placeholder_first_name_wrong" => "Veuillez entrer votre prénom",
+    "placeholder_last_name_wrong"  => "Veuillez entrer votre nom",
+    "placeholder_phone_wrong"      => "Veuillez entrer votre numéro de téléphone"
+];
 $logsPage = [
     "title"      => "logs",
     "date"       => "date",
@@ -62,6 +76,7 @@ $navs = [
 return [
     "main"       => $main,
     "home"       => $homePage,
+    "profile"    => $profilePage,
     "signIn"     => $signInPage,
     "logs"       => $logsPage,
     "404"        => $status404Page,
