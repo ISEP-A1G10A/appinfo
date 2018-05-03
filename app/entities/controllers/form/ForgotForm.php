@@ -10,8 +10,8 @@ class ForgotForm extends Form {
         $this->addToVerifications([
             new Verification("POST", "email", [
                 [function ($toTest) { return isEmpty($toTest); }, "connection", "email_empty"],
-                [function ($toTest) { return !isEmail($toTest); }, "connection", "email_not_valid"]]);
-                ])
+                [function ($toTest) { return !isEmail($toTest); }, "connection", "email_not_valid"]])
+        ]);
         $this->runVerifications();
         if ($this->isValid()) {
             $response = UserTable::getUserOrError($this->getValue("email"));

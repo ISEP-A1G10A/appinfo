@@ -6,6 +6,12 @@ $main = [
 $homePage = [
     "title" => "accueil"
 ];
+$forgotPasswordPage = [
+    "title"                      => "mot de passe oublié",
+    "placeholder_email"          => "Email",
+    "placeholder_email_wrong"    => "Veuillez entrer un email",
+    "submit"                     => "envoyer"
+];
 $signInPage = [
     "title"                      => "connexion",
     "forget_password"            => "Mot de passe oublié",
@@ -47,25 +53,26 @@ $navShowcase = [
     "connection" => "connexion"
 ];
 $navConnected = [
-    "home" => "tableau de bord",
+    "home"         => "tableau de bord",
     "deconnection" => "deconnexion",
-    "houses" => "maisons",
-    "settings" => "paramètres",
-    "sensors" => "capteurs",
-    "profile" => "profil",
-    "help" => "aide"
+    "houses"       => "maisons",
+    "settings"     => "paramètres",
+    "sensors"      => "capteurs",
+    "profile"      => "profil",
+    "help"         => "aide"
 ];
 $navs = [
-    "showcase" => $navShowcase,
+    "showcase"  => $navShowcase,
     "connected" => $navConnected
 ];
 // array
 return [
-    "main"       => $main,
-    "home"       => $homePage,
-    "signIn"     => $signInPage,
-    "logs"       => $logsPage,
-    "404"        => $status404Page,
-    "formErrors" => $formErrors,
-    "navs"       => $navs
+    "main"           => $main,
+    "home"           => $homePage,
+    "forgotPassword" => $forgotPasswordPage,
+    "signIn"         => $signInPage,
+    "logs"           => $logsPage,
+    "404"            => $status404Page,
+    "formErrors"     => $formErrors,
+    "navs"           => $navs
 ];

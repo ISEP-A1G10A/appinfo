@@ -1,10 +1,10 @@
 <?php
 
-class Forgot extends AppPage {
+class ForgotPage extends AppPage {
     public function __construct($lang) {
-        $this->initilization("Forgot", $lang);
+        $this->initilization("forgotPassword", $lang);
         if (isset($_POST["form"]) && $_POST["form"] === "Forgot") {
-            $this->initializationForm("Forgot", Forgot::class);
+            $this->initializationForm("Forgot", ForgotForm::class);
         }
          $this->addToCssFiles([
             "signIn/Forgot.css"
@@ -12,7 +12,7 @@ class Forgot extends AppPage {
     }
 
     protected function renderContent() {
-        require "../app/views/app/signIn/forgot-password.php";
+        require "../app/views/app/forgotPassword/forgotPasswordPage.php";
     }
 
     /*

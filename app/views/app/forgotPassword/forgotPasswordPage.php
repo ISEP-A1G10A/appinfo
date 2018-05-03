@@ -9,7 +9,7 @@
                    value="<?php echo $this->getFormValue("forgot", "email") ?>"><br>
             <div class="design-form-btns">
                 <input class="design-btn-raised signIn-form-btn" type="submit"
-                       value="<?php echo strtoupper($this->s[$this->page]["title"]) ?>">
+                       value="<?php echo strtoupper($this->s[$this->page]["submit"]) ?>">
             </div>
         </form>
         <hr class="design-form-hr">
