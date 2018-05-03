@@ -40,7 +40,7 @@
 .home-sub-nav-item-menu {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     position: sticky;
     width: 100%;
 
@@ -48,10 +48,6 @@
 
 .home-item-menu {
     padding: 10px;
-}
-
-.home-section {
-    height: 700px;
 }
 
 #section1 {
