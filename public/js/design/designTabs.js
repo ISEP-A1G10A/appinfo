@@ -15,13 +15,13 @@ $(window).scroll(function () {
             show its border-bottom by setting its width.
             */
             $('.home-sub-nav-item-menu a').eq(index).css({
-                'color': '#ffb300','border': 'solid #ffb300 4px'
+                'color': '#ffb300','border-bottom': 'solid #ffb300 2px'
 
             });
         } else {
             //hide the border-bottom
             $('.home-sub-nav-item-menu a').eq(index).css({
-                'color': 'white','border': 'solid white 4px'
+                'color': 'white','border-bottom': 'solid #1D383E 2px'
             });
         }
     });

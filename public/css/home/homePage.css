@@ -23,8 +23,8 @@
     color:blue;
 }
 .home-sub-nav {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -39,6 +39,7 @@
     flex-direction: row;
     justify-content: space-around;
     position: sticky;
+    width: 100%;
 
 }
 
