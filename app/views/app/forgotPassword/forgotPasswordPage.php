@@ -1,6 +1,6 @@
 <div class="forget-password">
     <div class="design-form signIn-form">
-        <div class="design-form-title signIn-form-title"><?php echo ucfirst($this->s[$this->page]["title"]) ?></div>
+        <div class="design-form-title forget-password-form-title"><?php echo ucfirst($this->s[$this->page]["title"]) ?></div>
         <?php $this->displayErrors() ?>
         <form action="<?php echo new URL("forgot-password/") ?>" method="post" class="design-form-inputs">
             <input name="form" value="Forgot" type="hidden">

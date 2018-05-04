@@ -37,6 +37,11 @@ $status404Page = [
 // forms
 $formErrorsCommon = [
 ];
+$formErrorsForgot = [
+    "email_empty"              => "Veuillez entrer votre email",
+    "email_not_valid"          => "Veuillez entrer un email valide",
+    "no_user_with_given_email" => "Email invalide"
+];
 $formErrorsConnection = [
     "email_empty"              => "Veuillez entrer votre email",
     "email_not_valid"          => "Veuillez entrer un email valide",
@@ -46,7 +51,8 @@ $formErrorsConnection = [
 ];
 $formErrors = [
     "common"     => $formErrorsCommon,
-    "connection" => $formErrorsConnection
+    "connection" => $formErrorsConnection,
+    "forgot" => $formErrorsForgot
 ];
 // nav
 $navShowcase = [

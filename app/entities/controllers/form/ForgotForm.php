@@ -9,8 +9,9 @@ class ForgotForm extends Form {
         $this->method = "POST";
         $this->addToVerifications([
             new Verification("POST", "email", [
-                [function ($toTest) { return isEmpty($toTest); }, "connection", "email_empty"],
-                [function ($toTest) { return !isEmail($toTest); }, "connection", "email_not_valid"]])
+                [function ($toTest) { return isEmpty($toTest); }, "Forgot", "email_empty"],
+                [function ($toTest) { return !isEmail($toTest); }, "Forgot", "email_not_valid"]
+            ])
         ]);
         $this->runVerifications();
         if ($this->isValid()) {
@@ -22,7 +23,7 @@ class ForgotForm extends Form {
                 $this->addError($response[1]);
             }
         }
-        $_SESSION["errors"]["connection"] = $this->getErrors();
+        $_SESSION["errors"]["forgot"] = $this->getErrors();
     }
 
     public function getRedirectionPage() {
