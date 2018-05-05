@@ -55,7 +55,7 @@
 
 </div>
     <div class="home-section3-bloc">
-        <img  src="<?php echo new URL("img/home/section3/Isabelle.D.jpg")?>alt=" A client's photo">
+        <img  src="<?php echo new URL("img/home/section3/IsabelleD.jpg")?>" alt=" A client's photo">
         <p> Isabelle.D : "Site très facile à prendre en main. Très utile notamment quand nous partons en vacances !"</p>
     </div>
     <div class="home-section3-bloc">
