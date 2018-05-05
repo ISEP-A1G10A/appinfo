@@ -66,6 +66,10 @@ $navs = [
     "connected" => $navConnected,
     "adminsys"  => $navAdminSys
 ];
+$footer = [
+    "term_of_use"    => "Conditions générales",
+    "privacy_policy" => "Politique de confidentialité"
+];
 // array
 return [
     "main"       => $main,
@@ -74,5 +78,6 @@ return [
     "logs"       => $logsPage,
     "404"        => $status404Page,
     "formErrors" => $formErrors,
-    "navs"       => $navs
+    "navs"       => $navs,
+    "footer"     => $footer
 ];
