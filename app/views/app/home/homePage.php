@@ -48,19 +48,27 @@
 </div>
 <div id="section3" class="home-section">
     <span class="home-title">Ils nous ont fait confiance</span>
+
+
 <div class="home-section3-bloc">
-    <img src="James.V.jpg" alt="A client's photo">
-    <p> James.v : Excellent service. Utilisation très facile. Entreprise très réactive</p>
+    <img class="home-section3-image" src="<?php echo new URL("img/home/section3/AlanA.png")?>" alt="A client's photo" width="200" >
+    <p class="home-section3-people"> James Vaugirard</p>
+    <p class="home-section3-commentary">  "Excellent service. Utilisation très facile. Entreprise très réactive"</p>
+
 
 
 </div>
     <div class="home-section3-bloc">
-        <img  src="<?php echo new URL("img/home/section3/IsabelleD.jpg")?>" alt=" A client's photo">
-        <p> Isabelle.D : "Site très facile à prendre en main. Très utile notamment quand nous partons en vacances !"</p>
+        <img class="home-section3-image" src="<?php echo new URL("img/home/section3/isabelleD.png")?>" alt=" A client's photo" width="200" >
+        <p class="home-section3-people">Isabelle Durand </p>
+        <p class="home-section3-commentary">  "Site très facile à prendre en main. Très utile notamment quand nous partons en vacances !"</p>
+
     </div>
     <div class="home-section3-bloc">
-        <img src ="Alan.A.jpg" alt="A client's photo">
-        <p> Alan.A : "Bon service, de nombreux choix de personnalisation. Je recommande vivement."</p>
+        <img class="home-section3-image" src ="<?php echo new URL("img/home/section3/danielD.png")?>" alt=" A client's photo" width="200"  >
+        <p class="home-section3-people">Daniel Dupont <p/>
+        <p class="home-section3-commentary">  "Bon service, de nombreux choix de personnalisation. Je recommande vivement."</p>
+
 
         </div>
 
