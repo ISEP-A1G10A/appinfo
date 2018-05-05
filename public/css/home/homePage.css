@@ -17,7 +17,6 @@
 .home-title {
     color: #ffb300;
     font-size: 30px;
-
 }
 
 .home-link {
@@ -32,7 +31,7 @@
     flex-direction: row;
     justify-content: space-around;
     position: sticky;
-    background-color: #1D383E;
+    background-color: #1d383e;
     text-align: center;
     top: 60px;
 }
@@ -43,7 +42,6 @@
     justify-content: space-between;
     position: sticky;
     width: 100%;
-
 }
 
 .home-item-menu {
@@ -61,3 +59,10 @@
 #section3 {
     background: white;
 }
+
+.home-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
