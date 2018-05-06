@@ -84,7 +84,7 @@
 <div id="section3" class="home-section">
     <span class="home-section3-title">Ils nous ont fait confiance, faites de même !</span>
     <div class="home-section3-bloc">
-        <img class="home-section3-image" src="<?php echo new URL("img/home/section3/AlanA.png") ?>"
+        <img class="home-section3-image" src="<?php echo new URL("img/home/section3/alanA.png") ?>"
              alt="A client's photo" width="200">
         <p class="home-section3-people"> James Vaugirard</p>
         <p class="home-section3-commentary"> "Excellent service. Utilisation très facile. Entreprise très réactive"</p>
