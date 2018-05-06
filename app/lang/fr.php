@@ -15,11 +15,14 @@ $signInPage = [
     "placeholder_password_wrong" => "Veuillez entrer un mot de passe"
 ];
 $profilePage = [
-    "title"                        => "profil",
+    "data_title"                   => "vos informations",
+    "password_title"               => "changez votre mot de passse",
     "first_name"                   => "prénom",
     "last_name"                    => "nom",
-    "password"                     => "mot de passe",
-    "email"                        => "Email",
+    "old_password"                 => "ancien mot de passe",
+    "password"                     => "nouveau mot de passe",
+    "repeat_password"              => "répétez votre nouveau mot de passe",
+    "email"                        => "email",
     "phone"                        => "numéro de téléphone",
     "submit"                       => "valider",
     "placeholder_email_wrong"      => "Veuillez entrer un email",

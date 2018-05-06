@@ -1,6 +1,8 @@
 <?php
 
 class ProfilePage extends AppPage {
+    private $data;
+
     public function __construct($lang) {
         $this->initilization("profile", $lang, "connected");
         if (isset($_POST["form"]) && $_POST["form"] === "profile") {
@@ -12,7 +14,11 @@ class ProfilePage extends AppPage {
     }
 
     protected function renderContent() {
-        require "../app/views/app/profile/profilePage.php";
+        $table = UserTable::getAllAllById($_SESSION['user']['id']);
+        if(count($table) == 1){
+            $this->data = UserTable::getAllAllById($_SESSION['user']['id'])[0];
+            require "../app/views/app/profile/profilePage.php";
+        }
     }
 
     /*
@@ -47,6 +53,7 @@ class ProfilePage extends AppPage {
             echo " error";
         }
     }
+
     private function getPlaceholderEmail() {
         if ($this->isErrorEmail()) {
             return $this->s[$this->page]["placeholder_email_wrong"];
@@ -70,27 +77,67 @@ class ProfilePage extends AppPage {
         if ($this->isErrorPassword()) {
             return $this->s[$this->page]["placeholder_password_wrong"];
         } else {
-            return $this->s[$this->page]["password"];
+            return $this->s[$this->page]["placeholder_password"];
         }
     }
 
-    // NAME
+    // FIRST NAME
 
-    private function isErrorName() {
-        return isset($this->errors["cell_empty"]);
+    private function isErrorFirstName() {
+        return isset($this->errors["first_name_empty"]);
     }
 
-    private function gotErrorName() {
-        if ($this->isErrorOther()){
+    private function gotErrorFirstName() {
+        if ($this->isErrorFirstName()) {
             echo " error";
         }
     }
 
-    private function getPlaceholderName(){
-        if($this->isErrorOther()) {
-            return $this->s[$this->page]["placeholder_name_wrong"];
-        }else{
-            return $this->s[$this->page]["placeholder_name"];
+    private function getPlaceholderFirstName() {
+        if ($this->isErrorFirstName()) {
+            return $this->s[$this->page]["placeholder_first_name_wrong"];
+        } else {
+            return $this->s[$this->page]["first_name"];
+        }
+    }
+
+    // LAST NAME
+
+    private function isErrorLastName() {
+        return isset($this->errors["last_name_empty"]);
+    }
+
+    private function gotErrorLastName() {
+        if ($this->isErrorLastName()) {
+            echo " error";
+        }
+    }
+
+    private function getPlaceholderLastName() {
+        if ($this->isErrorLastName()) {
+            return $this->s[$this->page]["placeholder_last_name_wrong"];
+        } else {
+            return $this->s[$this->page]["last_name"];
+        }
+    }
+
+    // PHONE
+
+    private function isErrorPhone() {
+        return isset($this->errors["phone_empty"]);
+    }
+
+    private function gotErrorPhone() {
+        if ($this->isErrorPhone()) {
+            echo " error";
+        }
+    }
+
+    private function getPlaceholderPhone() {
+        if ($this->isErrorPhone()) {
+            return $this->s[$this->page]["placeholder_phone_wrong"];
+        } else {
+            return $this->s[$this->page]["phone"];
         }
     }
 }

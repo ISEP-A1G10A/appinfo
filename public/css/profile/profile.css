@@ -1,5 +1,4 @@
 .profile {
-    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -9,11 +8,18 @@
     margin: 15px 20px 40px;
 }
 
+.profile-form-data, .profile-form-password {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    padding-bottom: 75px;
+}
+
 .profile-form-title {
-    padding: 20px;
-    font-size: 30px;
-    color: white;
-    background-color: #1f5661;
+    font-size: 20px;
+    padding-bottom: 40px;
+    width: 100%;
 }
 
 .profile-form-btn {
@@ -25,6 +31,18 @@
     border: none;
     font-size: 18px;
     padding-bottom: 5px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    background: none;
+    width: 100%;
+}
+
+.profile-form-input {
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    font-size: 18px;
+    padding-bottom: 5px;
+    padding-left: 20px;
     margin-bottom: 20px;
     background: none;
     width: 100%;
