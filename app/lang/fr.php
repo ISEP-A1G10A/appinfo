@@ -5,12 +5,12 @@ $main = [
 ];
 $homePage = [
     "title" => "accueil",
-    "Home automation seen by Domisep" => "La Domotique vue par Domisep",
-    "Domisep is a company that allows a secure and ergonomic control of any home" => "Domisep est une entreprise qui permet un contrôle sécurisé et ergonomique de toute habitation",
-    "Learn more" => "En savoir plus",
-    "Features" => "Fonctionnalités",
-    "Register" => "S'inscrire",
-    "Our clients" => "Nos clients"
+    "section0_domisep" => "La Domotique vue par Domisep",
+    "section0_description" => "Domisep est une entreprise qui permet un contrôle sécurisé et ergonomique de toute habitation",
+    "section0_learn_more" => "En savoir plus",
+    "nav_sticky_features" => "Fonctionnalités",
+    "nav_sticky_register" => "S'inscrire",
+    "nav_sticky_clients" => "Nos clients"
 ];
 $signInPage = [
     "title" => "connexion",
