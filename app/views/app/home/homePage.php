@@ -18,32 +18,43 @@
 </div>
 <div id="section1" class="home-section">
     <div class="home-section1-bloc">
-        <span class="home-bloc-title">Capter</span>
+        <span class="home-bloc-title"><img src="<?php echo new URL("css/home/section1/capter.jpg") ?>"/>Capter</span>
         <p>Notre catalogue de capteurs: choisissez, ajoutez et retirez des capteurs de votre maison</p>
     </div>
     <div class="home-section1-bloc">
-        <span class="home-bloc-title">Transférer</span>
-        <p>un transfert de données instantanné</p>
+        <span class="home-bloc-title"><img src="<?php echo new URL("css/home/section1/transferer1.jpg") ?>"/>Transférer</span>
+        <p> un transfert de données instantanné</p>
     </div>
     <div class="home-section1-bloc">
-        <span class="home-bloc-title">Visualiser</span>
+        <span class="home-bloc-title"><img
+                    src="<?php echo new URL("css/home/section1/visualiser.jpg") ?>"/>Visualiser</span>
         <p>accédez et personnalisez votre maison</p>
     </div>
     <div class="home-section1-bloc">
-        <span class="home-bloc-title">Economie</span>
+        <span class="home-bloc-title"><img
+                    src="<?php echo new URL("css/home/section1/economie.jpg") ?>"/>Economie</span>
         <p>Suivez votre consommation pour faire des économies </p>
     </div>
     <div class="home-section1-bloc">
-        <span class="home-bloc-title">Sécurité</span>
+        <span class="home-bloc-title"><img
+                    src="<?php echo new URL("css/home/section1/securité.jpg") ?>"/>Sécurité</span>
         <p>La sécurité est un pilier fondateur de notre entreprise. Notre produit respecte la CNIL</p>
     </div>
     <div class="home-section1-bloc">
-        <span class="home-bloc-title">Ecologie</span>
+        <span class="home-bloc-title"><img
+                    src="<?php echo new URL("css/home/section1/ecologie.jpg") ?>"/>Ecologie</span>
         <p>Quotidiennement nous relevons de nouveaux défis écologiques</p>
     </div>
 </div>
 <div id="section2" class="home-section">
-    Section2
+    <h1 class="home-section2-title">Processus d'inscription</h1><br/>
+    <h2 class="home-section2-subtitle">1/Nous contacter<br/></h2>
+    <p>Contactez nous par email: moongetters@gmail.com<br/>Par téléphone: 0639569547<br/>Nous sommes ouverts tous les
+        jours de 9h à 18h<br/></p>
+    <h2 class="home-section2-subtitle">Validez votre compte</h2>
+    <p>Aprés avoir pris contact avec nous, vous receverez un email avec un lien d'activation<br/></p>
+    <h2 class="home-section2-subtitle">Profitez de nos services</h2>
+    <p>Connectez vous et commencez tout de suite la personalisation de votre maison</p>
 </div>
 <div id="section3" class="home-section">
     <span class="home-section3-title">Ils nous ont fait confiance, faites de même !</span>
