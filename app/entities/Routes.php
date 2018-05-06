@@ -15,7 +15,7 @@ abstract class Routes {
             "profile"            => [HomeConnectedPage::class],
             "houses/{}/sensors"  => [HomeConnectedPage::class],
             "houses/{}/settings" => [HomeConnectedPage::class],
-            "help"               => [HomeConnectedPage::class],
+            "help"               => [HelpPage::class],
         ],
         "admin_sys" => [
             "home"       => [LogsPage::class],

@@ -1,4 +1,5 @@
 <div class="home-showcase-title">
+
     <div class="home-text">
         <div class="home-title">La Domotique vue par <strong>Domisep</strong><br></div class="home-title">
         Domisep est une entreprise qui permet un contrôle sécurisé et ergonomique de toute habitation<br>
@@ -7,6 +8,7 @@
 </div>
 
 <div class="home-sub-nav">
+
     <div class="home-sub-nav-item-menu">
         <a href="#section1" class="design-home-btn"><span class="home-item-menu">Fonctionnalités</span></a>
     </div>

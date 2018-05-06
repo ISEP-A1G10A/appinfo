@@ -7,16 +7,30 @@
     letter-spacing: 0.05px;
     text-decoration: none;
 }
+
 .design-home-btn {
     font-size: 24px;
     color: white;
-    margin: 0;
+    margin: 0px;
     background: #1D383E;
     padding: 10px 10px 10px 10px;
     text-decoration: none;
     width: 100%;
 }
-.design-btn-raised:hover, .design-btn-flat:hover,.design-home-btn:hover {
+
+.design-help-btn {
+    font-size: 17px;
+    color: black;
+    font-weight: 500;
+    margin-right: 10px;
+    padding: 5px 5px 5px 5px;
+    text-decoration: none;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.design-btn-raised:hover, .design-btn-flat:hover, .design-home-btn:hover, .design-help-btn:hover {
     cursor: pointer;
 }
 
@@ -73,7 +87,8 @@
 }
 
 @keyframes design-button-raised-in {
-    from { }
+    from {
+    }
     to {
         opacity: 0.8;
     }

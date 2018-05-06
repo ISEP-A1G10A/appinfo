@@ -1,0 +1,115 @@
+.help {
+    height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 70px;
+}
+
+.help-tel-part {
+    display: flex;
+    flex-direction: row;
+    min-height: 220px;
+    margin-bottom: 10px;
+
+}
+
+.help-tel-part-name {
+    font-weight: bold;
+    font-size: 20px;
+    color: #1f5661;
+}
+
+.help-tel-part-info {
+    padding-right: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.help-tel-part-info-2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: white;
+    margin-top: 20px;
+    width: 320px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+}
+
+.help-telnumber {
+    font-size: 20px;
+    color: Black;
+    padding: 1px 1px 1px 1px;
+    white-space: nowrap
+}
+
+.help-client, .help-tel {
+    padding-left: 20px;
+
+}
+
+.help-tel {
+    padding-bottom: 10px;
+}
+
+.help-client-number {
+    font-size: 20px;
+    color: Black;
+    padding: 1px 1px 1px 1px;
+}
+
+.help-description {
+    text-align: left;
+    width: 50%;
+    padding: 20px 1px 1px;
+    font-size: 17px;
+}
+.help-des-title{
+    font-weight: bold;
+
+}
+
+.help-message-part {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.help-message-choice {
+    display: flex;
+    flex-direction: row;
+}
+
+.help-message-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+.help-message-box, .help-message-ask {
+    font-weight: bold;
+}
+
+.help-message-text {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5px 5px 5px 5px;
+    background: white;
+    height: 150px;
+}
+.help-message-text2{
+
+    padding: 5px 5px 5px 5px;
+    background: white;
+    height: 150px;
+}
+
+.help-send {
+    margin-left: 70%;
+}
+.help-send-text{
+    font-size: 20px;
+    color: #1f5661;
+}
