@@ -14,20 +14,20 @@ $(window).scroll(function () {
             currently on the viewport and
             show its border-bottom by setting its width.
             */
-            $('.home-sub-nav-item-menu a').eq(index).css({
-                'color': '#ffb300', 'border-bottom': 'solid #ffb300 2px'
+            $('.help-message-btn a').eq(index).css({
+                'background':'orange'
 
             });
         } else {
             //hide the border-bottom
-            $('.home-sub-nav-item-menu a').eq(index).css({
-                'color': 'white', 'border-bottom': 'solid #1D383E 2px'
+            $('.help-message-btn a').eq(index).css({
+                'background':'yellow'
             });
         }
     });
 }).trigger('scroll');
 
-$('home-sub-nav-item-menu a').click(function () {
+$('help-message-btn a').click(function () {
     /* click has no index argument compared to each() function
     so we have to get it with index() */
     var index = $(this).index(),
