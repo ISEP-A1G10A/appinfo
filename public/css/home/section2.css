@@ -1,0 +1,24 @@
+#section2
+{
+
+    background-color: #1f5661;
+
+}
+.home-section2-title
+{
+    display: flex;
+    justify-content: center;
+    color: #ffb300;
+    font-weight: bold;
+
+}
+.home-section2-subtitle
+{
+
+    font-weight: bold;
+}
+h2
+{
+    justify-content: left;
+}
+
