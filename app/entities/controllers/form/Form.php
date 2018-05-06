@@ -32,7 +32,7 @@ abstract class Form {
     }
 
     public function redirect() {
-        header("Location: http://localhost/appinfo/public/" . $this->getRedirectionPage() . "/");
+        header("Location: /appinfo/public/" . $this->getRedirectionPage() . "/");
         die();
     }
 
