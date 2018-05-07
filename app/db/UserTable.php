@@ -16,6 +16,14 @@ abstract class UserTable extends Table {
         return $request->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public static function getAllAllById($id){
+        $request = self::prepare("SELECT first_name, last_name, phone, email FROM user WHERE id=:id");
+        $request->execute([
+            ':id' => $id
+        ]);
+        return $request->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public static function getUserOrError($email, $password) {
         $users = self::getAllIdsAndTypesAndPasswordsByEmail($email);
         if (count($users) > 0) {
@@ -27,5 +35,16 @@ abstract class UserTable extends Table {
             return ["error", ["connection", "wrong_password"]];
         }
         return ["error", ["connection", "no_user_with_given_email"]];
+    }
+
+    public static function setUserData($id, $email, $phone, $first_name, $last_name) {
+        $request = self::prepare("UPDATE user SET email=:email, phone=:phone, first_name=:first_name, last_name=:last_name WHERE id=:id");
+        $request->execute([
+           ':id' => $id,
+           ':email' => $email,
+           ':phone' => $phone,
+           ':first_name' => $first_name,
+           ':last_name' => $last_name
+        ]);
     }
 }
