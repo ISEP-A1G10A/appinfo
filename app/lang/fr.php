@@ -4,13 +4,19 @@ $main = [
     "language" => "fr"
 ];
 $homePage = [
-    "title" => "accueil"
+    "title"                => "accueil",
+    "section0_domisep"     => "La Domotique vue par Domisep",
+    "section0_description" => "Domisep est une entreprise qui permet un contrôle sécurisé et ergonomique de toute habitation",
+    "section0_learn_more"  => "En savoir plus",
+    "nav_sticky_features"  => "Fonctionnalités",
+    "nav_sticky_register"  => "S'inscrire",
+    "nav_sticky_clients"   => "Nos clients"
 ];
 $forgotPasswordPage = [
-    "title"                      => "mot de passe oublié",
-    "placeholder_email"          => "Email",
-    "placeholder_email_wrong"    => "Veuillez entrer un email",
-    "submit"                     => "envoyer"
+    "title"                   => "mot de passe oublié",
+    "placeholder_email"       => "Email",
+    "placeholder_email_wrong" => "Veuillez entrer un email",
+    "submit"                  => "envoyer"
 ];
 $signInPage = [
     "title"                      => "connexion",
@@ -19,6 +25,27 @@ $signInPage = [
     "placeholder_email_wrong"    => "Veuillez entrer un email",
     "placeholder_password"       => "Mot de passe",
     "placeholder_password_wrong" => "Veuillez entrer un mot de passe"
+];
+$helpPage = [
+    "title" => "Aide"
+];
+$profilePage = [
+    "title"                        => "profil",
+    "data_title"                   => "vos informations",
+    "password_title"               => "changez votre mot de passse",
+    "first_name"                   => "prénom",
+    "last_name"                    => "nom",
+    "old_password"                 => "ancien mot de passe",
+    "password"                     => "nouveau mot de passe",
+    "repeat_password"              => "répétez votre nouveau mot de passe",
+    "email"                        => "email",
+    "phone"                        => "numéro de téléphone",
+    "submit"                       => "valider",
+    "placeholder_email_wrong"      => "Veuillez entrer un email",
+    "placeholder_password_wrong"   => "Veuillez entrer un mot de passe",
+    "placeholder_first_name_wrong" => "Veuillez entrer votre prénom",
+    "placeholder_last_name_wrong"  => "Veuillez entrer votre nom",
+    "placeholder_phone_wrong"      => "Veuillez entrer votre numéro de téléphone"
 ];
 $logsPage = [
     "title"      => "logs",
@@ -52,7 +79,7 @@ $formErrorsConnection = [
 $formErrors = [
     "common"     => $formErrorsCommon,
     "connection" => $formErrorsConnection,
-    "forgot" => $formErrorsForgot
+    "forgot"     => $formErrorsForgot
 ];
 // nav
 $navShowcase = [
@@ -67,18 +94,31 @@ $navConnected = [
     "profile"      => "profil",
     "help"         => "aide"
 ];
+$navAdminSys = [
+    "home"         => "tableau de bord",
+    "deconnection" => "deconnexion",
+    "logs"         => "logs",
+    "logs_debug"   => "logs debug"
+];
 $navs = [
     "showcase"  => $navShowcase,
-    "connected" => $navConnected
+    "connected" => $navConnected,
+    "adminsys"  => $navAdminSys,
+];
+$footer = [
+    "term_of_use"    => "Conditions générales",
+    "privacy_policy" => "Politique de confidentialité"
 ];
 // array
 return [
-    "main"           => $main,
-    "home"           => $homePage,
-    "forgotPassword" => $forgotPasswordPage,
-    "signIn"         => $signInPage,
-    "logs"           => $logsPage,
-    "404"            => $status404Page,
-    "formErrors"     => $formErrors,
-    "navs"           => $navs
+    "main"       => $main,
+    "home"       => $homePage,
+    "signIn"     => $signInPage,
+    "profile"    => $profilePage,
+    "help"       => $helpPage,
+    "logs"       => $logsPage,
+    "404"        => $status404Page,
+    "formErrors" => $formErrors,
+    "navs"       => $navs,
+    "footer"     => $footer
 ];
