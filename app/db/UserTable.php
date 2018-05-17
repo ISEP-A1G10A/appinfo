@@ -37,7 +37,8 @@ abstract class UserTable extends Table {
         return ["error", ["connection", "no_user_with_given_email"]];
     }
 
-    public static function setUserData($id, $email, $phone, $first_name, $last_name) {
+    // TODO
+    public static function setAllById($id, $email, $phone, $first_name, $last_name) {
         $request = self::prepare("UPDATE user SET email=:email, phone=:phone, first_name=:first_name, last_name=:last_name WHERE id=:id");
         $request->execute([
            ':id' => $id,

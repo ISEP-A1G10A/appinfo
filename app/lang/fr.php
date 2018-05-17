@@ -34,6 +34,7 @@ $profilePage = [
     "repeat_password"              => "répétez votre nouveau mot de passe",
     "email"                        => "email",
     "phone"                        => "numéro de téléphone",
+    "reset"                        => "annuler",
     "submit"                       => "valider",
     "placeholder_email_wrong"      => "Veuillez entrer un email",
     "placeholder_password_wrong"   => "Veuillez entrer un mot de passe",
