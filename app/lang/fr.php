@@ -111,14 +111,15 @@ $footer = [
 ];
 // array
 return [
-    "main"       => $main,
-    "home"       => $homePage,
-    "signIn"     => $signInPage,
-    "profile"    => $profilePage,
-    "help"       => $helpPage,
-    "logs"       => $logsPage,
-    "404"        => $status404Page,
-    "formErrors" => $formErrors,
-    "navs"       => $navs,
-    "footer"     => $footer
+    "main"           => $main,
+    "home"           => $homePage,
+    "signIn"         => $signInPage,
+    "forgotPassword" => $forgotPasswordPage,
+    "profile"        => $profilePage,
+    "help"           => $helpPage,
+    "logs"           => $logsPage,
+    "404"            => $status404Page,
+    "formErrors"     => $formErrors,
+    "navs"           => $navs,
+    "footer"         => $footer
 ];
