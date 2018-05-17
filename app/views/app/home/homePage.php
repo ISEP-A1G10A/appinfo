@@ -23,22 +23,22 @@
         <div class="home-section1-bloc">
             <img src="<?php echo new URL("css/home/section1/capter.jpg") ?>"/>
             <div class="home-section1-bloc-txt">
-                <span class="home-section1-bloc-title">Capter</span>
-                <p>Notre catalogue de capteurs: choisissez, ajoutez et retirez des capteurs de votre maison</p>
+                <span class="home-section1-bloc-title"><?php echo ($this->s[$this->page]["bloc1_title"])?></span>
+                <p><?php echo ($this->s[$this->page]["bloc1_description"])?></p>
             </div>
         </div>
         <div class="home-section1-bloc">
             <img src="<?php echo new URL("css/home/section1/transferer1.jpg") ?>"/>
             <div class="home-section1-bloc-txt">
-                <span class="home-section1-bloc-title">Transférer</span>
-                <p> un transfert de données instantanné</p>
+                <span class="home-section1-bloc-title"><?php echo ($this->s[$this->page]["bloc2_title"])?></span>
+                <p><?php echo ($this->s[$this->page]["bloc2_description"])?></p>
             </div>
         </div>
         <div class="home-section1-bloc">
             <img src="<?php echo new URL("css/home/section1/visualiser.jpg") ?>"/>
             <div class="home-section1-bloc-txt">
-                <span class="home-section1-bloc-title">Visualiser</span>
-                <p>accédez et personnalisez votre maison</p>
+                <span class="home-section1-bloc-title"><?php echo ($this->s[$this->page]["bloc3_title"])?></span>
+                <p><?php echo ($this->s[$this->page]["bloc3_description"])?></p>
             </div>
         </div>
     </div>
@@ -46,22 +46,22 @@
         <div class="home-section1-bloc">
             <img src="<?php echo new URL("css/home/section1/economie.jpg") ?>"/>
             <div class="home-section1-bloc-txt">
-                <span class="home-section1-bloc-title">Economie</span>
-                <p>Suivez votre consommation pour faire des économies </p>
+                <span class="home-section1-bloc-title"><?php echo ($this->s[$this->page]["bloc4_title"])?></span>
+                <p><?php echo ($this->s[$this->page]["bloc4_description"])?></p>
             </div>
         </div>
         <div class="home-section1-bloc">
             <img src="<?php echo new URL("css/home/section1/securité.jpg") ?>"/>
             <div class="home-section1-bloc-txt">
-                <span class="home-section1-bloc-title">Sécurité</span>
-                <p>La sécurité est un pilier fondateur de notre entreprise. Notre produit respecte la CNIL</p>
+                <span class="home-section1-bloc-title"><?php echo ($this->s[$this->page]["bloc5_tile"])?></span>
+                <p><?php echo ($this->s[$this->page]["bloc5_description"])?></p>
             </div>
         </div>
         <div class="home-section1-bloc">
             <img src="<?php echo new URL("css/home/section1/ecologie.jpg") ?>"/>
             <div class="home-section1-bloc-txt">
-                <span class="home-section1-bloc-title">Ecologie</span>
-                <p>Quotidiennement nous relevons de nouveaux défis écologiques</p>
+                <span class="home-section1-bloc-title"><?php echo ($this->s[$this->page]["bloc6_title"])?></span>
+                <p><?php echo ($this->s[$this->page]["bloc6_description"])?></p>
             </div>
         </div>
     </div>

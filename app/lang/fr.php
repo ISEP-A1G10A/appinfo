@@ -97,6 +97,38 @@ $footer = [
     "term_of_use"    => "Conditions générales",
     "privacy_policy" => "Politique de confidentialité"
 ];
+$section1 = [
+    "bloc1_title" => "Capter",
+    "bloc1_description" => "Notre catalogue de capteurs: choisissez, ajoutez et retirez des capteurs de votre maison",
+    "bloc2_title" => "Transférer",
+    "bloc2_description" => "un transfert de données instantanné",
+    "bloc3_title" => "Visualiser",
+    "bloc3_description" => "accédez et personnalisez votre maison",
+    "bloc4_title" => "Economie",
+    "bloc4_description" => "Suivez votre consommation pour faire des économies",
+    "bloc5_tile" => "Sécurité",
+    "bloc5_description" => "La sécurité est un pilier fondateur de notre entreprise. Notre produit respecte la CNIL",
+    "bloc6_title" => "Ecologie",
+    "bloc6_description" => "Quotidiennement nous relevons de nouveaux défis écologiques"
+];<?php echo ($this->s[$this->page]["bloc6_description"])?>
+$section2 = [
+  "section2_title" => "Processus d'inscription",
+  "section2_subtitle1" => "Nous contacter",
+  "section2_description1" => "Contactez nous par email (contact@luxo.com) ou par téléphone (+33 6 39 56 95 47)",
+  "section2_subtitle2" => "Validez votre compte",
+  "section2_description2" => "Après avoir pris contact avec nous, vous receverez un email avec un lien d'activation",
+  "section2_subtitle3" => "Profitez de nos services",
+  "section2_description3" => "Connectez-vous et commencez tout de suite la personalisation de votre maison"
+];
+$section3 = [
+    "section3_title" => "Connectez-vous et commencez tout de suite la personalisation de votre maison",
+    "section3_people1" => "James Vaugirard",
+    "section3_commentary1" => "Excellent service. Utilisation très facile. Entreprise très réactive",
+    "section3_people2" => "Isabelle Durand",
+    "section3_commentary2" => "Site très facile à prendre en main. Très utile notamment quand nous partons en vacances !",
+    "section3_people3" => "Daniel Dupont",
+    "section3_commentary3" => "Bon service, de nombreux choix de personnalisation. Je recommande vivement."
+];
 // array
 return [
     "main" => $main,
