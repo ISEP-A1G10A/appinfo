@@ -15,7 +15,7 @@ class ForgotForm extends Form {
         ]);
         $this->runVerifications();
         if ($this->isValid()) {
-            $response = UserTable::getUserOrError($this->getValue("email"));
+            $response = UserTable::getMailOrError($this->getValue("email"));
             if ($response[0] === "success") {
                 $_SESSION["user"]["id"] = $response[1]["id"];
                 $_SESSION["user"]["role"] = UserTypeTable::getRoleByTypeId($response[1]["type"]);

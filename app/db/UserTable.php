@@ -28,4 +28,12 @@ abstract class UserTable extends Table {
         }
         return ["error", ["connection", "no_user_with_given_email"]];
     }
+    
+     public static function getMailOrError($email) {
+        $users = self::getAllIdsAndTypesAndPasswordsByEmail($email);
+        if (count($users) > 0) {
+            return ["success", $user];
+            }
+        return ["error", ["forgot", "no_user_with_given_email"]];
+    }
 }
