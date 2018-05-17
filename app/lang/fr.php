@@ -24,22 +24,22 @@ $helpPage = [
     "title" => "Aide"
 ];
 $profilePage = [
-    "title"                        => "profil",
-    "data_title"                   => "vos informations",
-    "password_title"               => "changez votre mot de passse",
-    "first_name"                   => "prénom",
-    "last_name"                    => "nom",
-    "old_password"                 => "ancien mot de passe",
-    "password"                     => "nouveau mot de passe",
-    "repeat_password"              => "répétez votre nouveau mot de passe",
-    "email"                        => "email",
-    "phone"                        => "numéro de téléphone",
-    "submit"                       => "valider",
-    "placeholder_email_wrong"      => "Veuillez entrer un email",
-    "placeholder_password_wrong"   => "Veuillez entrer un mot de passe",
+    "title" => "profil",
+    "data_title" => "vos informations",
+    "password_title" => "changez votre mot de passse",
+    "first_name" => "prénom",
+    "last_name" => "nom",
+    "old_password" => "ancien mot de passe",
+    "password" => "nouveau mot de passe",
+    "repeat_password" => "répétez votre nouveau mot de passe",
+    "email" => "email",
+    "phone" => "numéro de téléphone",
+    "submit" => "valider",
+    "placeholder_email_wrong" => "Veuillez entrer un email",
+    "placeholder_password_wrong" => "Veuillez entrer un mot de passe",
     "placeholder_first_name_wrong" => "Veuillez entrer votre prénom",
-    "placeholder_last_name_wrong"  => "Veuillez entrer votre nom",
-    "placeholder_phone_wrong"      => "Veuillez entrer votre numéro de téléphone"
+    "placeholder_last_name_wrong" => "Veuillez entrer votre nom",
+    "placeholder_phone_wrong" => "Veuillez entrer votre numéro de téléphone"
 ];
 $logsPage = [
     "title" => "logs",
@@ -50,6 +50,18 @@ $logsPage = [
     "ip-address" => "adresse IP",
     "value" => "valeur",
     "search" => "rechercher"
+];
+$membersPage = [
+    "title" => "membres",
+    "type" => "type",
+    "id" => "ID",
+    "value" => "valeur",
+    "search" => "rechercher",
+    "first_name" => "prénom",
+    "last_name" => "nom",
+    "email" => "email",
+    "phone" => "téléphone",
+
 ];
 $status404Page = [
     "title" => "404 - Page introuvable",
@@ -83,18 +95,22 @@ $navConnected = [
     "help" => "aide"
 ];
 $navAdminSys = [
-    "home" => "tableau de bord",
     "deconnection" => "deconnexion",
     "logs" => "logs",
     "logs_debug" => "logs debug"
 ];
+$navAdminSav = [
+    "deconnection" => "deconnexion",
+    "members" => "membres"
+];
 $navs = [
     "showcase" => $navShowcase,
     "connected" => $navConnected,
-    "adminsys" => $navAdminSys
+    "adminsys" => $navAdminSys,
+    "adminsav" => $navAdminSav
 ];
 $footer = [
-    "term_of_use"    => "Conditions générales",
+    "term_of_use" => "Conditions générales",
     "privacy_policy" => "Politique de confidentialité"
 ];
 // array
@@ -102,11 +118,12 @@ return [
     "main" => $main,
     "home" => $homePage,
     "signIn" => $signInPage,
-    "profile"    => $profilePage,
+    "profile" => $profilePage,
     "help" => $helpPage,
     "logs" => $logsPage,
+    "members" => $membersPage,
     "404" => $status404Page,
     "formErrors" => $formErrors,
-    "navs"       => $navs,
-    "footer"     => $footer
+    "navs" => $navs,
+    "footer" => $footer
 ];

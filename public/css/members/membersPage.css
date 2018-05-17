@@ -1,0 +1,74 @@
+.members-table {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 10px;
+}
+
+.members-tbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.members-tr, .members-td {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.members-tr:first-child {
+    border-bottom: 1px solid gray;
+}
+
+.members-tr > .members-td {
+    padding: 5px;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+}
+
+.members-th {
+    flex: 1;
+}
+
+.members-td:last-child, .members-th:last-child {
+    border-right: 1px solid gray;
+}
+
+.members-title {
+    background-color: #1d383e;
+    color: white;
+    font-weight: 800;
+    padding: 10px;
+}
+
+.members-search {
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+}
+
+.members-search-input {
+    width: 100%;
+    border: none;
+    padding: 5px;
+}
+
+.members-colum-id {
+    max-width: 150px;
+    min-width: 150px;
+}
+
+.members-colum-first_name, .members-colum-last_name {
+    max-width: 250px;
+    min-width: 250px;
+}
+
+.members-colum-email {
+    min-width: 220px;
+}
+
+.members-colum-phone {
+    min-width: 200px;
+}

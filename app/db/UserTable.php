@@ -47,4 +47,10 @@ abstract class UserTable extends Table {
            ':last_name' => $last_name
         ]);
     }
+
+    public static function getAll(){
+        $request = self::prepare("SELECT * FROM user");
+        $request->execute();
+        return $request->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

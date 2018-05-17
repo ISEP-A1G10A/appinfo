@@ -23,7 +23,8 @@ abstract class Routes {
             "logs-debug" => [LogsDebugPage::class],
         ],
         "admin_sav" => [
-            "home"       => [HomeSysSavPage::class], // TODO
+            "home"       => [MembersPage::class], // TODO
+            "members"    => [MembersPage::class],
         ],
         "status"    => [
             "404" => [Status404Page::class],
