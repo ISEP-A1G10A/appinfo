@@ -110,7 +110,7 @@ $section1 = [
     "bloc5_description" => "La sécurité est un pilier fondateur de notre entreprise. Notre produit respecte la CNIL",
     "bloc6_title" => "Ecologie",
     "bloc6_description" => "Quotidiennement nous relevons de nouveaux défis écologiques"
-];<?php echo ($this->s[$this->page]["bloc6_description"])?>
+];
 $section2 = [
   "section2_title" => "Processus d'inscription",
   "section2_subtitle1" => "Nous contacter",
