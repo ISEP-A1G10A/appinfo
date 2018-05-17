@@ -38,7 +38,7 @@ abstract class UserTable extends Table {
     }
 
     // TODO
-    public static function setAllById($id, $email, $phone, $first_name, $last_name) {
+    public static function setAllById($id, $first_name, $last_name, $email, $phone) {
         $request = self::prepare("UPDATE user SET email=:email, phone=:phone, first_name=:first_name, last_name=:last_name WHERE id=:id");
         $request->execute([
            ':id' => $id,

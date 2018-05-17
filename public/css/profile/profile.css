@@ -25,7 +25,7 @@
 
 .profile-form-title {
     font-size: 20px;
-    padding: 10px 25px 35px 0;
+    padding: 10px 25px 15px 0;
     width: 100%;
     color: gray;
 }
@@ -91,4 +91,8 @@
         text-align: center;
         margin: 0 10px;
     }
+}
+
+.profile-form-errors {
+    margin: 0 0 10px;
 }
