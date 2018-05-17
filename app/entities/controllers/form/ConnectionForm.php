@@ -11,6 +11,7 @@ class ConnectionForm extends Form {
             new Verification("POST", "email", [
                 [function ($toTest) { return isEmpty($toTest); }, "connection", "email_empty"],
                 [function ($toTest) { return !isEmail($toTest); }, "connection", "email_not_valid"],
+
             ]),
             new Verification("POST", "password", [
                 [function ($toTest) { return isEmpty($toTest); }, "connection", "password_empty"],

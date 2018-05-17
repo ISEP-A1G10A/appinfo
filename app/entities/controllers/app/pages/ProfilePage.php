@@ -10,9 +10,9 @@ class ProfilePage extends AppPage {
             if (!isset($_POST["first_name"]) || isEmpty($_POST["first_name"])) {
                 $this->errors["first_name_empty"] = $this->s["formErrors"]["profile-infos"]["first_name_empty"];
             }
-        }
-        if ($this->errors === []) {
-            UserTable::setAllById($_SESSION["user"]["id"], $_POST["first_name"], $_POST["last_name"], $_POST["email"], $_POST["phone"]);
+            if ($this->errors === []) {
+                UserTable::setAllById($_SESSION["user"]["id"], $_POST["first_name"], $_POST["last_name"], $_POST["email"], $_POST["phone"]);
+            }
         }
         $this->addToCssFiles([
             "profile/profile.css"

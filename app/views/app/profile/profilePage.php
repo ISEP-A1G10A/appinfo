@@ -12,7 +12,6 @@
 
                 <div class="profile-form-text"><?php echo ucfirst($this->s[$this->page]["last_name"]) ?></div>
                 <input name="last_name" class="profile-form-input" type="text"
-                       placeholder="<?php echo ucfirst($this->s[$this->page]["last_name"]) ?>"
                        value="<?php echo $this->user["last_name"] ?>">
 
                 <div class="profile-form-text"><?php echo ucfirst($this->s[$this->page]["email"]) ?></div>
@@ -21,7 +20,6 @@
 
                 <div class="profile-form-text"><?php echo ucfirst($this->s[$this->page]["phone"]) ?></div>
                 <input name="phone" class="profile-form-input" type="text"
-                       placeholder="<?php echo ucfirst($this->s[$this->page]["phone"]) ?>"
                        value="<?php echo $this->user["phone"] ?>">
 
                 <div class="profile-form-btns design-form-btns">
@@ -44,18 +42,16 @@
                 <?php $this->displayErrors("pass") ?>
                 <div class="profile-form-text"><?php echo ucfirst($this->s[$this->page]["old_password"]) ?></div>
                 <input name="password" class="profile-form-input" type="password"
-                       placeholder=""
-                       value=""><br>
+                       value="">
 
                 <div class="profile-form-text"><?php echo ucfirst($this->s[$this->page]["password"]) ?></div>
                 <input name="password" class="profile-form-input" type="password"
-                       placeholder=""
-                       value=""><br>
+                       value="">
 
                 <div class="profile-form-text"><?php echo ucfirst($this->s[$this->page]["repeat_password"]) ?></div>
                 <input name="password" class="profile-form-input" type="password"
                        placeholder=""
-                       value=""><br>
+                       value="">
 
                 <div class="profile-form-btns design-form-btns">
                     <input class="design-btn-raised profile-form-reset-btn" type="reset"
