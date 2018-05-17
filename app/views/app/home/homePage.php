@@ -67,41 +67,39 @@
     </div>
 </div>
 <div id="section2" class="home-section">
-    <h1 class="home-section2-title">Processus d'inscription</h1>
+    <h1 class="home-section2-title"><?php echo ($this->s[$this->page]["section2_title"])?></h1>
     <div class="home-section2-bloc">
-        <h2 class="home-section2-subtitle">Nous contacter</h2>
-        <p>Contactez nous par email (contact@luxo.com) ou par téléphone (+33 6 39 56 95 47)</p>
+        <h2 class="home-section2-subtitle"><?php echo ($this->s[$this->page]["section2_subtitle1"])?></h2>
+        <p><?php echo ($this->s[$this->page]["section2_description1"])?></p>
     </div>
     <div class="home-section2-bloc">
-        <h2 class="home-section2-subtitle">Validez votre compte</h2>
-        <p>Après avoir pris contact avec nous, vous receverez un email avec un lien d'activation</p>
+        <h2 class="home-section2-subtitle"><?php echo ($this->s[$this->page]["section2_subtitle2"])?></h2>
+        <p><?php echo ($this->s[$this->page]["section2_description2"])?></p>
     </div>
     <div class="home-section2-bloc">
-        <h2 class="home-section2-subtitle">Profitez de nos services</h2>
-        <p>Connectez-vous et commencez tout de suite la personalisation de votre maison</p>
+        <h2 class="home-section2-subtitle"><?php echo ($this->s[$this->page]["section2_subtitle3"])?></h2>
+        <p><?php echo ($this->s[$this->page]["section2_description3"])?></p>
     </div>
 </div>
 <div id="section3" class="home-section">
-    <span class="home-section3-title">Ils nous ont fait confiance, faites de même !</span>
+    <span class="home-section3-title"><?php echo ($this->s[$this->page]["section3_title"])?></span>
     <div class="home-section3-bloc">
         <img class="home-section3-image" src="<?php echo new URL("img/home/section3/alanA.png") ?>"
              alt="A client's photo" width="200">
-        <p class="home-section3-people"> James Vaugirard</p>
-        <p class="home-section3-commentary"> "Excellent service. Utilisation très facile. Entreprise très réactive"</p>
+        <p class="home-section3-people"><?php echo ($this->s[$this->page]["section3_people1"])?></p>
+        <p class="home-section3-commentary"><?php echo ($this->s[$this->page]["section3_commentary1"])?></p>
     </div>
     <div class="home-section3-bloc">
         <img class="home-section3-image" src="<?php echo new URL("img/home/section3/isabelleD.png") ?>"
              alt=" A client's photo" width="200">
-        <p class="home-section3-people">Isabelle Durand </p>
-        <p class="home-section3-commentary"> "Site très facile à prendre en main. Très utile notamment quand nous
-            partons en vacances !"</p>
+        <p class="home-section3-people"><?php echo ($this->s[$this->page]["section3_people2"])?></p>
+        <p class="home-section3-commentary"> <?php echo ($this->s[$this->page]["section3_commentary2"])?></p>
     </div>
     <div class="home-section3-bloc">
         <img class="home-section3-image" src="<?php echo new URL("img/home/section3/danielD.png") ?>"
              alt=" A client's photo" width="200">
-        <p class="home-section3-people">Daniel Dupont</p>
-        <p class="home-section3-commentary"> "Bon service, de nombreux choix de personnalisation. Je recommande
-            vivement."</p>
+        <p class="home-section3-people"><?php echo ($this->s[$this->page]["section3_people3"])?></p>
+        <p class="home-section3-commentary"><?php echo ($this->s[$this->page]["section3_commentary3"])?></p>
     </div>
 </div>
 <footer class="home-footer">
