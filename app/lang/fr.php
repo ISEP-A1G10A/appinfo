@@ -67,15 +67,21 @@ $formErrorsConnection = [
     "wrong_password"           => "Mot de passe invalide"
 ];
 $formErrorsProfilePass = [
-    "email_empty"              => "Veuillez entrer votre email",
-    "email_not_valid"          => "Veuillez entrer un email valide",
-    "no_user_with_given_email" => "Email invalide",
-    "password_empty"           => "Veuillez entrer votre mot de passe",
-    "wrong_password"           => "Mot de passe invalide"
+    "last_password_empty"   => "Veuillez entrer votre ancien mot de passe",
+    "wrong_last_password"   => "Ancien mot de passe invalide",
+    "password_empty"        => "Veuillez entrer un nouveau mot de passe",
+    "repeat_password_empty" => "Veuillez répeter votre nouveau mot de passe",
+    "passwords_not_match"   => "Les deux mots de passe ne sont pas identiques"
 ];
 $formErrorsProfileInfos = [
-    "first_name_empty" => "Veuillez entrer un nom",
-    "first_name_not_valid" => "Veuillez entrer un nom correct"
+    "first_name_empty"     => "Veuillez entrer un prenom",
+    "first_name_not_valid" => "Veuillez entrer un prenom correct",
+    "last_name_empty"      => "Veuillez entrer un nom",
+    "last_name_not_valid"  => "Veuillez entrer un nom correct",
+    "email_empty"          => "Veuillez entrer un email",
+    "email_not_valid"      => "Veuillez entrer un email correct",
+    "phone_empty"          => "Veuillez entrer un numero de telephone",
+    "phone_not_valid"      => "Veuillez entrer un numero de telephone correct"
 ];
 $formErrors = [
     "common"        => $formErrorsCommon,

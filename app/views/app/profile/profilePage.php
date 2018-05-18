@@ -41,7 +41,7 @@
                 <div class="profile-form-title"><?php echo strtoupper($this->s[$this->page]["password_title"]) ?></div>
                 <?php $this->displayErrors("pass") ?>
                 <div class="profile-form-text"><?php echo ucfirst($this->s[$this->page]["old_password"]) ?></div>
-                <input name="password" class="profile-form-input" type="password"
+                <input name="old_password" class="profile-form-input" type="password"
                        value="">
 
                 <div class="profile-form-text"><?php echo ucfirst($this->s[$this->page]["password"]) ?></div>
@@ -49,7 +49,7 @@
                        value="">
 
                 <div class="profile-form-text"><?php echo ucfirst($this->s[$this->page]["repeat_password"]) ?></div>
-                <input name="password" class="profile-form-input" type="password"
+                <input name="repeat_password" class="profile-form-input" type="password"
                        placeholder=""
                        value="">
 

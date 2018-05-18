@@ -37,6 +37,14 @@ abstract class UserTable extends Table {
         return ["error", ["connection", "no_user_with_given_email"]];
     }
 
+    public static function getPassById($id) {
+        $request = self::prepare("SELECT password FROM user WHERE id=:id");
+        $request->execute([
+            ':id' => $id
+        ]);
+        return $request->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     // TODO
     public static function setAllById($id, $first_name, $last_name, $email, $phone) {
         $request = self::prepare("UPDATE user SET email=:email, phone=:phone, first_name=:first_name, last_name=:last_name WHERE id=:id");
@@ -46,6 +54,14 @@ abstract class UserTable extends Table {
            ':phone' => $phone,
            ':first_name' => $first_name,
            ':last_name' => $last_name
+        ]);
+    }
+
+    public static function setPassById($id, $password) {
+        $request = self::prepare("UPDATE user SET password=:password WHERE id=:id");
+        $request->execute([
+            ':id' => $id,
+            ':password' => Encryption::encrypt($password)
         ]);
     }
 }
