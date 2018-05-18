@@ -1,9 +1,52 @@
+.part_add_member{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px 5px 5px 5px;
+    background: white;
+    height: 80px;
+    width: 99%;
+    margin: 100px 0 30px 10px;
+    display: flex;
+    flex-direction: row;
+}
+.part_add_member_type{
+    border: none;
+    margin-left: 40px;
+    font-size: 18px;
+
+    padding-bottom: 2px;
+    margin-bottom: 2px;
+
+}
+.profile-form-input {
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    font-size: 18px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    background: none;
+    margin-right: 50px;
+}
+.add_member_btn{
+    margin-left: 80px;
+    height: 40px;
+}
+
+.part_members_table{
+    position: sticky;
+    margin-top: 50px;
+    top : 70px;
+
+}
+
 .members-table {
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: baseline;
     padding: 10px;
+    top: 70px;
 }
 
 .members-tbody {

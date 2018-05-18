@@ -61,6 +61,7 @@ $membersPage = [
     "last_name" => "nom",
     "email" => "email",
     "phone" => "téléphone",
+    "add" => "ajouter",
 
 ];
 $status404Page = [
