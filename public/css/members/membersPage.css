@@ -1,4 +1,4 @@
-.part_add_member{
+.part-add-member{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 20px 5px 5px 5px;
     background: white;
@@ -8,16 +8,22 @@
     display: flex;
     flex-direction: row;
 }
-.part_add_member_type{
+.part-add-member-type{
     border: none;
-    margin-left: 40px;
+    margin-left: 50px;
     font-size: 18px;
-
+    margin-right: 50px;
     padding-bottom: 2px;
     margin-bottom: 2px;
 
 }
-.profile-form-input {
+.type-option{
+    font-size: 17px;
+}
+.type-option2{
+    font-size: 18px;
+}
+.add-member-form-input {
     border: none;
     border-bottom: 1px solid lightgrey;
     font-size: 18px;
@@ -28,14 +34,14 @@
     background: none;
     margin-right: 50px;
 }
-.add_member_btn{
+.add-member-btn{
     margin-left: 80px;
     height: 40px;
 }
 
-.part_members_table{
+.part-members-table{
     position: sticky;
-    margin-top: 50px;
+    margin-top: 40px;
     top : 70px;
 
 }

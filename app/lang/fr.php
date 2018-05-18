@@ -62,6 +62,9 @@ $membersPage = [
     "email" => "email",
     "phone" => "téléphone",
     "add" => "ajouter",
+    "user" => "Utilisateur",
+    "adminsys" => "Admin Syst",
+    "adminsav" => "Admins SAV",
 
 ];
 $status404Page = [
