@@ -9,7 +9,7 @@ abstract class HomeTable extends Table {
         ]);
         $results = $request->fetchAll(PDO::FETCH_ASSOC);
         foreach ($results as $result) {
-            $rooms = RoomTable::getAllLabelsByHome($result["id"]);
+            $rooms = RoomTable::getAllIdsAndLabelsByHome($result["id"]);
             array_push($houses, [$result["id"], $result["label"], $rooms]);
         }
         return $houses;

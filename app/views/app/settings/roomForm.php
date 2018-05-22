@@ -7,7 +7,7 @@
         <input>
         <!--TODO-->
     </div>
-    
+
     <div class="form-inputs">
         <?php
         /*TODO

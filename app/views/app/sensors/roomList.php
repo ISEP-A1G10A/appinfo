@@ -1,13 +1,13 @@
 <div>
     <div class="room-title">
     <?php
-    echo $room[0];
+    echo $room[1];
     ?>
     </div>
 
     <div class="sensors-list">
         <?php
-        foreach ($room[1] as $sensor){
+        foreach ($room[2] as $sensor){
             require "sensorsList.php";
         }
         ?>

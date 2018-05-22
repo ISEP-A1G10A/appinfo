@@ -47,6 +47,10 @@ $sensorsPage = [
     "rooms" => "liste des capteurs par piece: ",
 
 ];
+$settingsPage = [
+    "title" => "paramètres",
+
+];
 $logsPage = [
     "title"      => "logs",
     "date"       => "date",
@@ -129,6 +133,7 @@ return [
     "signIn"     => $signInPage,
     "profile"    => $profilePage,
     "sensors"    => $sensorsPage,
+    "settings"   => $settingsPage,
     "help"       => $helpPage,
     "logs"       => $logsPage,
     "404"        => $status404Page,
