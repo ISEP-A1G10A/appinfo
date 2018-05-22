@@ -42,6 +42,11 @@ $profilePage = [
     "placeholder_last_name_wrong"  => "Veuillez entrer votre nom",
     "placeholder_phone_wrong"      => "Veuillez entrer votre numéro de téléphone"
 ];
+$sensorsPage = [
+    "title" => "capteurs",
+    "rooms" => "liste des capteurs par piece: ",
+
+];
 $logsPage = [
     "title"      => "logs",
     "date"       => "date",
@@ -123,6 +128,7 @@ return [
     "home"       => $homePage,
     "signIn"     => $signInPage,
     "profile"    => $profilePage,
+    "sensors"    => $sensorsPage,
     "help"       => $helpPage,
     "logs"       => $logsPage,
     "404"        => $status404Page,

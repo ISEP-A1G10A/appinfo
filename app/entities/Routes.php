@@ -13,7 +13,7 @@ abstract class Routes {
         "connected" => [
             "home"               => [HomeConnectedPage::class],
             "profile"            => [ProfilePage::class],
-            "houses/{}/sensors"  => [HomeConnectedPage::class],
+            "houses/{}/sensors"  => [SensorsPage::class],
             "houses/{}/settings" => [HomeConnectedPage::class],
             "help"               => [HelpPage::class],
         ],
