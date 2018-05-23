@@ -7,7 +7,6 @@
            placeholder="<?php echo ucfirst($this->s[$this->page]["last_name"]) ?>"
            value="">
     <form method="post" class="part-add-member-type">
-
         <select class="type-option" id="">
             <option class="type-option2" value=""><?php echo ucfirst($this->s[$this->page]["user"]) ?></option>
             <option class="type-option2" value=""><?php echo ucfirst($this->s[$this->page]["adminsys"]) ?></option>
