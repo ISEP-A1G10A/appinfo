@@ -45,7 +45,7 @@ abstract class UserTable extends Table {
         return $request->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    // TODO
+
     public static function setAllById($id, $first_name, $last_name, $email, $phone) {
         $request = self::prepare("UPDATE user SET email=:email, phone=:phone, first_name=:first_name, last_name=:last_name WHERE id=:id");
         $request->execute([

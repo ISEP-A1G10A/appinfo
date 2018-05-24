@@ -49,7 +49,8 @@ $sensorsPage = [
 ];
 $settingsPage = [
     "title" => "paramètres",
-
+    "reset" => "annuler",
+    "submit" => "valider",
 ];
 $logsPage = [
     "title"      => "logs",
@@ -92,11 +93,19 @@ $formErrorsProfileInfos = [
     "phone_empty"          => "Veuillez entrer un numero de telephone",
     "phone_not_valid"      => "Veuillez entrer un numero de telephone correct"
 ];
+$formErrorsNewSensor = [
+    "new_sensor_empty" => "Veuillez entrer un nouveau capteur"
+];
+$formErrorsSensor = [
+    "sensor_empty" => "Veuillez entrer un capteur"
+];
 $formErrors = [
     "common"        => $formErrorsCommon,
     "connection"    => $formErrorsConnection,
     "profile-pass"  => $formErrorsProfilePass,
-    "profile-infos" => $formErrorsProfileInfos
+    "profile-infos" => $formErrorsProfileInfos,
+    "new-sensor"    => $formErrorsNewSensor,
+    "sensor"        => $formErrorsSensor
 ];
 // nav
 $navShowcase = [

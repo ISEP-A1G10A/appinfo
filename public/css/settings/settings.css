@@ -1,0 +1,19 @@
+.settings{
+    display: flex;
+    justify-content: center;
+}
+
+/*.room-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}*/
+
+.form-inputs .form-new-input {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px 35px;
+    margin-bottom: 35px;
+    width: 500px;
+}

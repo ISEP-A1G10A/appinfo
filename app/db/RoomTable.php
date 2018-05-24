@@ -15,4 +15,12 @@ abstract class RoomTable extends Table {
         }
         return $rooms;
     }
+
+    public static function getAllIdsByHome($home){
+        $request = self::prepare("SELECT id FROM room WHERE home=:home");
+        $request->execute([
+           ":home" => $home
+        ]);
+        return $request->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
