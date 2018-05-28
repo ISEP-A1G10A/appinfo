@@ -2,8 +2,8 @@
 
 abstract class Routes {
     private static $appRoutes = [
-        "showcase"  => [
-            "home"    => [HomePage::class],
+        "showcase" => [
+            "home" => [HomePage::class],
             "sign-in" => [SignInPage::class],
 //        "users/{}"           => [UserPage::class],
 //        "users/{}/infos"     => [UserPage::class, ["infos"]], // modify informations form : display = none; et bouton "modify" JS change valeurs, au clic je submit la form
@@ -11,22 +11,23 @@ abstract class Routes {
 //        "users/{}/houses/{}" => [HomePage::class] // HousePage
         ],
         "connected" => [
-            "home"               => [HomeConnectedPage::class],
-            "profile"            => [ProfilePage::class],
-            "houses/{}/sensors"  => [HomeConnectedPage::class],
+            "home" => [HomeConnectedPage::class],
+            "profile" => [ProfilePage::class],
+            "houses/{}/sensors" => [HomeConnectedPage::class],
             "houses/{}/settings" => [HomeConnectedPage::class],
-            "help"               => [HelpPage::class],
+            "help" => [HelpPage::class],
         ],
         "admin_sys" => [
-            "home"       => [LogsPage::class],
-            "logs"       => [LogsPage::class],
+            "home" => [LogsPage::class],
+            "logs" => [LogsPage::class],
             "logs-debug" => [LogsDebugPage::class],
+
         ],
         "admin_sav" => [
-            "home"       => [MembersPage::class], // TODO
-            "members"    => [MembersPage::class],
+            "home" => [MembersPage::class], // TODO
+            "members" => [MembersPage::class],
         ],
-        "status"    => [
+        "status" => [
             "404" => [Status404Page::class],
             "418" => [Status418Page::class]
         ]

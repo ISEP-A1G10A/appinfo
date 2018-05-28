@@ -16,7 +16,7 @@ abstract class UserTable extends Table {
         return $request->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public static function getAllAllById($id){
+    public static function getAllAllById($id) {
         $request = self::prepare("SELECT first_name, last_name, phone, email FROM user WHERE id=:id");
         $request->execute([
             ':id' => $id
@@ -40,17 +40,29 @@ abstract class UserTable extends Table {
     public static function setUserData($id, $email, $phone, $first_name, $last_name) {
         $request = self::prepare("UPDATE user SET email=:email, phone=:phone, first_name=:first_name, last_name=:last_name WHERE id=:id");
         $request->execute([
-           ':id' => $id,
-           ':email' => $email,
-           ':phone' => $phone,
-           ':first_name' => $first_name,
-           ':last_name' => $last_name
+            ':id' => $id,
+            ':email' => $email,
+            ':phone' => $phone,
+            ':first_name' => $first_name,
+            ':last_name' => $last_name
         ]);
     }
 
-    public static function getAll(){
+    public static function getAll() {
         $request = self::prepare("SELECT * FROM user");
         $request->execute();
         return $request->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public static function AddMembers($first_name, $last_name, $type, $email, $phone) {
+        $request = self::prepare("INSERT INTO user (first_name,last_name,type,email,phone) VALUES (first_name,last_name,type,email,phone)");
+        $request->execute([
+            ':first_name' => $first_name,
+            ':last_name' => $last_name,
+            ':type' => $type,
+            ':email' => $email,
+            ':phone' => $phone
+
+        ]);
     }
 }

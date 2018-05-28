@@ -8,6 +8,10 @@
     display: flex;
     flex-direction: row;
 }
+.form{
+    display: flex;
+    flex-direction: row;
+}
 .part-add-member-type{
     border: none;
     margin-left: 50px;
@@ -15,6 +19,7 @@
     margin-right: 50px;
     padding-bottom: 2px;
     margin-bottom: 2px;
+
 
 }
 .type-option{
