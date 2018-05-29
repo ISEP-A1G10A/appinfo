@@ -24,23 +24,24 @@ $helpPage = [
     "title" => "Aide"
 ];
 $profilePage = [
-    "title"                        => "profil",
-    "data_title"                   => "vos informations",
-    "password_title"               => "changez votre mot de passse",
-    "first_name"                   => "prénom",
-    "last_name"                    => "nom",
-    "old_password"                 => "ancien mot de passe",
-    "password"                     => "nouveau mot de passe",
-    "repeat_password"              => "répétez votre nouveau mot de passe",
-    "email"                        => "email",
-    "phone"                        => "numéro de téléphone",
-    "reset"                        => "annuler",
-    "submit"                       => "valider",
-    "placeholder_email_wrong"      => "Veuillez entrer un email",
-    "placeholder_password_wrong"   => "Veuillez entrer un mot de passe",
+    "title" => "profil",
+    "data_title" => "vos informations",
+    "password_title" => "changez votre mot de passse",
+    "first_name" => "prénom",
+    "last_name" => "nom",
+    "old_password" => "ancien mot de passe",
+    "password" => "nouveau mot de passe",
+    "repeat_password" => "répétez votre nouveau mot de passe",
+    "email" => "email",
+    "phone" => "numéro de téléphone",
+    "reset" => "annuler",
+    "submit" => "valider",
+    "placeholder_email_wrong" => "Veuillez entrer un email",
+    "placeholder_password_wrong" => "Veuillez entrer un mot de passe",
     "placeholder_first_name_wrong" => "Veuillez entrer votre prénom",
-    "placeholder_last_name_wrong"  => "Veuillez entrer votre nom",
-    "placeholder_phone_wrong"      => "Veuillez entrer votre numéro de téléphone"
+    "placeholder_last_name_wrong" => "Veuillez entrer votre nom",
+    "placeholder_phone_wrong" => "Veuillez entrer votre numéro de téléphone",
+
 ];
 $logsPage = [
     "title" => "logs",
@@ -70,7 +71,12 @@ $membersPage = [
     "placeholder_password_wrong" => "Veuillez entrer un mot de passe",
     "placeholder_first_name_wrong" => "Veuillez entrer votre prénom",
     "placeholder_last_name_wrong" => "Veuillez entrer votre nom",
-    "placeholder_phone_wrong" => "Veuillez entrer votre numéro de téléphone"
+    "placeholder_phone_wrong" => "Veuillez entrer votre numéro de téléphone",
+    "1" => "1",
+    "2" => "2",
+    "3" => "3",
+    "password" => "Mot de passe",
+
 
 ];
 $status404Page = [
@@ -81,11 +87,11 @@ $status404Page = [
 $formErrorsCommon = [
 ];
 $formErrorsProfilePass = [
-    "last_password_empty"   => "Veuillez entrer votre ancien mot de passe",
-    "wrong_last_password"   => "Ancien mot de passe invalide",
-    "password_empty"        => "Veuillez entrer un nouveau mot de passe",
+    "last_password_empty" => "Veuillez entrer votre ancien mot de passe",
+    "wrong_last_password" => "Ancien mot de passe invalide",
+    "password_empty" => "Veuillez entrer un nouveau mot de passe",
     "repeat_password_empty" => "Veuillez répeter votre nouveau mot de passe",
-    "passwords_not_match"   => "Les deux mots de passe ne sont pas identiques"
+    "passwords_not_match" => "Les deux mots de passe ne sont pas identiques"
 ];
 $formErrorsConnection = [
     "email_empty" => "Veuillez entrer votre email",
@@ -96,14 +102,26 @@ $formErrorsConnection = [
 
 ];
 $formErrorsProfileInfos = [
-    "first_name_empty"     => "Veuillez entrer un prenom",
+    "first_name_empty" => "Veuillez entrer un prenom",
     "first_name_not_valid" => "Veuillez entrer un prenom correct",
-    "last_name_empty"      => "Veuillez entrer un nom",
-    "last_name_not_valid"  => "Veuillez entrer un nom correct",
-    "email_empty"          => "Veuillez entrer un email",
-    "email_not_valid"      => "Veuillez entrer un email correct",
-    "phone_empty"          => "Veuillez entrer un numero de telephone",
-    "phone_not_valid"      => "Veuillez entrer un numero de telephone correct"
+    "last_name_empty" => "Veuillez entrer un nom",
+    "last_name_not_valid" => "Veuillez entrer un nom correct",
+    "email_empty" => "Veuillez entrer un email",
+    "email_not_valid" => "Veuillez entrer un email correct",
+    "phone_empty" => "Veuillez entrer un numero de telephone",
+    "phone_not_valid" => "Veuillez entrer un numero de telephone correct"
+];
+$formErrorsmembers = [
+    "first_name_empty" => "Veuillez entrer un prenom",
+    "first_name_not_valid" => "Veuillez entrer un prenom correct",
+    "last_name_empty" => "Veuillez entrer un nom",
+    "last_name_not_valid" => "Veuillez entrer un nom correct",
+    "email_empty" => "Veuillez entrer un email",
+    "email_not_valid" => "Veuillez entrer un email correct",
+    "phone_empty" => "Veuillez entrer un numero de telephone",
+    "phone_not_valid" => "Veuillez entrer un numero de telephone correct",
+    "password_not_valid" => "Veuilley entrer un mot de passe correct",
+    "placeholder_password_wrong" => "Veuillez entrer un mot de passe",
 ];
 $formErrorsNewSensor = [
     "new_sensor_empty" => "Veuillez entrer un nouveau capteur"
@@ -119,11 +137,12 @@ $formErrors = [
     "placeholder_first_name_wrong" => "Veuillez entrer votre prénom",
     "placeholder_last_name_wrong" => "Veuillez entrer votre nom",
     "placeholder_phone_wrong" => "Veuillez entrer votre numéro de téléphone",
-    "first_name_empty" =>"vide",
-    "profile-pass"  => $formErrorsProfilePass,
+    "first_name_empty" => "vide",
+    "profile-pass" => $formErrorsProfilePass,
     "profile-infos" => $formErrorsProfileInfos,
-    "new-sensor"    => $formErrorsNewSensor,
-    "sensor"        => $formErrorsSensor
+    "new-sensor" => $formErrorsNewSensor,
+    "sensor" => $formErrorsSensor,
+    "members" => $formErrorsmembers
 
 ];
 // nav
@@ -171,7 +190,6 @@ return [
     "formErrors" => $formErrors,
     "navs" => $navs,
     "footer" => $footer,
-
 
 
 ];

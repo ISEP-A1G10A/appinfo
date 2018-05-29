@@ -54,14 +54,16 @@ abstract class UserTable extends Table {
         return $request->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public static function AddMembers($first_name, $last_name, $type, $email, $phone) {
-        $request = self::prepare("INSERT INTO user (first_name,last_name,type,email,phone) VALUES (first_name,last_name,type,email,phone)");
+    public static function addMember($first_name, $last_name, $type, $email, $phone, $password) {
+
+        $request = self::prepare("INSERT INTO user (first_name,last_name,type,email,phone,password) VALUES (:first_name,:last_name,:type,:email,:phone,:password)");
         $request->execute([
             ':first_name' => $first_name,
             ':last_name' => $last_name,
             ':type' => $type,
             ':email' => $email,
-            ':phone' => $phone
+            ':phone' => $phone,
+            ':password' => Encryption::encrypt($password),
 
         ]);
     }

@@ -2,31 +2,36 @@
     <form action="<?php echo new URL("members/") ?>" method="post" class="form">
         <input name="form" value="members" type="hidden">
         <?php $this->displayErrors("infos")?>
-        <input name="first-name" class="add-member-form-input" type="text"
+
+        <input name="first_name" class="add-member-form-input" type="text"
                placeholder="<?php echo ucfirst($this->s[$this->page]["first_name"]) ?>"
-               value="<?php echo $this->getFormValue("members", "first-name") ?>">
+               value="">
 
-        <input name="first-name" class="add-member-form-input" type="text"
+        <input name="last_name" class="add-member-form-input" type="text"
                placeholder="<?php echo ucfirst($this->s[$this->page]["last_name"]) ?>"
-               value="<?php echo $this->getFormValue("members", "last-name") ?>">
+               value="">
 
 
-        <select class="part-add-member-type type-option" >
+        <select name="type" class="part-add-member-type type-option" >
             <option class="type-option2"
-                    value="<?php echo $this->getFormValue("members", "type") ?>"><?php echo ucfirst($this->s[$this->page]["user"]) ?></option>
+                    value="1"><?php echo ucfirst($this->s[$this->page]["1"]) ?></option>
             <option class="type-option2"
-                    value="<?php echo $this->getFormValue("members", "type") ?>"><?php echo ucfirst($this->s[$this->page]["adminsys"]) ?></option>
+                    value="2"><?php echo ucfirst($this->s[$this->page]["2"]) ?></option>
             <option class="type-option2"
-                    value="<?php echo $this->getFormValue("members", "type") ?>"><?php echo ucfirst($this->s[$this->page]["adminsav"]) ?></option>
+                    value="3"><?php echo ucfirst($this->s[$this->page]["2"]) ?></option>
         </select>
 
-        <input name="first-name" class="add-member-form-input"<?php $this->gotErrorEmail() ?> type="text"
+        <input name="email" class="add-member-form-input" <?php $this->gotErrorEmail() ?> type="text"
                placeholder="<?php echo ucfirst($this->s[$this->page]["email"]) ?>"
-               value="<?php echo $this->getFormValue("members", "email") ?>"><br>
+               value=""><br>
 
-        <input name="first-name" class="add-member-form-input" type="text"
+        <input name="phone" class="add-member-form-input" type="text"
                placeholder="<?php echo ucfirst($this->s[$this->page]["phone"]) ?>"
-               value="<?php echo $this->getFormValue("members", "phone") ?>">
+               value="">
+
+        <input name="password" class="add-member-form-input" type="text"
+               placeholder="<?php echo ucfirst($this->s[$this->page]["password"]) ?>"
+               value="">
 
         <input class="design-btn-raised navConnected-web-disconnect-btn add-member-btn" type="submit"
                value="<?php echo strtoupper($this->s[$this->page]["add"]) ?>">

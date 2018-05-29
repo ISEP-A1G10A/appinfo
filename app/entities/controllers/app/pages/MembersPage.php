@@ -2,32 +2,38 @@
 require "verificationFunctions.php";
 
 class MembersPage extends AppPage {
+    protected $errors = [];
+
     public function __construct($lang) {
         $this->initilization("members", $lang, "adminsav");
+
         if (isset($_POST["form"]) && $_POST["form"] === "members") {
             if (!isset($_POST["first_name"]) || isEmpty($_POST["first_name"])) {
-                $this->errors["first_name_empty"] = $this->s["formErrors"]["profile-infos"]["first_name_empty"];
+                $this->errors["first_name_empty"] = $this->s["formErrors"]["members"]["first_name_empty"];
             } elseif (!isName($_POST["first_name"])) {
-                $this->errors["first_name_not_valid"] = $this->s["formErrors"]["profile-infos"]["first_name_not_valid"];
+                $this->errors["first_name_not_valid"] = $this->s["formErrors"]["members"]["first_name_not_valid"];
             }
+
             if (!isset($_POST["last_name"]) || isEmpty($_POST["last_name"])) {
-                $this->errors["last_name_empty"] = $this->s["formErrors"]["profile-infos"]["last_name_empty"];
+                $this->errors["last_name_empty"] = $this->s["formErrors"]["members"]["last_name_empty"];
             } elseif (!isName($_POST["last_name"])) {
-                $this->errors["last_name_not_valid"] = $this->s["formErrors"]["profile-infos"]["last_name_not_valid"];
+                $this->errors["last_name_not_valid"] = $this->s["formErrors"]["members"]["last_name_not_valid"];
             }
             if (!isset($_POST["email"]) || isEmpty($_POST["email"])) {
-                $this->errors["email_empty"] = $this->s["formErrors"]["profile-infos"]["email_empty"];
+                $this->errors["email_empty"] = $this->s["formErrors"]["members"]["email_empty"];
             } elseif (!isEmail($_POST["email"])) {
-                $this->errors["email_not_valid"] = $this->s["formErrors"]["profile-infos"]["email_not_valid"];
+                $this->errors["email_not_valid"] = $this->s["formErrors"]["members"]["email_not_valid"];
             }
             if (!isset($_POST["phone"]) || isEmpty($_POST["phone"])) {
-                $this->errors["phone_empty"] = $this->s["formErrors"]["profile-infos"]["phone_empty"];
+                $this->errors["phone_empty"] = $this->s["formErrors"]["members"]["phone_empty"];
             } elseif (!isPhone($_POST["phone"])) {
-                $this->errors["phone_not_valid"] = $this->s["formErrors"]["profile-infos"]["phone_not_valid"];
+                $this->errors["phone_not_valid"] = $this->s["formErrors"]["members"]["phone_not_valid"];
             }
+
             if ($this->errors === []) {
-                UserTable::AddMembers($_POST['first_name'], $_POST['last_name'], $_POST['type'], $_POST['email'], $_POST['phone']);
+                UserTable::addMember($_POST['first_name'], $_POST['last_name'], $_POST['type'], $_POST['email'], $_POST['phone'], $_POST['password']);
             }
+
         }
         $this->addToCssFiles([
             "members/membersPage.css"
@@ -49,21 +55,21 @@ class MembersPage extends AppPage {
     /*
         ERRORS
     */
-    public function displayErrors() {
-        $errorTexts = [];
-        $display = false;
-        foreach ($this->errors as $name => $text) {
-            if (!endswith($name, "_empty")) {
+    public function displayErrors($form) {
+        if (isset($_POST["form"]) && $_POST["form"] === "profile-" . $form) {
+            $errorTexts = [];
+            $display = false;
+            foreach ($this->errors as $name => $text) {
                 $display = true;
                 array_push($errorTexts, "<span class='design-form-error'><img class='design-form-error-logo' src='" . new URL("img/icons/cancel.png") . "'>" . $text . "</span>");
             }
-        }
-        if ($display) {
-            echo "<div class='design-form-errors'>";
-            foreach ($errorTexts as $errorText) {
-                echo $errorText;
+            if ($display) {
+                echo "<div class='design-form-errors profile-form-errors'>";
+                foreach ($errorTexts as $errorText) {
+                    echo $errorText;
+                }
+                echo "</div>";
             }
-            echo "</div>";
         }
     }
 
@@ -86,27 +92,26 @@ class MembersPage extends AppPage {
             return $this->s[$this->page]["email"];
         }
     }
-    /*
-        // PASSWORD
-        private function isErrorPassword() {
-            return isset($this->errors["password_empty"]);
-        }
 
-        private function gotErrorPassword() {
-            if ($this->isErrorPassword()) {
-                echo " error";
-            }
-        }
+    private function isErrorPassword() {
+        return isset($this->errors["password_empty"]);
+    }
 
-        private function getPlaceholderPassword() {
-            if ($this->isErrorPassword()) {
-                return $this->s[$this->page]["placeholder_password_wrong"];
-            } else {
-                return $this->s[$this->page]["placeholder_password"];
-            }
+    private function gotErrorPassword() {
+        if ($this->isErrorPassword()) {
+            echo " error";
         }
-    */
-    // FIRST NAME
+    }
+
+    private function getPlaceholderPassword() {
+        if ($this->isErrorPassword()) {
+            return $this->s[$this->page]["placeholder_password_wrong"];
+        } else {
+            return $this->s[$this->page]["placeholder_password"];
+        }
+    }
+
+
 
     private function isErrorFirstName() {
         return isset($this->errors["first_name_empty"]);
@@ -165,5 +170,6 @@ class MembersPage extends AppPage {
             return $this->s[$this->page]["phone"];
         }
     }
+
 
 }
