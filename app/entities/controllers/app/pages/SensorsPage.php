@@ -1,4 +1,5 @@
 <?php
+require "verificationFunctions.php";
 
 class SensorsPage extends AppPage {
 
@@ -6,6 +7,7 @@ class SensorsPage extends AppPage {
 
     public function __construct($lang, $id) {
         $this->initilization("sensors", $lang, "connected");
+
         $this->addToCssFiles([
             "sensors/sensors.css"
         ]);
@@ -16,5 +18,6 @@ class SensorsPage extends AppPage {
     protected function renderContent() {
         require "../app/views/app/sensors/sensorsPage.php";
     }
+
 
 }

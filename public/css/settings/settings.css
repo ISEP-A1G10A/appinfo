@@ -3,17 +3,60 @@
     justify-content: center;
 }
 
-/*.room-form{
+.settings-forms{
     display: flex;
     justify-content: center;
     flex-direction: column;
-}*/
+}
 
-.form-inputs .form-new-input {
+.sensor-form-inputs .sensor-form-new-input {
     display: flex;
     flex-direction: column;
     flex: 1;
     padding: 20px 35px;
     margin-bottom: 35px;
     width: 500px;
+}
+
+.settings-inputs{
+    padding: 10px 0 0;
+    margin: 5px 20px 10px;
+}
+
+.sensor-form-label{
+    border: none;
+    font-size: 24px;
+    background: none;
+    width: 100%;
+    color: gray;
+    padding: 10px 0 0;
+    margin: 5px 20px 10px;
+}
+
+.settings-form-text{
+    color: gray;
+    padding: 10px 0 0;
+    margin: 5px 100px 10px;
+    font-size: 18px;
+}
+
+.settings-form-input{
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    font-size: 18px;
+    margin: 20px;
+    background: none;
+    width: 85%;
+}
+
+.settings-form-submit-btn{
+    background-color: #1f5661;
+    color: white;
+    margin: 20px;
+}
+
+.settings-form-reset-btn{
+    background-color: whitesmoke;
+    color: #1f5661;
+    margin: 20px;
 }

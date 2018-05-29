@@ -27,6 +27,5 @@ abstract class GearTable extends Table {
         $request->execute([
             ""
         ]);
-
     }*/
 }

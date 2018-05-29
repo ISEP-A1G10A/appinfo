@@ -49,6 +49,10 @@ $sensorsPage = [
 ];
 $settingsPage = [
     "title" => "paramètres",
+    "house" => "habitation",
+    "rooms" => "pieces",
+    "people" => "habitants",
+    "new" => "nouveau",
     "reset" => "annuler",
     "submit" => "valider",
 ];
@@ -99,13 +103,23 @@ $formErrorsNewSensor = [
 $formErrorsSensor = [
     "sensor_empty" => "Veuillez entrer un capteur"
 ];
+$formErrorsSettings = [
+    "house_label_empty" => "veuillez entrer un nom de maison",
+    "house_address_line_1_empty" => "veuillez entrer une adresse",
+    "house_zip_code_empty" => "veuillez entrer un code postal",
+    "house_city_empty" => "veuillez entrer une vile",
+    "house_country_empty" => "veuillez entrer un pays",
+    "house_surface_empty" => "veuillez entrer une superficie",
+    "room_empty" => "veuillez entrer un nom de pièce",
+];
 $formErrors = [
     "common"        => $formErrorsCommon,
     "connection"    => $formErrorsConnection,
     "profile-pass"  => $formErrorsProfilePass,
     "profile-infos" => $formErrorsProfileInfos,
     "new-sensor"    => $formErrorsNewSensor,
-    "sensor"        => $formErrorsSensor
+    "sensor"        => $formErrorsSensor,
+    "settings" => $formErrorsSettings
 ];
 // nav
 $navShowcase = [
