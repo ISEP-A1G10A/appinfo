@@ -1,28 +1,27 @@
 <div class="sensors">
-    <div>
-        <div class="main-title">
-            <?php
-            echo strtoupper($this->s[$this->page]["rooms"]);
-            ?>
-        </div>
+    <div class="new-sensor">
 
-        <div class="rooms-list">
-            <?php
-            $e = 0;
-            $t = 0;
-            foreach ($_SESSION["user"]["houses"][$this->id - 1][2] as $room){
-                if(!sizeof($room[2]) == 0){
-                    require "roomList.php";
-                }else{
-                    $e++;
-                }
-                $t++;
-            }
-            if($e == $t){
-                echo "Aucun capteur, ajoutez en dans l'onglet paramètres";
-            }
-            ?>
-        </div>
+        <input name="new-sensor" placeholder="<?php $this->s[$this->page]["new"] ?>">
+
     </div>
-
+    <div class="sensor-table">
+        <?php foreach($this->homes[$this->id - 1][7] as $room) { ?>
+            <div class="table-title"><?php echo $room[1] ?></div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>label</th>
+                    <th>type</th>
+                    <th>état</th>
+                </tr>
+                <?php foreach ($room[2] as $sensor){ ?>
+                <tr>
+                    <td><?php echo $sensor[0] ?></td>
+                    <td><?php echo $sensor[1] ?></td>
+                    <td><?php echo $sensor[2] ?></td>
+                </tr>
+                <?php } ?>
+            </table>
+        <?php } ?>
+    </div>
 </div>

@@ -10,7 +10,7 @@ abstract class RoomTable extends Table {
         ]);
         $results = $request->fetchAll(PDO::FETCH_ASSOC);
         foreach ($results as $result){
-            $sensors = GearTable::getAllLabelsByRoom($result["id"]);
+            $sensors = GearTable::getAllIdsAndLabelsAndTypesByRoom($result["id"]);
             array_push($rooms, [$result["id"], $result["label"], $sensors] );
         }
         return $rooms;
@@ -38,6 +38,12 @@ abstract class RoomTable extends Table {
            ":label" => $label,
            ":home" => $home
         ]);
+    }
 
+    public static function deleteRoomById($id){
+        $request = self::prepare("DELETE FROM room WHERE id=:id");
+        $request->execute([
+           ":id" => $id
+        ]);
     }
 }

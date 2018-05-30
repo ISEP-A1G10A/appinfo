@@ -44,7 +44,7 @@ $profilePage = [
 ];
 $sensorsPage = [
     "title" => "capteurs",
-    "rooms" => "liste des capteurs par piece: ",
+    "new" => "nouveau capteur",
 
 ];
 $settingsPage = [
@@ -119,7 +119,7 @@ $formErrors = [
     "profile-infos" => $formErrorsProfileInfos,
     "new-sensor"    => $formErrorsNewSensor,
     "sensor"        => $formErrorsSensor,
-    "settings" => $formErrorsSettings
+    "settings"      => $formErrorsSettings
 ];
 // nav
 $navShowcase = [

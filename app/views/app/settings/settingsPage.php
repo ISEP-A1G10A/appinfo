@@ -1,7 +1,8 @@
 <div class="settings">
     <div class="settings-forms">
         <div class="design-form settings-form-data">
-            <form action="<?php echo new URL("houses/" . $this->id . "/settings/") ?>" method="post" class="settings-inputs">
+            <form action="<?php echo new URL("houses/" . $this->id . "/settings/") ?>" method="post"
+                  class="settings-inputs">
                 <input name="form" value="settings" type="hidden">
 
                 <div class="settings-form-title"><?php echo strtoupper($this->s[$this->page]["house"]) ?></div>
@@ -30,9 +31,11 @@
                 <div class="settings-form-title"><?php echo strtoupper($this->s[$this->page]["rooms"]) ?></div>
 
                 <?php foreach ($this->homes[$this->id - 1][7] as $room) { ?>
-                    <div>
+                    <div class="<?php echo $room[0] ?>">
                         <input name="<?php echo $room[0] ?>" class="settings-form-input"
                                value="<?php echo ucfirst($room[1]) ?>">
+                        <img class="delete-button" onclick="deleteItem(<?php echo $room[0] ?>, <?php echo $this->id ?>)"
+                             src="<?php echo new URL("img/icons/delete.png") ?>">
                     </div>
                 <?php } ?>
 

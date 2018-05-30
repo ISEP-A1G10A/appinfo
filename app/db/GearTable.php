@@ -1,15 +1,15 @@
 <?php
 
 abstract class GearTable extends Table {
-    public static function getAllLabelsByRoom($roomId) {
+    public static function getAllIdsAndLabelsAndTypesByRoom($roomId) {
         $sensors = [];
-        $request = self::prepare("SELECT label FROM gear WHERE room=:room");
+        $request = self::prepare("SELECT id, label, type FROM gear WHERE room=:room");
         $request->execute([
            ':room' => $roomId
         ]);
         $results = $request->fetchAll(PDO::FETCH_ASSOC);
         foreach ($results as $result) {
-            array_push($sensors, $result["label"]);
+            array_push($sensors, [$result["id"], $result["label"], $result["type"]]);
         }
         return $sensors;
     }

@@ -15,7 +15,11 @@ class SensorsPage extends AppPage {
     }
 
 
+    private $homes = [];
     protected function renderContent() {
+        foreach ($_SESSION["user"]["houses"] as $house){
+            array_push($this->homes, HomeTable::getAllAllById($house[0])[0]);
+        }
         require "../app/views/app/sensors/sensorsPage.php";
     }
 

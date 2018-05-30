@@ -46,10 +46,15 @@ class SettingsPage extends AppPage {
                     RoomTable::addRoom($_POST["new-room"], $id);
                 }
             }
+        }elseif (isset($_POST["name"]) && $_POST["name"] === "delete"){
+            $this->deleteRoomById($_POST["id"]);
         }
 
         $this->addToCssFiles([
             "settings/settings.css"
+        ]);
+        $this->addToJsFiles([
+            "settings/deleteButton.js"
         ]);
         $this->id = $id;
     }
@@ -79,5 +84,9 @@ class SettingsPage extends AppPage {
                 echo "</div>";
             }
         }
+    }
+
+    public function deleteRoomById($id){
+        RoomTable::deleteRoomById($id);
     }
 }
