@@ -1,43 +1,38 @@
 .sensors{
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
-.main-title {
+.new-sensor{
+    display: flex;
+    justify-content: center;
+    width: 500px;
+}
+
+.sensor-dropdown{
+
+}
+
+.sensor-input{
+
+}
+
+.sensor-table{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.room-table{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.table-title{
+    font-size: 20px;
+    padding: 10px 25px 15px 0;
+    width: 100%;
     color: gray;
-    font-weight: 500;
-    letter-spacing: 0;
-    width: 100%;
-    padding: 10px 0 15px 20px;
-    font-size: 18px;
-}
-
-.rooms-list{
-    padding: 10px 0 15px 30px;
-}
-
-.room-title{
-    color: gray;
-    font-weight: 500;
-    letter-spacing: 0;
-    width: 100%;
-    padding: 10px 0 15px 20px;
-    font-size: 18px;
-}
-
-.sensors-list{
-    background-color: white;
-    width: 300px;
-    border-radius: 10px;
-    padding: 10px;
-    margin-left: 50px;
-}
-
-.sensor-name{
-    color: black;
-    font-weight: 500;
-    letter-spacing: 0;
-    width: 100%;
-    padding: 10px 0 15px 20px;
-    font-size: 15px;
 }

@@ -25,18 +25,24 @@
                 <input name="house-address-country" class="settings-form-input" type="text"
                        value="<?php echo $this->homes[$this->id - 1][5]?>">
 
-                <input name="house-surface" class="settings-form-input" type="text"
-                       value="<?php echo $this->homes[$this->id - 1][6]?>">
+                <div class="surface-div">
+                    <div class="settings-text">Surface:</div>
+
+                    <input name="house-surface" class="settings-form-input-surface" type="text"
+                           value="<?php echo $this->homes[$this->id - 1][6]?>">
+                    <div class="settings-text">m².</div>
+                </div>
 
                 <div class="settings-form-title"><?php echo strtoupper($this->s[$this->page]["rooms"]) ?></div>
 
+
                 <?php foreach ($this->homes[$this->id - 1][7] as $room) { ?>
-                    <div class="<?php echo $room[0] ?>">
-                        <input name="<?php echo $room[0] ?>" class="settings-form-input"
-                               value="<?php echo ucfirst($room[1]) ?>">
-                        <img class="delete-button" onclick="deleteItem(<?php echo $room[0] ?>, <?php echo $this->id ?>)"
-                             src="<?php echo new URL("img/icons/delete.png") ?>">
-                    </div>
+                        <div class="<?php echo $room[0] ?> settings-room">
+                            <input name="<?php echo $room[0] ?>" class="settings-form-input"
+                                   value="<?php echo ucfirst($room[1]) ?>">
+                            <img class="delete-button" onclick="deleteItem(<?php echo $room[0] ?>, <?php echo $this->id ?>)"
+                                 src="<?php echo new URL("img/icons/delete.png") ?>">
+                        </div>
                 <?php } ?>
 
                 <input name="new-room" class="settings-form-input"
