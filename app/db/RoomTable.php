@@ -24,6 +24,15 @@ abstract class RoomTable extends Table {
         return $request->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public static function getIdByLabel($label){
+        $request = self::prepare("SELECT id FROM room WHERE label=:label");
+        $request->execute([
+            ":label" => $label
+        ]);
+        $results = $request->fetchAll(PDO::FETCH_ASSOC);
+        return $results[0]["id"];
+    }
+
     public static function setLabelById($id, $label){
         $request = self::prepare("UPDATE room SET label=:label WHERE id=:id");
         $request->execute([

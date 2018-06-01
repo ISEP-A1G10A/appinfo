@@ -1,5 +1,10 @@
 .sensors{
     display: flex;
+    justify-content: center;
+}
+
+.sensors-elements{
+    display: flex;
     flex-direction: column;
     justify-content: center;
 }
@@ -7,32 +12,75 @@
 .new-sensor{
     display: flex;
     justify-content: center;
-    width: 500px;
+    width: 100%;
 }
 
-.sensor-dropdown{
-
+.new-sensor-form{
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
 }
+
+.new-sensor-submit-btn{
+    background-color: #1f5661;
+    color: white;
+}
+
+.dropdown{
+    margin: 20px;
+    border:none;
+    border-bottom: 1px solid lightgrey;
+    background: #f5f5f5;
+    color:gray;
+    outline:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    cursor:pointer;
+    font-size: 18px;
+    width: 150px;
+}
+
 
 .sensor-input{
-
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    font-size: 18px;
+    margin: 20px;
+    background: none;
+    width: 85%;
 }
 
 .sensor-table{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /*justify-content: center;*/
+    align-items: center;
 }
 
 .room-table{
-    margin: 50px;
-    display: flex;
-    flex-direction: column;
+    margin: 20px;
 }
 
 .table-title{
     font-size: 20px;
-    padding: 10px 25px 15px 0;
+    padding: 10px 25px 35px 0;
     width: 100%;
     color: gray;
+}
+
+.table-input{
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    font-size: 16px;
+    background: none;
+    width: 100%;
+}
+
+.delete-button{
+    height: 20px;
+    width: 20px;
+}
+
+td{
+    padding: 5px 20px;
 }

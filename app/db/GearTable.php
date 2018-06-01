@@ -22,10 +22,27 @@ abstract class GearTable extends Table {
         ]);
     }
 
-    /*public static function setNewSensorByRoom($label, $room){
-        $request = self::prepare("INSERT INTO gear (label, room) VALUES ($label, $room)");
+    public static function addGear($type, $label, $room){
+        $request = self::prepare("INSERT INTO gear (type, label, room) VALUES (:type, :label, :room)");
         $request->execute([
-            ""
+            ":type" => $type,
+            ":label" => $label,
+            ":room" => $room
         ]);
-    }*/
+    }
+
+    public static function setLabelById($label, $id){
+        $request = self::prepare("UPDATE gear SET label=:label WHERE id=:id");
+        $request->execute([
+            ":label" => $label,
+            ":id" => $id
+        ]);
+    }
+
+    public static function deleteGearById($id){
+        $request = self::prepare("DELETE FROM gear WHERE id=:id");
+        $request->execute([
+           ":id" => $id
+        ]);
+    }
 }

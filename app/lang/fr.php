@@ -45,7 +45,14 @@ $profilePage = [
 $sensorsPage = [
     "title" => "capteurs",
     "new" => "nouveau capteur",
-
+    "sensor-type" => "type de capteur",
+    "add" => "ajouter",
+    "no-sensor" => "aucun capteur",
+    "id" => "id",
+    "label" => "nom",
+    "type" => "type",
+    "state" => "etat",
+    "actions" => "actions"
 ];
 $settingsPage = [
     "title" => "paramètres",
@@ -101,7 +108,8 @@ $formErrorsNewSensor = [
     "new_sensor_empty" => "Veuillez entrer un nouveau capteur"
 ];
 $formErrorsSensor = [
-    "sensor_empty" => "Veuillez entrer un capteur"
+    "sensor_type_empty" => "Veuillez entrer un type de capteur",
+    "sensor_label_empty" => "Veuillez entrer un nom de capteur"
 ];
 $formErrorsSettings = [
     "house_label_empty" => "veuillez entrer un nom de maison",
@@ -118,7 +126,7 @@ $formErrors = [
     "profile-pass"  => $formErrorsProfilePass,
     "profile-infos" => $formErrorsProfileInfos,
     "new-sensor"    => $formErrorsNewSensor,
-    "sensor"        => $formErrorsSensor,
+    "sensors"        => $formErrorsSensor,
     "settings"      => $formErrorsSettings
 ];
 // nav
