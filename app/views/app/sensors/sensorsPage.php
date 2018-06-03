@@ -25,12 +25,11 @@
         <div class="sensor-table">
             <?php foreach($this->homes[$this->id - 1][7] as $room) { ?>
                 <div class="room-table">
-                    <div class="table-title"><?php echo $room[1] ?></div>
                     <table border="1">
-                        <?php
-                        if(sizeof($room[2]) === 0){
-                            echo ucfirst($this->s[$this->page]["no-sensor"]);
-                        }else{ ?>
+                        <div class="table-title"><?php echo $room[1] ?></div>
+                        <?php if(sizeof($room[2]) === 0){ ?>
+                            <div class="table-text"><?php echo ucfirst($this->s[$this->page]["no-sensor"]) ?></div>
+                        <?php }else{ ?>
                             <tr>
                                 <th><?php echo ucfirst($this->s[$this->page]["id"]) ?></th>
                                 <th><?php echo ucfirst($this->s[$this->page]["label"]) ?></th>
@@ -38,6 +37,7 @@
                                 <th><?php echo ucfirst($this->s[$this->page]["state"]) ?></th>
                                 <th><?php echo ucfirst($this->s[$this->page]["actions"]) ?></th>
                             </tr>
+
                             <?php foreach ($room[2] as $sensor){ ?>
                                 <tr class="<?php echo $sensor[0] ?>">
                                     <td><?php echo $sensor[0] ?></td>
@@ -45,8 +45,9 @@
                                     <td><?php echo $sensor[2] ?></td>
                                     <td>off</td>
                                     <td>null</td>
+
                                     <td><img src="<?php echo new URL("img/icons/delete.png") ?>" class="delete-button"
-                                             onclick="deleteSensor(<?php echo $sensor[0] ?>, <?php echo $this->id ?>)"></td>
+                                             onclick="deleteSensor(<?php echo $sensor[0] ?>, <?php echo $this->id ?>, <?php echo sizeof($room[2]) ?>)"></td>
                                 </tr>
                                 <?php
                             }

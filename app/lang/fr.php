@@ -59,7 +59,9 @@ $settingsPage = [
     "house" => "habitation",
     "rooms" => "pieces",
     "people" => "habitants",
-    "new" => "nouveau",
+    "new_room" => "nouvelle piece",
+    "new_first" => "nouveau prenom",
+    "new_last" => "nouveau nom",
     "reset" => "annuler",
     "submit" => "valider",
 ];
@@ -119,6 +121,11 @@ $formErrorsSettings = [
     "house_country_empty" => "veuillez entrer un pays",
     "house_surface_empty" => "veuillez entrer une superficie",
     "room_empty" => "veuillez entrer un nom de pièce",
+    "first_name_empty" => "veuillez entrer un prenom",
+    "last_name_empty" => "veuillez entrer un nom",
+    "first_name_not_valid" => "veuillez entrer un prenom correct",
+    "last_name_not_valid" => "veuillez entrer un nom correct",
+
 ];
 $formErrors = [
     "common"        => $formErrorsCommon,

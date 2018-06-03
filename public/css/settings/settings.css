@@ -19,8 +19,7 @@
     width: 500px;
 }
 
-.settings-inputs{
-    padding: 10px 0 0;
+.settings-inputs, .settings-bottom-inputs{
     margin: 5px 20px 10px;
 }
 
@@ -58,7 +57,7 @@
     height: 30px;
 }
 
-.settings-form-input{
+.settings-form-input, .settings-room-input, .settings-new-room-input, .created-input{
     border: none;
     border-bottom: 1px solid lightgrey;
     font-size: 18px;
@@ -74,6 +73,20 @@
     margin: 20px 10px;
     background: none;
     width: 40px;
+}
+
+.users-names{
+    display: flex;
+    align-items: center;
+}
+
+.settings-first-name-input, .settings-last-name-input, .settings-new-name-input{
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    font-size: 18px;
+    margin: 20px;
+    background: none;
+    width: 36%;
 }
 
 .settings-form-btns{

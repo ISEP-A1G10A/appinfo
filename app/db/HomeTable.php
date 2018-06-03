@@ -40,6 +40,15 @@ abstract class HomeTable extends Table {
         return $house;
     }
 
+    public static function getMainUserById($id){
+        $request = self::prepare("SELECT main_user FROM home WHERE id=:id");
+        $request->execute([
+            ":id" => $id
+        ]);
+        $results = $request->fetchAll(PDO::FETCH_ASSOC);
+        return $results[0]["main_user"];
+    }
+
     public static function setAllById($id, $label, $address1, $address2, $zip, $city, $country, $surface) {
         $request = self::prepare("UPDATE home SET label=:label, address_line_1=:address1, address_line_2=:address2, address_zip_code=:zip, address_city=:city, address_country=:country, surface=:surface WHERE id=:id");
         $request->execute([
