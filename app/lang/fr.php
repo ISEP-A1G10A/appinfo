@@ -3,18 +3,6 @@
 $main = [
     "language" => "fr"
 ];
-$homePage = [
-    "title"                => "accueil",
-    "section0_domisep"     => "La Domotique vue par Domisep",
-    "section0_description" => "Domisep est une entreprise qui permet un contrôle sécurisé et ergonomique de toute habitation",
-    "section0_learn_more"  => "En savoir plus",
-    "nav_sticky_features"  => "Fonctionnalités",
-    "nav_sticky_register"  => "S'inscrire",
-    "nav_sticky_clients"   => "Nos clients",
-    "section1"   => $section1,
-    "section2"   => $section2,
-    "section3"   => $section3,
-];
 $section1 = [
     "bloc1_title"       => "Capter",
     "bloc1_description" => "Notre catalogue de capteurs: choisissez, ajoutez et retirez des capteurs de votre maison",
@@ -46,6 +34,18 @@ $section3 = [
     "section3_commentary2" => "Site très facile à prendre en main. Très utile notamment quand nous partons en vacances !",
     "section3_people3"     => "Daniel Dupont",
     "section3_commentary3" => "Bon service, de nombreux choix de personnalisation. Je recommande vivement."
+];
+$homePage = [
+    "title"                => "accueil",
+    "section0_domisep"     => "La Domotique vue par Domisep",
+    "section0_description" => "Domisep est une entreprise qui permet un contrôle sécurisé et ergonomique de toute habitation",
+    "section0_learn_more"  => "En savoir plus",
+    "nav_sticky_features"  => "Fonctionnalités",
+    "nav_sticky_register"  => "S'inscrire",
+    "nav_sticky_clients"   => "Nos clients",
+    "section1"   => $section1,
+    "section2"   => $section2,
+    "section3"   => $section3,
 ];
 $signInPage = [
     "title"                      => "connexion",
