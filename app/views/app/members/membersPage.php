@@ -1,7 +1,7 @@
 <div class="part-add-member">
     <form action="<?php echo new URL("members/") ?>" method="post" class="form">
         <input name="form" value="members" type="hidden">
-        <?php $this->displayErrors("infos")?>
+        <?php $this->displayErrors("infos") ?>
 
         <input name="first_name" class="add-member-form-input" type="text"
                placeholder="<?php echo ucfirst($this->s[$this->page]["first_name"]) ?>"
@@ -12,13 +12,13 @@
                value="">
 
 
-        <select name="type" class="part-add-member-type type-option" >
+        <select name="type" class="part-add-member-type type-option">
             <option class="type-option2"
                     value="1"><?php echo ucfirst($this->s[$this->page]["1"]) ?></option>
             <option class="type-option2"
                     value="2"><?php echo ucfirst($this->s[$this->page]["2"]) ?></option>
             <option class="type-option2"
-                    value="3"><?php echo ucfirst($this->s[$this->page]["2"]) ?></option>
+                    value="3"><?php echo ucfirst($this->s[$this->page]["3"]) ?></option>
         </select>
 
         <input name="email" class="add-member-form-input" <?php $this->gotErrorEmail() ?> type="text"
