@@ -8,11 +8,7 @@
     </div>
 </div>
 <div class="home-sub-nav">
-
     <div class="home-sub-nav-item-menu">
-
-        <a href="#section1" class="design-home-btn"><span class="home-item-menu"><?php echo $this->s[$this->page]["navHomePage"]["item1"]?></span></a>
-
         <a href="#section1" class="design-home-btn"><span class="home-item-menu"><?php echo ($this->s[$this->page]["nav_sticky_features"]) ?></span></a>
     </div>
     <div class="home-sub-nav-item-menu">
