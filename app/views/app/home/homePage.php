@@ -9,13 +9,13 @@
 <div class="home-sub-nav">
 
     <div class="home-sub-nav-item-menu">
-        <a href="#section1" class="design-home-btn"><span class="home-item-menu">Fonctionnalités</span></a>
+        <a href="#section1" class="design-home-btn"><span class="home-item-menu"><?php echo $this->s[$this->page]["navHomePage"]["item1"]?></span></a>
     </div>
     <div class="home-sub-nav-item-menu">
-        <a href="#section2" class="design-home-btn"><span class="home-item-menu">S'inscrire</span></a>
+        <a href="#section2" class="design-home-btn"><span class="home-item-menu"><?php echo $this->s[$this->page]["navHomePage"]["item2"]?></span></a>
     </div>
     <div class="home-sub-nav-item-menu">
-        <a href="#section3" class="design-home-btn"><span class="home-item-menu">Nos clients</span></a>
+        <a href="#section3" class="design-home-btn"><span class="home-item-menu"><?php echo $this->s[$this->page]["navHomePage"]["item3"]?></span></a>
     </div>
 </div>
 <div id="section1" class="home-section">

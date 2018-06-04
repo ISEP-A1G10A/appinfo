@@ -46,6 +46,7 @@ $homePage = [
     "section1" => $section1,
     "section2" => $section2,
     "section3" => $section3,
+    "navHomePage" => $navHomePage,
 ];
 $signInPage = [
     "title" => "connexion",
@@ -123,10 +124,17 @@ $navAdminSys = [
     "logs" => "logs",
     "logs_debug" => "logs debug"
 ];
+$navHomePage = [
+    "intem1" => "Fonctionnalités",
+    "intem2" => "S'inscrire",
+    "intem3" => "Nos clients"
+];
 $navs = [
     "showcase" => $navShowcase,
     "connected" => $navConnected,
-    "adminsys" => $navAdminSys
+    "adminsys" => $navAdminSys,
+    "navHomePage" => $navHomePage,
+
 ];
 $footer = [
     "term_of_use"    => "Conditions générales",
