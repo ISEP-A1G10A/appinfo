@@ -37,7 +37,49 @@ abstract class UserTable extends Table {
         return ["error", ["connection", "no_user_with_given_email"]];
     }
 
-    public static function setUserData($id, $email, $phone, $first_name, $last_name) {
+    public static function getPassById($id) {
+        $request = self::prepare("SELECT password FROM user WHERE id=:id");
+        $request->execute([
+            ':id' => $id
+        ]);
+        return $request->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public static function getNamesById($id){
+        $names = [];
+        $request = self::prepare("SELECT first_name, last_name FROM user WHERE id=:id");
+        $request->execute([
+            ':id' => $id
+        ]);
+        $results = $request->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($results as $result) {
+            array_push($names, [$result["first_name"], $result["last_name"], $id]);
+        }
+        return $names;
+    }
+
+    public static function getIdByNames($first_name, $last_name){
+        $request = self::prepare("SELECT id FROM user WHERE first_name=:first_name AND last_name=:last_name");
+        $request->execute([
+            ':first_name' => $first_name,
+            ':last_name' => $last_name
+        ]);
+        $results = $request->fetchAll(PDO::FETCH_ASSOC);
+        return $results[0]["id"];
+    }
+
+
+
+    public static function setNamesById($first_name, $last_name, $id){
+        $request = self::prepare("UPDATE user SET first_name=:first_name, last_name=:last_name WHERE id=:id");
+        $request->execute([
+            ":first_name" => $first_name,
+            ":last_name" => $last_name,
+            ':id' => $id
+        ]);
+    }
+
+    public static function setAllById($id, $first_name, $last_name, $email, $phone) {
         $request = self::prepare("UPDATE user SET email=:email, phone=:phone, first_name=:first_name, last_name=:last_name WHERE id=:id");
         $request->execute([
            ':id' => $id,
@@ -45,6 +87,46 @@ abstract class UserTable extends Table {
            ':phone' => $phone,
            ':first_name' => $first_name,
            ':last_name' => $last_name
+        ]);
+    }
+
+    public static function setPassById($id, $password) {
+        $request = self::prepare("UPDATE user SET password=:password WHERE id=:id");
+        $request->execute([
+            ':id' => $id,
+            ':password' => Encryption::encrypt($password)
+        ]);
+    }
+
+    public static function setFirstNameById($id, $name){
+        $request = self::prepare("UPDATE user SET first_name=:first_name WHERE id=:id");
+        $request->execute([
+            ':id' => $id,
+            ':first_name' => $name
+        ]);
+    }
+
+    public static function setLastNameById($id, $name){
+        $request = self::prepare("UPDATE user SET last_name=:last_name WHERE id=:id");
+        $request->execute([
+            ':id' => $id,
+            ':last_name' => $name
+        ]);
+    }
+
+    public static function addUser($first_name, $last_name){
+        $request = self::prepare("INSERT INTO user (first_name, last_name, type) VALUES (:first_name, :last_name, :type)");
+        $request->execute([
+            ':first_name' => $first_name,
+            ":last_name" => $last_name,
+            ":type" => 4,
+        ]);
+    }
+
+    public static function deleteUserById($id){
+        $request = self::prepare("DELETE FROM user WHERE id=:id");
+        $request->execute([
+            ':id' => $id
         ]);
     }
 }

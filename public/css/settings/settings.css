@@ -1,0 +1,107 @@
+.settings{
+    display: flex;
+    justify-content: center;
+}
+
+.settings-forms{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.settings-form-data {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px 35px;
+    margin-bottom: 35px;
+    margin-top: 35px;
+    width: 500px;
+}
+
+.settings-inputs, .settings-bottom-inputs{
+    margin: 5px 20px 10px;
+}
+
+.settings-form-title{
+    border: none;
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    background: none;
+    width: 100%;
+    color: gray;
+}
+
+.surface-div{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.settings-text{
+    border: none;
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    background: none;
+}
+
+.settings-room{
+    display: flex;
+    align-items: center;
+}
+
+.delete-button{
+    width: 30px;
+    height: 30px;
+}
+
+.settings-form-input, .settings-room-input, .settings-new-room-input, .created-input{
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    font-size: 18px;
+    margin: 20px;
+    background: none;
+    width: 85%;
+}
+
+.settings-form-input-surface{
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    font-size: 18px;
+    margin: 20px 10px;
+    background: none;
+    width: 40px;
+}
+
+.users-names{
+    display: flex;
+    align-items: center;
+}
+
+.settings-first-name-input, .settings-last-name-input, .settings-new-name-input{
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    font-size: 18px;
+    margin: 20px;
+    background: none;
+    width: 36%;
+}
+
+.settings-form-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.settings-form-submit-btn{
+    background-color: #1f5661;
+    color: white;
+}
+
+.settings-form-reset-btn{
+    background-color: whitesmoke;
+    color: #1f5661;
+    margin-right: 20px;
+}

@@ -14,4 +14,32 @@ abstract class LinkUserHomeTable extends Table {
         }
         return $houses;
     }
+
+    public static function getUserByHome($home){
+        $ids = [];
+        $request = self::prepare("SELECT user FROM link_user_home WHERE home=:home");
+        $request->execute([
+            ":home" => $home
+        ]);
+        $results = $request->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($results as $result) {
+            array_push($ids, $result["user"]);
+        }
+        return $ids;
+    }
+
+    public static function addLink($user, $home){
+        $request = self::prepare("INSERT INTO link_user_home (user, home) VALUES (:user, :home)");
+        $request->execute([
+            ':user' => $user,
+            ":home" => $home,
+        ]);
+    }
+
+    public static function deleteLinkByUser($user){
+        $request = self::prepare("DELETE FROM link_user_home WHERE user=:user");
+        $request->execute([
+            ':user' => $user
+        ]);
+    }
 }
