@@ -46,7 +46,6 @@ $homePage = [
     "section1"             => $section1,
     "section2"             => $section2,
     "section3"             => $section3,
-    "navHomePage"          => $navHomePage,
 ];
 $signInPage = [
     "title"                      => "connexion",
@@ -253,11 +252,6 @@ $navAdminSys = [
 $navAdminSav = [
     "deconnection" => "deconnexion",
     "members"      => "membres"
-];
-$navHomePage = [
-    "item1" => "Fonctionnalités",
-    "item2" => "S'inscrire",
-    "item3" => "Nos clients"
 ];
 $navs = [
     "showcase"  => $navShowcase,

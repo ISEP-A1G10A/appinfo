@@ -12,10 +12,10 @@
         <a href="#section1" class="design-home-btn"><span class="home-item-menu"><?php echo ($this->s[$this->page]["nav_sticky_features"]) ?></span></a>
     </div>
     <div class="home-sub-nav-item-menu">
-        <a href="#section2" class="design-home-btn"><span class="home-item-menu"><?php echo ($this->s[$this->page]["nav_sticky_register"]) ?><?php echo $this->s[$this->page]["navHomePage"]["item2"]?></span></a>
+        <a href="#section2" class="design-home-btn"><span class="home-item-menu"><?php echo ($this->s[$this->page]["nav_sticky_register"]) ?></span></a>
     </div>
     <div class="home-sub-nav-item-menu">
-        <a href="#section2" class="design-home-btn"><span class="home-item-menu"><?php echo ($this->s[$this->page]["nav_sticky_clients"]) ?><?php echo $this->s[$this->page]["navHomePage"]["item2"]?></span></a>
+        <a href="#section2" class="design-home-btn"><span class="home-item-menu"><?php echo ($this->s[$this->page]["nav_sticky_clients"]) ?></span></a>
     </div>
 </div>
 <div id="section1" class="home-section">
