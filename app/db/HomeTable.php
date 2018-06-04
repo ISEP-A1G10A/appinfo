@@ -62,4 +62,21 @@ abstract class HomeTable extends Table {
             ':surface' => $surface
         ]);
     }
+    public static function getAll2() {
+        $request = self::prepare("SELECT * FROM home");
+        $request->execute();
+        return $request->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public static function getAll() {
+        $house = [];
+        $request = self::prepare("SELECT id,main_user,type,surface,address_line_1,address_line_2,address_zip_code,address_city,address_country,label FROM home");
+        $request->execute();
+        $results = $request->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($results as $result){
+            $userIdRequest = UserTable::getNamesById2($result["id"]);
+            array_push($house, [$result["id"],$userIdRequest, $result["address_line_1"], $result["address_line_2"], $result["address_zip_code"], $result["address_city"], $result["address_country"], $result["surface"]]);
+        }
+        return $house;
+    }
 }

@@ -24,8 +24,10 @@ abstract class Routes {
 
         ],
         "admin_sav" => [
-            "home" => [MembersPage::class], // TODO
+            "home" => [MembersPage::class],
             "members" => [MembersPage::class],
+            "houses" => [HousesPage::class],
+
         ],
         "status" => [
             "404" => [Status404Page::class],

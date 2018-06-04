@@ -149,4 +149,16 @@ abstract class UserTable extends Table {
             ':id' => $id
         ]);
     }
+    public static function getNamesById2($id){
+        $names = [];
+        $request = self::prepare("SELECT first_name, last_name FROM user WHERE id=:id");
+        $request->execute([
+            ':id' => $id
+        ]);
+        $results = $request->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($results as $result) {
+            array_push($names, [$result["first_name"]. $result["last_name"], $id]);
+        }
+        return $names;
+    }
 }
