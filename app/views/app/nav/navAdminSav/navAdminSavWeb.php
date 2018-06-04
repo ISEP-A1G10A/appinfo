@@ -17,20 +17,15 @@
                 <input name="form" value="nav-deconnection" type="hidden">
                 <input type="submit"
                        class="design-btn-raised navConnected-web-disconnect-btn"
-                       value="<?php echo strtoupper($this->s["navs"]["adminsys"]["deconnection"]) ?>"/>
+                       value="<?php echo strtoupper($this->s["navs"]["adminsav"]["deconnection"]) ?>"/>
             </form>
         </span>
     </div>
     <div class="design-sideNav">
-        <a class="design-sideNav-link<?php echo Regex::urlMatchPattern("logs") | Regex::urlMatchPattern("home") ? " current" : "" ?>"
-           href="<?php echo new URL("logs/") ?>">
+        <a class="design-sideNav-link<?php echo Regex::urlMatchPattern("members") | Regex::urlMatchPattern("home") ? " current" : "" ?>"
+           href="<?php echo new URL("members/") ?>">
             <img class="design-sideNav-icon" src="<?php echo new URL("img/icons/profile.png") ?>"/>
-            <span><?php echo ucfirst($this->s["navs"]["adminsys"]["logs"]) ?></span>
-        </a>
-        <a class="design-sideNav-link<?php echo Regex::urlMatchPattern("logs-debug") ? " current" : "" ?>"
-           href="<?php echo new URL("logs-debug/") ?>">
-            <img class="design-sideNav-icon" src="<?php echo new URL("img/icons/profile.png") ?>"/>
-            <span><?php echo ucfirst($this->s["navs"]["adminsys"]["logs_debug"]) ?></span>
+            <span><?php echo ucfirst($this->s["navs"]["adminsav"]["members"]) ?></span>
         </a>
     </div>
 </nav>

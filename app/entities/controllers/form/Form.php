@@ -11,7 +11,7 @@ abstract class Form {
         $this->verifications = array_merge($this->verifications, $toAdd);
     }
 
-    private $errors = [];
+    protected $errors = [];
 
     protected function runVerifications() {
         foreach ($this->verifications as $verification) {

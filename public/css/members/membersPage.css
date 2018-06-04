@@ -1,0 +1,130 @@
+.part-add-member{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px 5px 5px 5px;
+    background: white;
+    height: 80px;
+    width: 99%;
+    margin: 100px 0 30px 10px;
+    display: flex;
+    flex-direction: row;
+}
+.form{
+    display: flex;
+    flex-direction: row;
+}
+.part-add-member-type{
+    border: none;
+    margin-left: 50px;
+    font-size: 18px;
+    margin-right: 50px;
+    padding-bottom: 2px;
+    margin-bottom: 2px;
+
+
+}
+.type-option{
+    font-size: 17px;
+    padding: 3px 5px 3px 10px;
+}
+.type-option2{
+    font-size: 18px;
+}
+.add-member-form-input {
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    font-size: 18px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    background: none;
+    margin-right: 45px;
+}
+.add-member-btn{
+    margin-left: 80px;
+    height: 40px;
+}
+
+.part-members-table{
+    position: sticky;
+    margin-top: 40px;
+    top : 70px;
+
+}
+
+.members-table {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 10px;
+    top: 70px;
+}
+
+.members-tbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.members-tr, .members-td {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.members-tr:first-child {
+    border-bottom: 1px solid gray;
+}
+
+.members-tr > .members-td {
+    padding: 5px;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+}
+
+.members-th {
+    flex: 1;
+}
+
+.members-td:last-child, .members-th:last-child {
+    border-right: 1px solid gray;
+}
+
+.members-title {
+    background-color: #1d383e;
+    color: white;
+    font-weight: 800;
+    padding: 10px;
+}
+
+.members-search {
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+}
+
+.members-search-input {
+    width: 100%;
+    border: none;
+    padding: 5px;
+}
+
+.members-colum-id {
+    max-width: 150px;
+    min-width: 150px;
+}
+
+.members-colum-first_name, .members-colum-last_name {
+    max-width: 250px;
+    min-width: 250px;
+}
+
+.members-colum-email {
+    min-width: 220px;
+}
+
+.members-colum-phone {
+    min-width: 200px;
+}
+
