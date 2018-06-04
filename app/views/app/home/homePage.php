@@ -105,9 +105,9 @@
 <footer class="home-footer">
     <div class="home-footer-left">
         <div class="home-footer-left-links">
-            <a href="<?php echo new URL("404") ?>"><?php echo $this->s[$this->page]["footer"]["term_of_use"] ?></a>
+            <a href="<?php echo new URL("404") ?>"><?php echo $this->s["footer"]["term_of_use"] ?></a>
             <span class="home-footer-left-links-separator">|</span>
-            <a href="<?php echo new URL("404") ?>"><?php echo $this->s[$this->page]["footer"]["privacy_policy"] ?></a>
+            <a href="<?php echo new URL("404") ?>"><?php echo $this->s["footer"]["privacy_policy"] ?></a>
         </div>
         <div class="home-footer-left-copyright">Copyright © 2018. All Rights Reserved.</div>
     </div>
