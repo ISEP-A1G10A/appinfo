@@ -255,9 +255,9 @@ $navAdminSav = [
     "members"      => "membres"
 ];
 $navHomePage = [
-    "intem1" => "Fonctionnalités",
-    "intem2" => "S'inscrire",
-    "intem3" => "Nos clients"
+    "item1" => "Fonctionnalités",
+    "item2" => "S'inscrire",
+    "item3" => "Nos clients"
 ];
 $navs = [
     "showcase"  => $navShowcase,

@@ -10,17 +10,16 @@
 <div class="home-sub-nav">
 
     <div class="home-sub-nav-item-menu">
-<<<<<<< HEAD
+
         <a href="#section1" class="design-home-btn"><span class="home-item-menu"><?php echo $this->s[$this->page]["navHomePage"]["item1"]?></span></a>
-=======
+
         <a href="#section1" class="design-home-btn"><span class="home-item-menu"><?php echo ($this->s[$this->page]["nav_sticky_features"]) ?></span></a>
->>>>>>> 4bd3e250b63023eb200c991d897eefc7cc567309
     </div>
     <div class="home-sub-nav-item-menu">
-        <a href="#section2" class="design-home-btn"><span class="home-item-menu"><?php echo $this->s[$this->page]["navHomePage"]["item2"]?></span></a>
+        <a href="#section2" class="design-home-btn"><span class="home-item-menu"><?php echo ($this->s[$this->page]["nav_sticky_register"]) ?><?php echo $this->s[$this->page]["navHomePage"]["item2"]?></span></a>
     </div>
     <div class="home-sub-nav-item-menu">
-        <a href="#section3" class="design-home-btn"><span class="home-item-menu"><?php echo $this->s[$this->page]["navHomePage"]["item3"]?></span></a>
+        <a href="#section2" class="design-home-btn"><span class="home-item-menu"><?php echo ($this->s[$this->page]["nav_sticky_clients"]) ?><?php echo $this->s[$this->page]["navHomePage"]["item2"]?></span></a>
     </div>
 </div>
 <div id="section1" class="home-section">
