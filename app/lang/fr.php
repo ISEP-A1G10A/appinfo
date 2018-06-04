@@ -40,30 +40,30 @@ $profilePage = [
     "placeholder_password_wrong"   => "Veuillez entrer un mot de passe",
     "placeholder_first_name_wrong" => "Veuillez entrer votre prénom",
     "placeholder_last_name_wrong"  => "Veuillez entrer votre nom",
-    "placeholder_phone_wrong"      => "Veuillez entrer votre numéro de téléphone"
+    "placeholder_phone_wrong"      => "Veuillez entrer votre numéro de téléphone",
 ];
 $sensorsPage = [
-    "title" => "capteurs",
-    "new" => "nouveau capteur",
+    "title"       => "capteurs",
+    "new"         => "nouveau capteur",
     "sensor-type" => "type de capteur",
-    "add" => "ajouter",
-    "no-sensor" => "aucun capteur",
-    "id" => "id",
-    "label" => "nom",
-    "type" => "type",
-    "state" => "etat",
-    "actions" => "actions"
+    "add"         => "ajouter",
+    "no-sensor"   => "aucun capteur",
+    "id"          => "id",
+    "label"       => "nom",
+    "type"        => "type",
+    "state"       => "etat",
+    "actions"     => "actions"
 ];
 $settingsPage = [
-    "title" => "paramètres",
-    "house" => "habitation",
-    "rooms" => "pieces",
-    "people" => "habitants",
-    "new_room" => "nouvelle piece",
+    "title"     => "paramètres",
+    "house"     => "habitation",
+    "rooms"     => "pieces",
+    "people"    => "habitants",
+    "new_room"  => "nouvelle piece",
     "new_first" => "nouveau prenom",
-    "new_last" => "nouveau nom",
-    "reset" => "annuler",
-    "submit" => "valider",
+    "new_last"  => "nouveau nom",
+    "reset"     => "annuler",
+    "submit"    => "valider",
 ];
 $logsPage = [
     "title"      => "logs",
@@ -75,26 +75,57 @@ $logsPage = [
     "value"      => "valeur",
     "search"     => "rechercher"
 ];
+$membersPage = [
+    "title"                        => "membres",
+    "type"                         => "type",
+    "id"                           => "ID",
+    "value"                        => "valeur",
+    "search"                       => "rechercher",
+    "first_name"                   => "prénom",
+    "last_name"                    => "nom",
+    "email"                        => "email",
+    "phone"                        => "téléphone",
+    "add"                          => "ajouter",
+    "user"                         => "Utilisateur",
+    "adminsys"                     => "Admin Syst",
+    "adminsav"                     => "Admins SAV",
+    "placeholder_email_wrong"      => "Veuillez entrer un email",
+    "placeholder_password_wrong"   => "Veuillez entrer un mot de passe",
+    "placeholder_first_name_wrong" => "Veuillez entrer votre prénom",
+    "placeholder_last_name_wrong"  => "Veuillez entrer votre nom",
+    "placeholder_phone_wrong"      => "Veuillez entrer votre numéro de téléphone",
+    "1"                            => "1",
+    "2"                            => "2",
+    "3"                            => "3",
+    "password"                     => "Mot de passe",
+];
 $status404Page = [
     "title"     => "404 - Page introuvable",
-    "not_found" => "Page non trouvée"
+    "not_found" => "Page non trouvée",
 ];
 // forms
 $formErrorsCommon = [
-];
-$formErrorsConnection = [
-    "email_empty"              => "Veuillez entrer votre email",
-    "email_not_valid"          => "Veuillez entrer un email valide",
-    "no_user_with_given_email" => "Email invalide",
-    "password_empty"           => "Veuillez entrer votre mot de passe",
-    "wrong_password"           => "Mot de passe invalide"
 ];
 $formErrorsProfilePass = [
     "last_password_empty"   => "Veuillez entrer votre ancien mot de passe",
     "wrong_last_password"   => "Ancien mot de passe invalide",
     "password_empty"        => "Veuillez entrer un nouveau mot de passe",
     "repeat_password_empty" => "Veuillez répeter votre nouveau mot de passe",
-    "passwords_not_match"   => "Les deux mots de passe ne sont pas identiques"
+    "passwords_not_match"   => "Les deux mots de passe ne sont pas identiques",
+];
+$formErrorsConnection = [
+    "email_empty"              => "Veuillez entrer votre email",
+    "email_not_valid"          => "Veuillez entrer un email valide",
+    "no_user_with_given_email" => "Email invalide",
+    "password_empty"           => "Veuillez entrer votre mot de passe",
+    "wrong_password"           => "Mot de passe invalide",
+];
+$formErrorsProfilePass = [
+    "last_password_empty"   => "Veuillez entrer votre ancien mot de passe",
+    "wrong_last_password"   => "Ancien mot de passe invalide",
+    "password_empty"        => "Veuillez entrer un nouveau mot de passe",
+    "repeat_password_empty" => "Veuillez répeter votre nouveau mot de passe",
+    "passwords_not_match"   => "Les deux mots de passe ne sont pas identiques",
 ];
 $formErrorsProfileInfos = [
     "first_name_empty"     => "Veuillez entrer un prenom",
@@ -104,37 +135,65 @@ $formErrorsProfileInfos = [
     "email_empty"          => "Veuillez entrer un email",
     "email_not_valid"      => "Veuillez entrer un email correct",
     "phone_empty"          => "Veuillez entrer un numero de telephone",
-    "phone_not_valid"      => "Veuillez entrer un numero de telephone correct"
+    "phone_not_valid"      => "Veuillez entrer un numero de telephone correct",
+];
+$formErrorsProfileInfos = [
+    "first_name_empty"     => "Veuillez entrer un prenom",
+    "first_name_not_valid" => "Veuillez entrer un prenom correct",
+    "last_name_empty"      => "Veuillez entrer un nom",
+    "last_name_not_valid"  => "Veuillez entrer un nom correct",
+    "email_empty"          => "Veuillez entrer un email",
+    "email_not_valid"      => "Veuillez entrer un email correct",
+    "phone_empty"          => "Veuillez entrer un numero de telephone",
+    "phone_not_valid"      => "Veuillez entrer un numero de telephone correct",
+];
+$formErrorsmembers = [
+    "first_name_empty"           => "Veuillez entrer un prenom",
+    "first_name_not_valid"       => "Veuillez entrer un prenom correct",
+    "last_name_empty"            => "Veuillez entrer un nom",
+    "last_name_not_valid"        => "Veuillez entrer un nom correct",
+    "email_empty"                => "Veuillez entrer un email",
+    "email_not_valid"            => "Veuillez entrer un email correct",
+    "phone_empty"                => "Veuillez entrer un numero de telephone",
+    "phone_not_valid"            => "Veuillez entrer un numero de telephone correct",
+    "password_not_valid"         => "Veuilley entrer un mot de passe correct",
+    "placeholder_password_wrong" => "Veuillez entrer un mot de passe",
 ];
 $formErrorsNewSensor = [
-    "new_sensor_empty" => "Veuillez entrer un nouveau capteur"
+    "new_sensor_empty" => "Veuillez entrer un nouveau capteur",
 ];
 $formErrorsSensor = [
-    "sensor_type_empty" => "Veuillez entrer un type de capteur",
-    "sensor_label_empty" => "Veuillez entrer un nom de capteur"
+    "sensor_type_empty"  => "Veuillez entrer un type de capteur",
+    "sensor_label_empty" => "Veuillez entrer un nom de capteur",
 ];
 $formErrorsSettings = [
-    "house_label_empty" => "veuillez entrer un nom de maison",
+    "house_label_empty"          => "veuillez entrer un nom de maison",
     "house_address_line_1_empty" => "veuillez entrer une adresse",
-    "house_zip_code_empty" => "veuillez entrer un code postal",
-    "house_city_empty" => "veuillez entrer une vile",
-    "house_country_empty" => "veuillez entrer un pays",
-    "house_surface_empty" => "veuillez entrer une superficie",
-    "room_empty" => "veuillez entrer un nom de pièce",
-    "first_name_empty" => "veuillez entrer un prenom",
-    "last_name_empty" => "veuillez entrer un nom",
-    "first_name_not_valid" => "veuillez entrer un prenom correct",
-    "last_name_not_valid" => "veuillez entrer un nom correct",
-
+    "house_zip_code_empty"       => "veuillez entrer un code postal",
+    "house_city_empty"           => "veuillez entrer une vile",
+    "house_country_empty"        => "veuillez entrer un pays",
+    "house_surface_empty"        => "veuillez entrer une superficie",
+    "room_empty"                 => "veuillez entrer un nom de pièce",
+    "first_name_empty"           => "veuillez entrer un prenom",
+    "last_name_empty"            => "veuillez entrer un nom",
+    "first_name_not_valid"       => "veuillez entrer un prenom correct",
+    "last_name_not_valid"        => "veuillez entrer un nom correct",
 ];
 $formErrors = [
-    "common"        => $formErrorsCommon,
-    "connection"    => $formErrorsConnection,
-    "profile-pass"  => $formErrorsProfilePass,
-    "profile-infos" => $formErrorsProfileInfos,
-    "new-sensor"    => $formErrorsNewSensor,
-    "sensors"        => $formErrorsSensor,
-    "settings"      => $formErrorsSettings
+    "common"                       => $formErrorsCommon,
+    "connection"                   => $formErrorsConnection,
+    "placeholder_email_wrong"      => "Veuillez entrer un email",
+    "placeholder_password_wrong"   => "Veuillez entrer un mot de passe",
+    "placeholder_first_name_wrong" => "Veuillez entrer votre prénom",
+    "placeholder_last_name_wrong"  => "Veuillez entrer votre nom",
+    "placeholder_phone_wrong"      => "Veuillez entrer votre numéro de téléphone",
+    "first_name_empty"             => "vide",
+    "profile-pass"                 => $formErrorsProfilePass,
+    "profile-infos"                => $formErrorsProfileInfos,
+    "new-sensor"                   => $formErrorsNewSensor,
+    "sensor"                       => $formErrorsSensor,
+    "members"                      => $formErrorsmembers,
+    "settings"                     => $formErrorsSettings,
 ];
 // nav
 $navShowcase = [
@@ -155,10 +214,15 @@ $navAdminSys = [
     "logs"         => "logs",
     "logs_debug"   => "logs debug"
 ];
+$navAdminSav = [
+    "deconnection" => "deconnexion",
+    "members"      => "membres"
+];
 $navs = [
     "showcase"  => $navShowcase,
     "connected" => $navConnected,
-    "adminsys"  => $navAdminSys
+    "adminsys"  => $navAdminSys,
+    "adminsav"  => $navAdminSav,
 ];
 $footer = [
     "term_of_use"    => "Conditions générales",
@@ -175,7 +239,8 @@ return [
     "help"       => $helpPage,
     "logs"       => $logsPage,
     "404"        => $status404Page,
+    "members"    => $membersPage,
     "formErrors" => $formErrors,
     "navs"       => $navs,
-    "footer"     => $footer
+    "footer"     => $footer,
 ];

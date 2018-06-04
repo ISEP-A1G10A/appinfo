@@ -4,15 +4,10 @@
         <span class="design-mobileNav-top-title"><?php echo ucfirst($this->s[$this->page]["title"]) ?></span>
     </div>
     <div class="design-mobileNav-side">
-        <a class="design-mobileNav-link<?php echo Regex::urlMatchPattern("logs") | Regex::urlMatchPattern("home") ? " current" : "" ?>"
-           href="<?php echo new URL("logs/") ?>">
+        <a class="design-mobileNav-link<?php echo Regex::urlMatchPattern("members") | Regex::urlMatchPattern("home") ? " current" : "" ?>"
+           href="<?php echo new URL("members/") ?>">
             <img class="design-mobileNav-icon" src="<?php echo new URL("img/icons/profile.png") ?>"/>
-            <span><?php echo ucfirst($this->s["navs"]["adminsys"]["logs"]) ?></span>
-        </a>
-        <a class="design-mobileNav-link<?php echo Regex::urlMatchPattern("logs-debug") ? " current" : "" ?>"
-           href="<?php echo new URL("logs-debug/") ?>">
-            <img class="design-mobileNav-icon" src="<?php echo new URL("img/icons/profile.png") ?>"/>
-            <span><?php echo ucfirst($this->s["navs"]["adminsys"]["logs_debug"]) ?></span>
+            <span><?php echo ucfirst($this->s["navs"]["adminsav"]["members"]) ?></span>
         </a>
         <div class="design-mobileNav-bottom">
             <form action="<?php echo new URL(true) ?>" method="post" class="design-mobileNav-bottom-lang">
