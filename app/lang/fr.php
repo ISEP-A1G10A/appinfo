@@ -140,5 +140,8 @@ return [
     "404" => $status404Page,
     "formErrors" => $formErrors,
     "navs"       => $navs,
-    "footer"     => $footer
+    "footer"     => $footer,
+    "section1" => $section1,
+    "section2" => $section2,
+    "section3" => $section3,
 ];

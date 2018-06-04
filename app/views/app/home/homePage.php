@@ -23,22 +23,22 @@
         <div class="home-section1-bloc">
             <img src="<?php echo new URL("css/home/section1/capter.jpg") ?>"/>
             <div class="home-section1-bloc-txt">
-                <span class="home-section1-bloc-title"><?php echo ($this->s[$this->page]["bloc1_title"])?></span>
-                <p><?php echo ($this->s[$this->page]["bloc1_description"])?></p>
+                <span class="home-section1-bloc-title"><?php echo $this->s["section1"]["bloc1_title"]?></span>
+                <p><?php echo $this->s["section1"]["bloc1_description"]?></p>
             </div>
         </div>
         <div class="home-section1-bloc">
             <img src="<?php echo new URL("css/home/section1/transferer1.jpg") ?>"/>
             <div class="home-section1-bloc-txt">
-                <span class="home-section1-bloc-title"><?php echo ($this->s[$this->page]["bloc2_title"])?></span>
-                <p><?php echo ($this->s[$this->page]["bloc2_description"])?></p>
+                <span class="home-section1-bloc-title"><?php echo $this->s["section1"]["bloc2_title"]?></span>
+                <p><?php echo $this->s["section1"]["bloc2_description"]?></p>
             </div>
         </div>
         <div class="home-section1-bloc">
             <img src="<?php echo new URL("css/home/section1/visualiser.jpg") ?>"/>
             <div class="home-section1-bloc-txt">
-                <span class="home-section1-bloc-title"><?php echo ($this->s[$this->page]["bloc3_title"])?></span>
-                <p><?php echo ($this->s[$this->page]["bloc3_description"])?></p>
+                <span class="home-section1-bloc-title"><?php echo $this->s["section1"]["bloc3_title"]?></span>
+                <p><?php echo $this->s["section1"]["bloc3_description"]?></p>
             </div>
         </div>
     </div>
@@ -46,60 +46,60 @@
         <div class="home-section1-bloc">
             <img src="<?php echo new URL("css/home/section1/economie.jpg") ?>"/>
             <div class="home-section1-bloc-txt">
-                <span class="home-section1-bloc-title"><?php echo ($this->s[$this->page]["bloc4_title"])?></span>
-                <p><?php echo ($this->s[$this->page]["bloc4_description"])?></p>
+                <span class="home-section1-bloc-title"><?php echo $this->s["section1"]["bloc4_title"]?></span>
+                <p><?php echo $this->s["section1"]["bloc4_description"]?></p>
             </div>
         </div>
         <div class="home-section1-bloc">
             <img src="<?php echo new URL("css/home/section1/securité.jpg") ?>"/>
             <div class="home-section1-bloc-txt">
-                <span class="home-section1-bloc-title"><?php echo ($this->s[$this->page]["bloc5_tile"])?></span>
-                <p><?php echo ($this->s[$this->page]["bloc5_description"])?></p>
+                <span class="home-section1-bloc-title"><?php echo $this->s["section1"]["bloc5_tile"]?></span>
+                <p><?php echo ($this->s["section1"]["bloc5_description"])?></p>
             </div>
         </div>
         <div class="home-section1-bloc">
             <img src="<?php echo new URL("css/home/section1/ecologie.jpg") ?>"/>
             <div class="home-section1-bloc-txt">
-                <span class="home-section1-bloc-title"><?php echo ($this->s[$this->page]["bloc6_title"])?></span>
-                <p><?php echo ($this->s[$this->page]["bloc6_description"])?></p>
+                <span class="home-section1-bloc-title"><?php echo $this->s["section1"]["bloc6_title"]?></span>
+                <p><?php echo $this->s["section1"]["bloc6_description"]?></p>
             </div>
         </div>
     </div>
 </div>
 <div id="section2" class="home-section">
-    <h1 class="home-section2-title"><?php echo ($this->s[$this->page]["section2_title"])?></h1>
+    <h1 class="home-section2-title"><?php echo $this->s["section2"]["section2_title"]?></h1>
     <div class="home-section2-bloc">
-        <h2 class="home-section2-subtitle"><?php echo ($this->s[$this->page]["section2_subtitle1"])?></h2>
-        <p><?php echo ($this->s[$this->page]["section2_description1"])?></p>
+        <h2 class="home-section2-subtitle"><?php echo $this->s["section2"]["section2_subtitle1"]?></h2>
+        <p><?php echo $this->s["section2"]["section2_description1"]?></p>
     </div>
     <div class="home-section2-bloc">
-        <h2 class="home-section2-subtitle"><?php echo ($this->s[$this->page]["section2_subtitle2"])?></h2>
-        <p><?php echo ($this->s[$this->page]["section2_description2"])?></p>
+        <h2 class="home-section2-subtitle"><?php echo $this->s["section2"]["section2_subtitle2"]?></h2>
+        <p><?php echo $this->s["section2"]["section2_description2"]?></p>
     </div>
     <div class="home-section2-bloc">
-        <h2 class="home-section2-subtitle"><?php echo ($this->s[$this->page]["section2_subtitle3"])?></h2>
-        <p><?php echo ($this->s[$this->page]["section2_description3"])?></p>
+        <h2 class="home-section2-subtitle"><?php echo $this->s["section2"]["section2_subtitle3"]?></h2>
+        <p><?php echo $this->s["section2"]["section2_description3"]?></p>
     </div>
 </div>
 <div id="section3" class="home-section">
-    <span class="home-section3-title"><?php echo ($this->s[$this->page]["section3_title"])?></span>
+    <span class="home-section3-title"><?php echo $this->s["section3"]["section3_title"]?></span>
     <div class="home-section3-bloc">
         <img class="home-section3-image" src="<?php echo new URL("img/home/section3/alanA.png") ?>"
              alt="A client's photo" width="200">
-        <p class="home-section3-people"><?php echo ($this->s[$this->page]["section3_people1"])?></p>
-        <p class="home-section3-commentary"><?php echo ($this->s[$this->page]["section3_commentary1"])?></p>
+        <p class="home-section3-people"><?php echo $this->s["section3"]["section3_people1"]?></p>
+        <p class="home-section3-commentary"><?php echo $this->s["section3"]["section3_commentary1"]?></p>
     </div>
     <div class="home-section3-bloc">
         <img class="home-section3-image" src="<?php echo new URL("img/home/section3/isabelleD.png") ?>"
              alt=" A client's photo" width="200">
-        <p class="home-section3-people"><?php echo ($this->s[$this->page]["section3_people2"])?></p>
-        <p class="home-section3-commentary"> <?php echo ($this->s[$this->page]["section3_commentary2"])?></p>
+        <p class="home-section3-people"><?php echo $this->s["section3"]["section3_people2"]?></p>
+        <p class="home-section3-commentary"> <?php echo $this->s["section3"]["section3_commentary2"]?></p>
     </div>
     <div class="home-section3-bloc">
         <img class="home-section3-image" src="<?php echo new URL("img/home/section3/danielD.png") ?>"
              alt=" A client's photo" width="200">
-        <p class="home-section3-people"><?php echo ($this->s[$this->page]["section3_people3"])?></p>
-        <p class="home-section3-commentary"><?php echo ($this->s[$this->page]["section3_commentary3"])?></p>
+        <p class="home-section3-people"><?php echo $this->s["section3"]["section3_people3"]?></p>
+        <p class="home-section3-commentary"><?php echo $this->s["section3"]["section3_commentary3"]?></p>
     </div>
 </div>
 <footer class="home-footer">
