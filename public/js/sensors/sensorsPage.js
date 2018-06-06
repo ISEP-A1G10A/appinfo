@@ -12,7 +12,11 @@ function deleteSensor ($id, $houseId, $sensor){
 
 function editSensor (e, $id, $houseId){
     if(e.keyCode == 13){
-        var $label = $(".table-input").val();
+        var $label = $("#label-"+$id).val();
         $.ajax({type:"POST", url:"/appinfo/public/houses/"+ $houseId +"/sensors/", data:{label:$label, id: $id, action: "editSensor"}});
     }
+}
+
+function toggleState($id, $houseId){
+    $.ajax({type:"POST", url:"/appinfo/public/houses/"+ $houseId +"/sensors/", data:{id: $id, action: "toggleState"}});
 }

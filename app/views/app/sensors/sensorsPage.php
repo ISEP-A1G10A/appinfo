@@ -41,9 +41,17 @@
                             <?php foreach ($room[2] as $sensor){ ?>
                                 <tr class="<?php echo $sensor[0] ?>">
                                     <td><?php echo $sensor[0] ?></td>
-                                    <td><input onkeypress="return editSensor(event, <?php echo $sensor[0] ?>, <?php echo $this->id ?>);" class="table-input" type="text" value="<?php echo $sensor[1] ?>"></td>
+                                    <td><input onkeypress="return editSensor(event, <?php echo $sensor[0] ?>, <?php echo $this->id ?>);"
+                                               class="table-input" id="label-<?php echo $sensor[0] ?>" type="text" value="<?php echo $sensor[1] ?>"></td>
                                     <td><?php echo $sensor[2] ?></td>
-                                    <td>off</td>
+
+                                    <?php if($sensor[3]){ ?>
+                                        <td><input type="checkbox" id="<?php echo $sensor[0] ?>" name="set-name" class="switch-input" checked>
+                                            <label for="<?php echo $sensor[0] ?>" class="switch-label" onclick="toggleState(<?php echo $sensor[0] ?>, <?php echo $this->id ?>)"></label></td>
+                                    <?php }else{ ?>
+                                        <td><input type="checkbox" id="<?php echo $sensor[0] ?>" name="set-name" class="switch-input">
+                                            <label for="<?php echo $sensor[0] ?>" class="switch-label" onclick="toggleState(<?php echo $sensor[0] ?>, <?php echo $this->id ?>)"></label></td>
+                                    <?php } ?>
                                     <td>null</td>
 
                                     <td><img src="<?php echo new URL("img/icons/delete.png") ?>" class="delete-button"
