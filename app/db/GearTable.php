@@ -1,15 +1,16 @@
 <?php
 
 abstract class GearTable extends Table {
+
     public static function getAllIdsAndLabelsAndTypesByRoom($roomId) {
         $sensors = [];
-        $request = self::prepare("SELECT id, label, type FROM gear WHERE room=:room");
+        $request = self::prepare("SELECT id, label, type, state FROM gear WHERE room=:room");
         $request->execute([
            ':room' => $roomId
         ]);
         $results = $request->fetchAll(PDO::FETCH_ASSOC);
         foreach ($results as $result) {
-            array_push($sensors, [$result["id"], $result["label"], $result["type"]]);
+            array_push($sensors, [$result["id"], $result["label"], $result["type"], $result["state"]]);
         }
         return $sensors;
     }
@@ -41,6 +42,13 @@ abstract class GearTable extends Table {
 
     public static function deleteGearById($id){
         $request = self::prepare("DELETE FROM gear WHERE id=:id");
+        $request->execute([
+           ":id" => $id
+        ]);
+    }
+
+    public static function toggleStateById($id){
+        $request = self::prepare("UPDATE gear SET state=!state WHERE id=:id");
         $request->execute([
            ":id" => $id
         ]);

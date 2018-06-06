@@ -62,4 +62,13 @@ abstract class HomeTable extends Table {
             ':surface' => $surface
         ]);
     }
+
+    public static function getAllUsersByHome($home){
+        $request = self::prepare("SELECT home.main_user, link_user_home.user FROM home INNER JOIN link_user_home ON home.id=link_user_home.home WHERE home.id=:home");
+        $request->execute([
+           ':home' => $home
+        ]);
+        $results = $request->fetchAll(PDO::FETCH_ASSOC);
+        return $results;
+    }
 }
