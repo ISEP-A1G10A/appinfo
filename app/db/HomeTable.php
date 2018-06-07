@@ -74,8 +74,7 @@ INNER JOIN home_type ON home.type=home_type.id  ");
 
     }
     public static function addHouse($main_user, $type, $surface, $address_line_1,$address_line_2,$address_zip_code,$address_city,$address_country,$label) {
-
-        $request = self::prepare("INSERT INTO user (main_user,type,surface,address_line_1,address_line_2,address_zip_code,address_city,address_country,label) 
+        $request = self::prepare("INSERT INTO home (main_user,type,surface,address_line_1,address_line_2,address_zip_code,address_city,address_country,label) 
 VALUES (:main_user,:type,:surface,:address_line_1,:address_line_2,:address_zip_code,:address_city,:address_country,:label)");
         $request->execute([
             ':main_user' => $main_user,
@@ -85,9 +84,11 @@ VALUES (:main_user,:type,:surface,:address_line_1,:address_line_2,:address_zip_c
             ':address_line_2' => $address_line_2,
             ':address_zip_code' => $address_zip_code,
             ':address_city' => $address_city,
-            ':address_contry' => $address_country,
+            ':address_country' => $address_country,
             ':label' => $label,
         ]);
+
+
     }
 
 }

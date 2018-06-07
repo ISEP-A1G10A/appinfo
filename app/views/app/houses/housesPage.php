@@ -14,7 +14,7 @@
                         value="2"><?php echo ucfirst($this->s[$this->page]["flat"]) ?></option>
             </select>
 
-            <input name="surface" class="add-house-form-input" type="number"
+            <input name="surface" class="add-house-form-input" type="text"
                    placeholder="<?php echo ucfirst($this->s[$this->page]["surface"]) ?>"
                    value="">
 
@@ -26,9 +26,10 @@
             <input name="address_line_2" class="add-house-form-input" type="text"
                    placeholder="<?php echo ucfirst($this->s[$this->page]["address_line_2"]) ?>"
                    value="">
+
         </div>
         <div class="bloc2">
-            <input name="address_zip_code" class="add-house-form-input" type="number"
+            <input name="address_zip_code" class="add-house-form-input" type="text"
                    placeholder="<?php echo ucfirst($this->s[$this->page]["address_zip_code"]) ?>"
                    value="">
 
@@ -38,6 +39,7 @@
             <input name="address_country" class="add-house-form-input" type="text"
                    placeholder="<?php echo ucfirst($this->s[$this->page]["address_country"]) ?>"
                    value="">
+
             <input name="label" class="add-house-form-input" type="text"
                    placeholder="<?php echo ucfirst($this->s[$this->page]["last_name"]) ?>"
                    value="">
