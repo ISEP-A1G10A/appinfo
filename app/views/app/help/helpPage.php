@@ -1,8 +1,8 @@
 <div class="help">
     <div class="help-tel-part">
 
-            <p><span class="help-intro"> Nous contacter par téléphone</span></p>
         <div class="help-tel-part-info">
+            <div class="help-tel-part-name"> Nous contacter par téléphone:</div>
             <div class="help-tel-part-info-2">
                 <div class="help-tel">
                     <p><span class="help-tel-part-name">Notre numéro </span></p> <span
@@ -17,8 +17,8 @@
         </div>
         <div class="help-description">
             <div class="help-des-title">Comment procéder ?</div>
-            <br>
-            <div>1. Appelez le numéro de téléphone.<br>
+
+            <div class="help-des-text">1. Appelez le numéro de téléphone.<br>
                 2. Précisez votre numéro client rappelé ci-contre.<br>
                 3. Indiquer l'objet de votre demande.<br>
                 4. Expliquez le problème rencontré.<br>
@@ -30,11 +30,10 @@
 
     <hr>
     <br>
-    <div class="help-tel-part-name">Nous contacter par messagerie Interne :</div>
+    <div class="help-tel-part-name">Nous contacter par messagerie interne :</div>
     <br>
     <div class="help-message-part">
         <div class="help-message-ask">Quel est l'objet de votre demande ?</div>
-        <br>
         <div class="help-message-choice">
             <div class="help-message-btn">
                 <a href="" class="design-btn-raised design-help-btn"><span class="">Maison</span></a>
@@ -52,19 +51,16 @@
                 <a href="" class="design-btn-raised design-help-btn"><span class="">Fonctionnalités</span></a>
             </div>
         </div>
-        <br><br>
         <div class="help-message-box">
             Quel est votre message ?
         </div>
-        <br>
-        <textarea rows="10" cols="110" class="help-message-text">
+        <textarea rows="10" cols="121" class="help-message-text">
 
         </textarea>
 
-        <br>
         <div class="help-send">
-            <a href="" class="design-btn-raised navConnected-web-disconnect-btn">
-                <span class="help-send-text">Envoyer</span>
+            <a href="" class="design-btn-raised help-btn">
+                <span class="help-send-text">ENVOYER</span>
             </a>
         </div>
 
