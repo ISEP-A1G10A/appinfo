@@ -5,6 +5,8 @@ abstract class Routes {
         "showcase" => [
             "home" => [HomePage::class],
             "sign-in" => [SignInPage::class],
+            "forgot-password" => [ForgotPasswordPage::class]
+
 //        "users/{}"           => [UserPage::class],
 //        "users/{}/infos"     => [UserPage::class, ["infos"]], // modify informations form : display = none; et bouton "modify" JS change valeurs, au clic je submit la form
 //        "users/{}/houses"    => [UserPage::class, ["houses"]],

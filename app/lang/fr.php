@@ -55,8 +55,35 @@ $signInPage = [
     "placeholder_password"       => "Mot de passe",
     "placeholder_password_wrong" => "Veuillez entrer un mot de passe"
 ];
+$forgotPassPage = [
+    "title" => "mot de passe oublié",
+    "form_title" => "mot de passe oublié?",
+    "form_text" => "entrez votre adresse email",
+    "send_password" => "envoyer"
+];
 $helpPage = [
-    "title" => "Aide"
+    "title" => "Aide",
+    "phone_contact" => "nous contacter par téléphone :",
+    "phone_text_1" => "notre numéro",
+    "phone_1" => "+33 01 55 45 40 90",
+    "phone_text_2" => "votre numéro client",
+    "phone_2" => "09 45 83 37 86",
+    "phone_explain" => "comment procéder ?",
+    "phone_explain_1" => "1. Appelez le numéro de téléphone.",
+    "phone_explain_2" => "2. Précisez votre numéro client rappelé ci-contre.",
+    "phone_explain_3" => "3. Indiquez l'objet de votre demande.",
+    "phone_explain_4" => "4. Expliquez le problème rencontré.",
+    "mail_contact" => "nous contacter par messagerie interne :",
+    "mail_question_1" => "quel est l'objet de votre demande ?",
+    "mail_object_1" => "maison",
+    "mail_object_2" => "capteurs",
+    "mail_object_3" => "compte",
+    "mail_object_4" => "mot de passe",
+    "mail_object_5" => "fonctionnalités",
+    "mail_question_2" => "quel est votre message ?",
+    "button_label" => "envoyer"
+
+
 ];
 $profilePage = [
     "title"                        => "profil",
@@ -214,6 +241,9 @@ $formErrorsSettings = [
     "first_name_not_valid"       => "veuillez entrer un prenom correct",
     "last_name_not_valid"        => "veuillez entrer un nom correct",
 ];
+$formErrorsHelp = [
+    "message_empty" => "veuillez entrer un message"
+];
 $formErrors = [
     "common"                       => $formErrorsCommon,
     "connection"                   => $formErrorsConnection,
@@ -229,6 +259,7 @@ $formErrors = [
     "sensor"                       => $formErrorsSensor,
     "members"                      => $formErrorsmembers,
     "settings"                     => $formErrorsSettings,
+    "help"                         => $formErrorsHelp
 ];
 // nav
 $navShowcase = [
@@ -268,6 +299,7 @@ return [
     "main"       => $main,
     "home"       => $homePage,
     "signIn"     => $signInPage,
+    "forgot-password" => $forgotPassPage,
     "profile"    => $profilePage,
     "sensors"    => $sensorsPage,
     "settings"   => $settingsPage,

@@ -18,7 +18,7 @@
     width: 100%;
 }
 
-.design-help-btn {
+/*.design-help-btn {
     font-size: 17px;
     color: black;
     font-weight: 500;
@@ -27,8 +27,7 @@
     text-decoration: none;
     background: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
+}*/
 
 .design-btn-raised:hover, .design-btn-flat:hover, .design-home-btn:hover, .design-help-btn:hover {
     cursor: pointer;
