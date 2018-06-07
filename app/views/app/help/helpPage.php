@@ -63,8 +63,9 @@
 
         <br>
         <div class="help-send">
-            <a href="" class="design-btn-raised navConnected-web-disconnect-btn"><span
-                        class="help-send-text">Envoyer</span></a>
+            <a href="" class="design-btn-raised navConnected-web-disconnect-btn">
+                <span class="help-send-text">Envoyer</span>
+            </a>
         </div>
 
     </div>
