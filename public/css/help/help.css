@@ -16,7 +16,7 @@
 .help-tel-part-name {
     font-weight: bold;
     font-size: 20px;
-    color: #1f5661;
+    color: grey;
 }
 
 .help-tel-part-info {
@@ -67,6 +67,7 @@
 }
 .help-des-title{
     font-weight: bold;
+    width: 50%;
 
 }
 
@@ -107,9 +108,20 @@
 }
 
 .help-send {
-    margin-left: 70%;
+    margin-left: 80%;
+    margin-bottom: 50px;
+    margin-top: 10px;
 }
 .help-send-text{
     font-size: 20px;
     color: #1f5661;
+}
+
+.help-intro{
+    color:#1f5661;
+
+}
+
+.textarea {
+    resize:none
 }
