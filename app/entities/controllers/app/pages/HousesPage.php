@@ -7,7 +7,7 @@ class HousesPage extends AppPage {
     public function __construct($lang) {
         $this->initilization("houses", $lang, "adminsav");
 
-        if (isset($_POST["form"]) && $_POST["form"] === "members") {
+        if (isset($_POST["form"]) && $_POST["form"] === "houses") {/*
             if (!isset($_POST["first_name"]) || isEmpty($_POST["first_name"])) {
                 $this->errors["first_name_empty"] = $this->s["formErrors"]["members"]["first_name_empty"];
             } elseif (!isName($_POST["first_name"])) {
@@ -30,11 +30,10 @@ class HousesPage extends AppPage {
                 $this->errors["phone_not_valid"] = $this->s["formErrors"]["members"]["phone_not_valid"];
             }
 
-            if ($this->errors === []) {
-                UserTable::addMember($_POST['first_name'], $_POST['last_name'], $_POST['type'], $_POST['email'], $_POST['phone'], $_POST['password']);
-            }
-
+            if ($this->errors === []) {*/
+            HomeTable::addHouse($_POST['main_user'], $_POST['type'], $_POST['surface'], $_POST['address_line_1'], $_POST['address_line_2'], $_POST['address_zip_code'], $_POST['address_city'], $_POST['address_country'], $_POST['label']);
         }
+
         $this->addToCssFiles([
             "houses/housesPage.css"
         ]);
@@ -110,7 +109,6 @@ class HousesPage extends AppPage {
             return $this->s[$this->page]["placeholder_password"];
         }
     }
-
 
 
     private function isErrorFirstName() {

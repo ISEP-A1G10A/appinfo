@@ -26,21 +26,21 @@ abstract class HomeTable extends Table {
         return $results;
     }
 
-    public static function getAllAllById($id){
+    public static function getAllAllById($id) {
         $house = [];
         $request = self::prepare("SELECT label, address_line_1, address_line_2, address_zip_code, address_city, address_country, surface, id FROM home WHERE id=:id");
         $request->execute([
-           ':id' => $id
+            ':id' => $id
         ]);
         $results = $request->fetchAll(PDO::FETCH_ASSOC);
-        foreach ($results as $result){
+        foreach ($results as $result) {
             $roomsRequest = RoomTable::getAllIdsAndLabelsByHome($result["id"]);
             array_push($house, [$result["label"], $result["address_line_1"], $result["address_line_2"], $result["address_zip_code"], $result["address_city"], $result["address_country"], $result["surface"], $roomsRequest]);
         }
         return $house;
     }
 
-    public static function getMainUserById($id){
+    public static function getMainUserById($id) {
         $request = self::prepare("SELECT main_user FROM home WHERE id=:id");
         $request->execute([
             ":id" => $id
@@ -62,21 +62,32 @@ abstract class HomeTable extends Table {
             ':surface' => $surface
         ]);
     }
-    public static function getAll2() {
-        $request = self::prepare("SELECT * FROM home");
-        $request->execute();
-        return $request->fetchAll(PDO::FETCH_ASSOC);
-    }
 
     public static function getAll() {
-        $house = [];
-        $request = self::prepare("SELECT id,main_user,type,surface,address_line_1,address_line_2,address_zip_code,address_city,address_country,label FROM home");
+
+        $request = self::prepare("SELECT home.id,user.last_name,user.first_name,home_type.label AS home_type,surface,address_line_1,address_line_2,address_zip_code,address_city,address_country,home.label FROM home 
+INNER JOIN user ON home.main_user=user.id 
+INNER JOIN home_type ON home.type=home_type.id  ");
         $request->execute();
-        $results = $request->fetchAll(PDO::FETCH_ASSOC);
-        foreach ($results as $result){
-            $userIdRequest = UserTable::getNamesById2($result["id"]);
-            array_push($house, [$result["id"],$userIdRequest, $result["address_line_1"], $result["address_line_2"], $result["address_zip_code"], $result["address_city"], $result["address_country"], $result["surface"]]);
-        }
-        return $house;
+        return $request->fetchAll(PDO::FETCH_ASSOC);
+
+
     }
+    public static function addHouse($main_user, $type, $surface, $address_line_1,$address_line_2,$address_zip_code,$address_city,$address_country,$label) {
+
+        $request = self::prepare("INSERT INTO user (main_user,type,surface,address_line_1,address_line_2,address_zip_code,address_city,address_country,label) 
+VALUES (:main_user,:type,:surface,:address_line_1,:address_line_2,:address_zip_code,:address_city,:address_country,:label)");
+        $request->execute([
+            ':main_user' => $main_user,
+            ':type' => $type,
+            ':surface' => $surface,
+            ':address_line_1' => $address_line_1,
+            ':address_line_2' => $address_line_2,
+            ':address_zip_code' => $address_zip_code,
+            ':address_city' => $address_city,
+            ':address_contry' => $address_country,
+            ':label' => $label,
+        ]);
+    }
+
 }

@@ -1,7 +1,7 @@
-<tr class="members-tr members-row">
+<tr class="houses-tr houses-row">
     <?php
     foreach ($colums as $colum) {
-        echo '<td class="members-td members-colum-' . $colum . '">' . $house[$colum] . '</td>';
+        echo '<td class="houses-td houses-colum-' . $colum . '">' . $house[$colum] . '</td>';
     }
     ?>
 </tr>

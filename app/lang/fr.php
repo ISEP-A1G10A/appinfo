@@ -133,6 +133,7 @@ $membersPage = [
     "2" => "2",
     "3" => "3",
     "password" => "Mot de passe",
+    "main_user" => "Util. princ.",
 ];
 $housesPage = [
     "title" => "maisons",
@@ -164,9 +165,10 @@ $housesPage = [
     "address_zip_code" => "Code postal",
     "address_city" => "Ville",
     "address_country" => "Pays",
-    "label" => "Labem"
-
-
+    "label" => "Label",
+    "home_type" => "Type",
+    "house" => "Maison",
+    "flat"=>"Appartement",
 
 ];
 $status404Page = [

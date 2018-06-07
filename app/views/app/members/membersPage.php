@@ -14,11 +14,11 @@
 
         <select name="type" class="part-add-member-type type-option">
             <option class="type-option2"
-                    value="1"><?php echo ucfirst($this->s[$this->page]["1"]) ?></option>
+                    value="1"><?php echo ucfirst($this->s[$this->page]["adminsys"]) ?></option>
             <option class="type-option2"
-                    value="2"><?php echo ucfirst($this->s[$this->page]["2"]) ?></option>
+                    value="2"><?php echo ucfirst($this->s[$this->page]["adminsav"]) ?></option>
             <option class="type-option2"
-                    value="3"><?php echo ucfirst($this->s[$this->page]["3"]) ?></option>
+                    value="3"><?php echo ucfirst($this->s[$this->page]["main_user"]) ?></option>
         </select>
 
         <input name="email" class="add-member-form-input" <?php $this->gotErrorEmail() ?> type="text"
