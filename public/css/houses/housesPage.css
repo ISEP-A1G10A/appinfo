@@ -2,7 +2,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 20px 5px 5px 5px;
     background: white;
-    height: 160px;
+    height: 80px;
     width: 99%;
     margin: 100px 0 30px 10px;
     display: flex;
@@ -10,15 +10,15 @@
 }
 .form{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 .part-add-house-type{
     border: none;
-    margin-left: 50px;
+    margin-left: 10px;
     font-size: 18px;
-    margin-right: 50px;
+    margin-right: 10px;
     padding-bottom: 2px;
-    margin-bottom: 2px;
+    margin-bottom: 20px;
 }
 .bloc1{
     margin-bottom: 20px;
@@ -37,12 +37,28 @@
     padding-bottom: 5px;
     padding-left: 10px;
     margin-bottom: 20px;
-    margin-left: 15px;
+    margin-left: 20px;
     background: none;
-    margin-right: 45px;
+    margin-right: 10px;
+}
+.id-form{
+    width: 60px;
+}
+
+.surface-form{
+    width: 80px;
+}
+.zip-form{
+    width: 110px;
+}
+.city-form{
+    width:140px;
+}
+.country-form{
+    width:120px;
 }
 .add-house-btn{
-    margin-left: 80px;
+    margin-left: 60px;
     height: 40px;
 }
 
