@@ -26,6 +26,11 @@
            href="<?php echo new URL("members/") ?>">
             <img class="design-sideNav-icon" src="<?php echo new URL("img/icons/profile.png") ?>"/>
             <span><?php echo ucfirst($this->s["navs"]["adminsav"]["members"]) ?></span>
+        
+        <a class="design-sideNav-link<?php echo Regex::urlMatchPattern("houses") | Regex::urlMatchPattern("home") ? " current" : "" ?>"
+           href="<?php echo new URL("houses/") ?>">
+            <img class="design-sideNav-icon" src="<?php echo new URL("img/icons/profile.png") ?>"/>
+            <span><?php echo ucfirst($this->s["navs"]["adminsav"]["houses"]) ?></span>
         </a>
     </div>
 </nav>

@@ -45,7 +45,7 @@ abstract class UserTable extends Table {
         return $request->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public static function getNamesById($id){
+    public static function getNamesById($id) {
         $names = [];
         $request = self::prepare("SELECT first_name, last_name FROM user WHERE id=:id");
         $request->execute([
@@ -58,7 +58,7 @@ abstract class UserTable extends Table {
         return $names;
     }
 
-    public static function getIdByNames($first_name, $last_name){
+    public static function getIdByNames($first_name, $last_name) {
         $request = self::prepare("SELECT id FROM user WHERE first_name=:first_name AND last_name=:last_name");
         $request->execute([
             ':first_name' => $first_name,
@@ -69,8 +69,7 @@ abstract class UserTable extends Table {
     }
 
 
-
-    public static function setNamesById($first_name, $last_name, $id){
+    public static function setNamesById($first_name, $last_name, $id) {
         $request = self::prepare("UPDATE user SET first_name=:first_name, last_name=:last_name WHERE id=:id");
         $request->execute([
             ":first_name" => $first_name,
@@ -91,7 +90,9 @@ abstract class UserTable extends Table {
     }
 
     public static function getAll() {
-        $request = self::prepare("SELECT * FROM user");
+        $request = self::prepare("SELECT user.id,user.first_name,user.last_name,user_type.label AS type,user.email,user.phone FROM user
+INNER JOIN user_type ON user.type=user_type.id
+ORDER BY user.id");
         $request->execute();
         return $request->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -118,7 +119,7 @@ abstract class UserTable extends Table {
         ]);
     }
 
-    public static function setFirstNameById($id, $name){
+    public static function setFirstNameById($id, $name) {
         $request = self::prepare("UPDATE user SET first_name=:first_name WHERE id=:id");
         $request->execute([
             ':id' => $id,
@@ -126,7 +127,7 @@ abstract class UserTable extends Table {
         ]);
     }
 
-    public static function setLastNameById($id, $name){
+    public static function setLastNameById($id, $name) {
         $request = self::prepare("UPDATE user SET last_name=:last_name WHERE id=:id");
         $request->execute([
             ':id' => $id,
@@ -134,7 +135,7 @@ abstract class UserTable extends Table {
         ]);
     }
 
-    public static function addUser($first_name, $last_name){
+    public static function addUser($first_name, $last_name) {
         $request = self::prepare("INSERT INTO user (first_name, last_name, type) VALUES (:first_name, :last_name, :type)");
         $request->execute([
             ':first_name' => $first_name,
@@ -143,10 +144,11 @@ abstract class UserTable extends Table {
         ]);
     }
 
-    public static function deleteUserById($id){
+    public static function deleteUserById($id) {
         $request = self::prepare("DELETE FROM user WHERE id=:id");
         $request->execute([
             ':id' => $id
         ]);
     }
+
 }
