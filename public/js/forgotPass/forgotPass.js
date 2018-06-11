@@ -1,7 +1,7 @@
 function sendRecovery() {
-    var btn = $(".forgotPass-btn");
+    const btn = $(".forgotPass-btn");
     if(!btn.hasClass('forgotPass-btn-disabled')) {
-        var form =
+        const form =
             '<div class="design-form forgotPass-form">' +
             '<div class="forgotPass-title">Entrez le code reçu</div>' +
             '<input type="text" class="forgotPass-input">' +
@@ -11,8 +11,14 @@ function sendRecovery() {
             '</div>';
         btn.css('background-color', 'gray').removeClass('design-btn-raised').addClass('forgotPass-btn-disabled');
         $(".forgotPass").append(form);
-        var email = $(".forgotPass-input").val();
-        $.ajax({type: "POST", url: "appinfo/public/forgot-password/", data: {email: email, subject: "Password reset"}})
+        const email = $(".forgotPass-input").val();
+        /*const reset_url = ;*/
+        const message = "Click to reset password: "/* + reset_url*/;
+            $.ajax({
+                type: "POST",
+                url: "appinfo/public/forgot-password/",
+                data: {email: email, subject: "Password reset", message: message, action: "sendRecovery"}
+            });
 
     }
 }
