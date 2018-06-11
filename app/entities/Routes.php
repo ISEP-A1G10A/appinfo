@@ -5,6 +5,7 @@ abstract class Routes {
         "showcase" => [
             "home" => [HomePage::class],
             "sign-in" => [SignInPage::class],
+            "test" => [TestPage::class],
 //        "users/{}"           => [UserPage::class],
 //        "users/{}/infos"     => [UserPage::class, ["infos"]], // modify informations form : display = none; et bouton "modify" JS change valeurs, au clic je submit la form
 //        "users/{}/houses"    => [UserPage::class, ["houses"]],
@@ -24,8 +25,10 @@ abstract class Routes {
 
         ],
         "admin_sav" => [
-            "home" => [MembersPage::class], // TODO
+            "home" => [MembersPage::class],
             "members" => [MembersPage::class],
+            "houses" => [HousesPage::class],
+
         ],
         "status" => [
             "404" => [Status404Page::class],
