@@ -2,10 +2,11 @@
 
 abstract class Routes {
     private static $appRoutes = [
-        "showcase" => [
-            "home" => [HomePage::class],
-            "sign-in" => [SignInPage::class],
-            "test" => [TestPage::class],
+        "showcase"  => [
+            "home"            => [HomePage::class],
+            "sign-in"         => [SignInPage::class],
+            "test"            => [TestPage::class],
+            "forgot-password" => [ForgotPasswordPage::class],
 //        "users/{}"           => [UserPage::class],
 //        "users/{}/infos"     => [UserPage::class, ["infos"]], // modify informations form : display = none; et bouton "modify" JS change valeurs, au clic je submit la form
 //        "users/{}/houses"    => [UserPage::class, ["houses"]],
@@ -19,18 +20,16 @@ abstract class Routes {
             "help"               => [HelpPage::class],
         ],
         "admin_sys" => [
-            "home" => [LogsPage::class],
-            "logs" => [LogsPage::class],
+            "home"       => [LogsPage::class],
+            "logs"       => [LogsPage::class],
             "logs-debug" => [LogsDebugPage::class],
-
         ],
         "admin_sav" => [
-            "home" => [MembersPage::class],
+            "home"    => [MembersPage::class],
             "members" => [MembersPage::class],
-            "houses" => [HousesPage::class],
-
+            "houses"  => [HousesPage::class],
         ],
-        "status" => [
+        "status"    => [
             "404" => [Status404Page::class],
             "418" => [Status418Page::class]
         ]

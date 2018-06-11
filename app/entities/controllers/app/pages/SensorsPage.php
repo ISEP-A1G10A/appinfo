@@ -22,9 +22,14 @@ class SensorsPage extends AppPage {
 
         }elseif (isset($_POST["action"]) && $_POST["action"] === "deleteSensor"){
             $this->deleteGearById($_POST["id"]);
-        }if(isset($_POST["action"]) && $_POST["action"] === "editSensor"){
+        }
+        if(isset($_POST["action"]) && $_POST["action"] === "editSensor"){
             $this->setLabelById($_POST["label"], $_POST["id"]);
         }
+        if(isset($_POST["action"]) && $_POST["action"] === "toggleState"){
+            $this->toggleStateById($_POST["id"]);
+        }
+
 
         $this->addToCssFiles([
             "sensors/sensors.css"
@@ -69,4 +74,10 @@ class SensorsPage extends AppPage {
     public function setLabelById($label, $id){
         GearTable::setLabelById($label, $id);
     }
+
+    public function toggleStateById($id){
+        GearTable::toggleStateById($id);
+    }
+
+
 }
