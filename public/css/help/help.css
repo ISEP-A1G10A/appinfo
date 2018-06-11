@@ -16,25 +16,24 @@
 .help-tel-part-name {
     font-weight: bold;
     font-size: 20px;
-    color: #1f5661;
+    color: grey;
 }
 
 .help-tel-part-info {
-    padding-right: 20px;
-    margin-right: 20px;
     display: flex;
     flex-direction: column;
+    width: 45%;
 
 }
 
 .help-tel-part-info-2 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background: white;
-    margin-top: 20px;
-    width: 320px;
+    width: 300px;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-left: 20px;
+    margin-left: 25px;
+    margin-top: 25px;
 }
 
 .help-telnumber {
@@ -60,14 +59,19 @@
 }
 
 .help-description {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
     width: 50%;
-    padding: 20px 1px 1px;
-    font-size: 17px;
 }
 .help-des-title{
     font-weight: bold;
-
+    margin-left: 25px;
+    margin-bottom: 15px;
+    margin-top: 45px;
+}
+.help-des-text{
+    margin-left: 25px;
+    margin-top: 5px;
 }
 
 .help-message-part {
@@ -78,6 +82,7 @@
 .help-message-choice {
     display: flex;
     flex-direction: row;
+    margin-bottom: 15px;
 }
 
 .help-message-btn {
@@ -86,11 +91,26 @@
     justify-content: space-around;
     margin-left: 5px;
     margin-right: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 5px 5px 5px;
+    text-decoration: none;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    color: #1f5661;
+}
+
+.help-message-btn.active{
+    color: white;
+    background-color: #1f5661;
 
 }
 
 .help-message-box, .help-message-ask {
     font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 .help-message-text {
@@ -98,6 +118,9 @@
     padding: 5px 5px 5px 5px;
     background: white;
     height: 150px;
+    width: 100%;
+    resize:none;
+    border: none;
 }
 .help-message-text2{
 
@@ -107,9 +130,24 @@
 }
 
 .help-send {
-    margin-left: 70%;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
+
 .help-send-text{
     font-size: 20px;
-    color: #1f5661;
+    color: white;
+}
+
+.help-intro{
+    color:#1f5661;
+
+}
+
+.help-btn{
+    background-color: #1f5661;
+    color: white;
 }

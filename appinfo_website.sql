@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Apr 26, 2018 at 07:23 AM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 7.1.2
+-- Host: 127.0.0.1
+-- Generation Time: Jun 11, 2018 at 04:17 PM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -33,15 +33,17 @@ CREATE TABLE `gear` (
   `type` int(11) NOT NULL,
   `reference` varchar(255) COLLATE utf8_bin NOT NULL,
   `label` varchar(255) COLLATE utf8_bin NOT NULL,
-  `room` int(11) NOT NULL
+  `room` int(11) NOT NULL,
+  `state` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Dumping data for table `gear`
 --
 
-INSERT INTO `gear` (`id`, `type`, `reference`, `label`, `room`) VALUES
-(1, 1, 'Q-0000003232', 'salon_température', 1);
+INSERT INTO `gear` (`id`, `type`, `reference`, `label`, `room`, `state`) VALUES
+(1, 1, '', 'pression', 1, 0),
+(3, 1, '', 'humiditÃ©', 10, 1);
 
 -- --------------------------------------------------------
 
@@ -161,7 +163,8 @@ CREATE TABLE `home` (
 --
 
 INSERT INTO `home` (`id`, `main_user`, `type`, `surface`, `address_line_1`, `address_line_2`, `address_zip_code`, `address_city`, `address_country`, `label`) VALUES
-(1, 2, 1, '32', '32 rue de l\'ISEP', 'Appartement 32', '75000', 'Paris', 'France', 'Ma maison');
+(1, 2, 1, '32', '32 rue de l\'ISEP', 'Appartement 32', '75000', 'Paris', 'France', 'Ma maison'),
+(2, 2, 1, '13', '13 rue du Pendu', 'Appartement 13', '75013', 'Paris', 'France', 'Ma seconde maison');
 
 -- --------------------------------------------------------
 
@@ -210,7 +213,9 @@ CREATE TABLE `link_user_home` (
 --
 
 INSERT INTO `link_user_home` (`id`, `user`, `home`) VALUES
-(1, 3, 1);
+(1, 3, 1),
+(7, 13, 2),
+(8, 14, 1);
 
 -- --------------------------------------------------------
 
@@ -221,7 +226,7 @@ INSERT INTO `link_user_home` (`id`, `user`, `home`) VALUES
 CREATE TABLE `message` (
   `id` int(11) NOT NULL,
   `user` int(11) NOT NULL,
-  `object` int(11) NOT NULL,
+  `object` varchar(25) COLLATE utf8_bin NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `content` text COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -256,7 +261,11 @@ CREATE TABLE `room` (
 --
 
 INSERT INTO `room` (`id`, `type`, `label`, `home`) VALUES
-(1, 1, 'Salon', 1);
+(1, 0, 'Salon', 1),
+(6, 0, 'Salle de bains', 2),
+(10, 0, 'Cuisine', 2),
+(39, 0, 'Chambre', 1),
+(47, 0, 'Toilettes', 1);
 
 -- --------------------------------------------------------
 
@@ -274,7 +283,9 @@ CREATE TABLE `room_type` (
 --
 
 INSERT INTO `room_type` (`id`, `label`) VALUES
-(1, 'living_room');
+(1, 'living_room'),
+(2, 'kitchen'),
+(3, 'bedroom');
 
 -- --------------------------------------------------------
 
@@ -298,8 +309,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `first_name`, `last_name`, `type`, `email`, `phone`, `password`) VALUES
 (1, 'test_admin_sys', 'test_admin_sys', 1, 'admin_sys@test.com', '0000000000', '$6$rounds=3232$yRyJDM8YPUMMRAJF$80d8yrKfQdx.BEleBxPuCxJh2IJp3IRJM32poxmYJcZ/MBoyvYPSVN2MeP.9Yrl.P1DBSkJ9mbBz0DhDeckRc0'),
-(2, 'test_client', 'test_client', 3, 'client@test.com', '0000000000', '$6$rounds=3232$yRyJDM8YPUMMRAJF$80d8yrKfQdx.BEleBxPuCxJh2IJp3IRJM32poxmYJcZ/MBoyvYPSVN2MeP.9Yrl.P1DBSkJ9mbBz0DhDeckRc0'),
-(3, 'test_client2', 'test_client2', 4, 'client2@test.com', '0000000000', '$6$rounds=3232$yRyJDM8YPUMMRAJF$80d8yrKfQdx.BEleBxPuCxJh2IJp3IRJM32poxmYJcZ/MBoyvYPSVN2MeP.9Yrl.P1DBSkJ9mbBz0DhDeckRc0'),
+(2, 'MainUser', 'Test', 3, 'client@test.com', '0000000000', '$6$rounds=3232$yRyJDM8YPUMMRAJF$80d8yrKfQdx.BEleBxPuCxJh2IJp3IRJM32poxmYJcZ/MBoyvYPSVN2MeP.9Yrl.P1DBSkJ9mbBz0DhDeckRc0'),
+(3, 'SecondaryOne', 'TestOne', 4, 'client2@test.com', '0000000000', '$6$rounds=3232$yRyJDM8YPUMMRAJF$80d8yrKfQdx.BEleBxPuCxJh2IJp3IRJM32poxmYJcZ/MBoyvYPSVN2MeP.9Yrl.P1DBSkJ9mbBz0DhDeckRc0'),
 (4, 'test_admin_sav', 'test_admin_sav', 2, 'admin_sav@test.com', '0000000000', '$6$rounds=3232$yRyJDM8YPUMMRAJF$80d8yrKfQdx.BEleBxPuCxJh2IJp3IRJM32poxmYJcZ/MBoyvYPSVN2MeP.9Yrl.P1DBSkJ9mbBz0DhDeckRc0');
 
 -- --------------------------------------------------------
@@ -450,87 +461,104 @@ ALTER TABLE `user_type`
 -- AUTO_INCREMENT for table `gear`
 --
 ALTER TABLE `gear`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `gear_action`
 --
 ALTER TABLE `gear_action`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `gear_category`
 --
 ALTER TABLE `gear_category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `gear_company`
 --
 ALTER TABLE `gear_company`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `gear_event`
 --
 ALTER TABLE `gear_event`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `gear_type`
 --
 ALTER TABLE `gear_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `home`
 --
 ALTER TABLE `home`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `home_type`
 --
 ALTER TABLE `home_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `link_gear_action_gear_category`
 --
 ALTER TABLE `link_gear_action_gear_category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `link_user_home`
 --
 ALTER TABLE `link_user_home`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `message_object`
 --
 ALTER TABLE `message_object`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `room`
 --
 ALTER TABLE `room`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+
 --
 -- AUTO_INCREMENT for table `room_type`
 --
 ALTER TABLE `room_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
 --
 -- AUTO_INCREMENT for table `user_tempory_password`
 --
 ALTER TABLE `user_tempory_password`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `user_type`
 --
 ALTER TABLE `user_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
