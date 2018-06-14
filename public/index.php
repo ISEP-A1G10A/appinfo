@@ -1,6 +1,9 @@
 <?php
 // FUNCTIONS
 function getPage($routes, $p) {
+    if (Regex::urlMatch($p, "test-api")) {
+        return new TestApiPage();
+    }
     foreach ($routes as $path => &$arrayExecution) {
         if (Regex::urlMatch($p, $path)) {
             $argvClass = [$_SESSION['settings']['language']];
