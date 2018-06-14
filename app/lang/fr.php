@@ -24,10 +24,10 @@ $section2 = [
     "section2_subtitle2" => "Validez votre compte",
     "section2_description2" => "Après avoir pris contact avec nous, vous receverez un email avec un lien d'activation",
     "section2_subtitle3" => "Profitez de nos services",
-    "section2_description3" => "Connectez-vous et commencez tout de suite la personalisation de votre maison"
+    "section2_description3" => "Connectez-vous et commencez tout de suite la personnalisation de votre maison"
 ];
 $section3 = [
-    "section3_title" => "Connectez-vous et commencez tout de suite la personalisation de votre maison",
+    "section3_title" => "Connectez-vous et commencez tout de suite la personnalisation de votre maison",
     "section3_people1" => "James Vaugirard",
     "section3_commentary1" => "Excellent service. Utilisation très facile. Entreprise très réactive",
     "section3_people2" => "Isabelle Durand",
