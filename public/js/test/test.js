@@ -54,5 +54,5 @@ google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
 
-window.setInterval(refresh, 2000);
+window.setInterval(refresh, 500);
 
