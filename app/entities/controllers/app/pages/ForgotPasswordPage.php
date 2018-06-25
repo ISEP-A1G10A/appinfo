@@ -8,8 +8,7 @@ class ForgotPasswordPage extends AppPage {
 
         if(isset($_POST["action"]) && $_POST["action"] === "sendRecovery"){
             /*if account exists*/
-            var_dump('yo');
-            die();
+
             mail($_POST["email"], $_POST["subject"], $_POST["message"]);
         }
 

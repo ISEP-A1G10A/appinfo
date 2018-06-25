@@ -10,17 +10,19 @@
     <title><?php echo ucfirst($this->s[$this->page]["title"]) ?></title>
 </head>
 <body>
-    <?php
-    /*if (isset($_SESSION["user"]["id"]) && isset($_SESSION["user"]["role"])) {
-        echo "USER CONNECTED WITH ID <b>" . $_SESSION["user"]["id"] . "</b> AND ROLE <b>" . $_SESSION["user"]["role"] . "</b><br>";
-    }*/
-    $this->renderNav();
-    ?>
-    <div class="content<?php echo $this->section === "showcase" ? " showcase" : "" ?>">
-        <?php $this->renderContent(); ?>
-    </div>
-    <?php
-    $this->displayJsFiles();
-    ?>
+<?php
+/*if (isset($_SESSION["user"]["id"]) && isset($_SESSION["user"]["role"])) {
+    echo "USER CONNECTED WITH ID <b>" . $_SESSION["user"]["id"] . "</b> AND ROLE <b>" . $_SESSION["user"]["role"] . "</b><br>";
+}*/
+$this->renderNav();
+?>
+<div class="content<?php echo $this->section === "showcase" ? " showcase" : "" ?>">
+    <?php $this->renderContent(); ?>
+</div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<?php
+$this->displayJsFiles();
+?>
+
 </body>
 </html>

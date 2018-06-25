@@ -29,4 +29,12 @@ VALUES (:user,:frame_type,:card_number,:request_type,:sensor_type,:sensor_number
             ]);
         }
     }
+
+    public static function getDataById($id){
+        $request = self::prepare("SELECT sensor_type, value, date_time FROM gear_event WHERE sensor_number=:id");
+        $request->execute([
+            ':id' => $id
+        ]);
+        return $request->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
