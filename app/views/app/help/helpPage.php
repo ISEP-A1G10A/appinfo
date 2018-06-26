@@ -35,7 +35,7 @@
     <div class="help-message-part">
         <div class="help-message-ask"><?php echo ucfirst($this->s[$this->page]["mail_question_1"]) ?></div>
         <div class="help-message-choice">
-            <div class="help-message-btn" id="1" onclick="setSelected(1)">
+            <div class="help-message-btn active" id="1" onclick="setSelected(1)">
                 <span class="design-btn-raised design-help-btn"><span class=""><?php echo ucfirst($this->s[$this->page]["mail_object_1"]) ?></span></span>
             </div>
             <div class="help-message-btn" id="2" onclick="setSelected(2)">

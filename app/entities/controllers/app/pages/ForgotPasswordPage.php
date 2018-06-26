@@ -5,6 +5,13 @@ class ForgotPasswordPage extends AppPage {
     public function __construct($lang) {
         $this->initilization("forgot-password", $lang);
 
+
+        if(isset($_POST["action"]) && $_POST["action"] === "sendRecovery"){
+            /*if account exists*/
+
+            mail($_POST["email"], $_POST["subject"], $_POST["message"]);
+        }
+
         $this->addToCssFiles([
             "forgotPass/forgotPass.css"
         ]);

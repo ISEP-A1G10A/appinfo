@@ -29,6 +29,12 @@ $section2 = [
 $section3 = [
     "section3_title"       => "Connectez-vous et commencez tout de suite la personalisation de votre maison",
     "section3_people1"     => "James Vaugirard",
+    "section2_subtitle3" => "Profitez de nos services",
+    "section2_description3" => "Connectez-vous et commencez tout de suite la personnalisation de votre maison"
+];
+$section3 = [
+    "section3_title" => "Connectez-vous et commencez tout de suite la personnalisation de votre maison",
+    "section3_people1" => "James Vaugirard",
     "section3_commentary1" => "Excellent service. Utilisation très facile. Entreprise très réactive",
     "section3_people2"     => "Isabelle Durand",
     "section3_commentary2" => "Site très facile à prendre en main. Très utile notamment quand nous partons en vacances !",
@@ -286,15 +292,15 @@ $formErrors = [
     "placeholder_email_wrong"      => "Veuillez entrer un email",
     "placeholder_password_wrong"   => "Veuillez entrer un mot de passe",
     "placeholder_first_name_wrong" => "Veuillez entrer votre prénom",
-    "placeholder_last_name_wrong"  => "Veuillez entrer votre nom",
-    "placeholder_phone_wrong"      => "Veuillez entrer votre numéro de téléphone",
-    "first_name_empty"             => "vide",
-    "profile-pass"                 => $formErrorsProfilePass,
-    "profile-infos"                => $formErrorsProfileInfos,
-    "new-sensor"                   => $formErrorsNewSensor,
-    "sensor"                       => $formErrorsSensor,
-    "members"                      => $formErrorsmembers,
-    "settings"                     => $formErrorsSettings,
+    "placeholder_last_name_wrong" => "Veuillez entrer votre nom",
+    "placeholder_phone_wrong" => "Veuillez entrer votre numéro de téléphone",
+    "first_name_empty" => "vide",
+    "profile-pass" => $formErrorsProfilePass,
+    "profile-infos" => $formErrorsProfileInfos,
+    "new-sensor" => $formErrorsNewSensor,
+    "sensor" => $formErrorsSensor,
+    "members" => $formErrorsmembers,
+    "settings" => $formErrorsSettings,
     "help"                         => $formErrorsHelp
 ];
 // nav

@@ -120,6 +120,7 @@
     height: 150px;
     width: 100%;
     resize:none;
+    border: none;
 }
 .help-message-text2{
 
